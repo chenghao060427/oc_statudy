@@ -16,6 +16,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if description %}
     <meta name="description" content="{{ description }}" />
     {% endif %}
     {% if keywords %}
@@ -30,15 +31,15 @@
         <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
     {% endfor %}
 
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/animate.css">
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/responsive.css">
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/menu.css">
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/filter_product.css">
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/wide-grid.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/filter_product.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/wide-grid.css">
     <style type="text/css">
         body,
         .product-filter .list-options select,
@@ -1009,30 +1010,30 @@
             background-image: none !important;
         }
     </style>
-    <link rel="stylesheet" type="text/css" href="./Your Store_files/magnific-popup.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/medic/css/magnific-popup.css" media="screen">
 
     <!-- js -->
-    <script type="text/javascript" src="./Your Store_files/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="./Your Store_files/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="./Your Store_files/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="./Your Store_files/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="./Your Store_files/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./Your Store_files/twitter-bootstrap-hover-dropdown.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/twitter-bootstrap-hover-dropdown.js"></script>
     <style type="text/css">.dropdown-submenu:hover > .dropdown-menu {
             display: none
         }</style>
-    <script type="text/javascript" src="./Your Store_files/common.js"></script>
-    <script type="text/javascript" src="./Your Store_files/tweetfeed.min.js"></script>
-    <script type="text/javascript" src="./Your Store_files/bootstrap-notify.min.js"></script>
-    <script type="text/javascript" src="./Your Store_files/jquery.plugin.min.js"></script>
-    <script type="text/javascript" src="./Your Store_files/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/common.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/tweetfeed.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/bootstrap-notify.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/jquery.plugin.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/jquery.countdown.min.js"></script>
 
 
-    <script type="text/javascript" src="./Your Store_files/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/owl.carousel.min.js"></script>
 
-    <script type="text/javascript" src="./Your Store_files/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/jquery-ui-1.10.4.custom.min.js"></script>
 
-    <script type="text/javascript" src="./Your Store_files/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/medic/js/jquery.magnific-popup.min.js"></script>
 
     <script type="text/javascript">
         var responsive_design = 'yes';
@@ -1041,7 +1042,7 @@
 
     <!--[if lt IE 9]>
     <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="catalog/view/theme/fastor/js/respond.min.js"></script>
+    <script src="catalog/view/theme/theme/fastor/js/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
         #megamenu_11973796 ul.megamenu > li > .sub-menu > .content {
@@ -1071,21 +1072,21 @@
                     <div class="medic-top-bar row">
                         <div class="col-sm-4">
                             <div class="background">
-                                <img src="image/catalog/medic/icon-free-shipping.png" alt="Free shipping">
+                                <img src="catalog/view/theme/medic/image/icon-free-shipping.png" alt="Free shipping">
                                 <p>Free shipping &amp; Return</p>
                             </div>
                         </div>
 
                         <div class="col-sm-4 text-center">
                             <div class="background">
-                                <img src="image/catalog/medic/icon-money.png" alt="Money back">
+                                <img src="catalog/view/theme/medic/image/icon-money.png" alt="Money back">
                                 <p>Money back guarantee</p>
                             </div>
                         </div>
 
                         <div class="col-sm-4 text-right">
                             <div class="background">
-                                <img src="image/catalog/medic/icon-support.png" alt="Support">
+                                <img src="catalog/view/theme/medic/image/icon-support.png" alt="Support">
                                 <p>Support 24/7</p>
                             </div>
                         </div>
@@ -1094,4 +1095,3 @@
             </div>
         </div>
     </div>
-                                                                                                  
