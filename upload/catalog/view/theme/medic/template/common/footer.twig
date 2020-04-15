@@ -1,0 +1,147 @@
+<!-- FOOTER
+     ================================================== -->
+<div class="footer full-width">
+    <div class="background-footer"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+
+                <div class="advanced-grid advanced-grid-5101682  "
+                     style="margin-top: 0px;margin-left: 0px;margin-right: 0px;margin-bottom: 0px;">
+                    <div style="">
+                        <div class="container">
+                            <div style="padding-top: 0px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="medic-contact">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <img src="/catalog/view/theme/medic/image/icon-phone2.png" alt="Phone">
+                                                    <div class="heading">Do you have<br>a question?</div>
+                                                    <p>{{ telephone }}</p>
+                                                </div>
+
+                                                <div class="col-sm-5" style="padding-left: 70px">
+                                                    <img src="/catalog/view/theme/medic/image/icon-mail2.png" alt="Mail">
+                                                    <div class="heading">Offer<br>question?</div>
+                                                    <p>{{ email }}</p>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <img src="/catalog/view/theme/medic/image/icon-support2.png"
+                                                         alt="Support">
+                                                    <div class="heading">Support<br>question?</div>
+                                                    <p>{{ fax }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    {% if informations %}
+                                    <div class="col-sm-3">
+                                        <h4>{{ text_information }}</h4>
+                                        <div class="strip-line"></div>
+                                        <div class="row" style="clear: both">
+                                            <div class="col-sm-12">
+                                                <ul>
+                                                    {% for information in informations %}
+
+                                                        <li>
+                                                            <a href="{{ information.href }}">{{ information.title }}
+                                                            </a>
+                                                        </li>
+                                                    {% endfor %}
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+
+                                    <div class="col-sm-3">
+                                        <h4>{{ text_service }}</h4>
+                                        <div class="strip-line"></div>
+                                        <div class="row" style="clear: both">
+                                            <div class="col-sm-12">
+                                                <ul>
+                                                    <li>
+                                                        <a href="{{ contact }}">{{ text_contact }}</a></li>
+                                                    <li>
+                                                        <a href="{{ return }}">{{ text_return }}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h4>{{ text_extra }}</h4>
+                                        <div class="strip-line"></div>
+                                        <div class="row" style="clear: both">
+                                            <div class="col-sm-12">
+                                                <ul>
+                                                    <li>
+                                                        <a href="{{ manufacturer }}">{{ text_manufacturer }}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ voucher }}">{{ text_voucher }}</a></li>
+                                                    <li>
+                                                        <a href="{{ affiliate }}">{{ text_affiliate }}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ special }}">{{ text_special }}</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h4>{{ text_account }}</h4>
+                                        <div class="strip-line"></div>
+                                        <div class="row" style="clear: both">
+                                            <div class="col-sm-12">
+                                                <ul>
+                                                    <li>
+                                                        <a href="{{ account }}">{{ text_account }}</a></li>
+                                                    <li>
+                                                        <a href="{{ order }}">{{ text_order }}</a></li>
+                                                    <li>
+                                                        <a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+                                                    <li>
+                                                        <a href="{{ newsletter }}">{{ text_newsletter }}</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        {{ powered }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/catalog/view/theme/medic/js/megamenu.js"></script>
+{% for script in scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+</div>
+</div>
+
+<div class="nav-collapse collapse" style="visibility:hidden;position:fixed" id="cwspear-is-awesome">.</div>
+</body>
+</html>

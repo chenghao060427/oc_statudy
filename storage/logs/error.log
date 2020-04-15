@@ -77,3 +77,96 @@
 2020-04-14 9:12:04 - PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 175
 2020-04-14 9:12:04 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
 2020-04-14 9:12:04 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:12:35 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:12:35 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:12:35 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:12:35 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:12:35 - PHP Warning:  Division by zero in D:\xampp\htdocs\OpenCart\upload\catalog\controller\product\category.php on line 332
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagealphablending() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 172
+2020-04-15 6:30:10 - PHP Warning:  imagesavealpha() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 173
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 174
+2020-04-15 6:30:10 - PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 175
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:10 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:10 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:10 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:10 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:11 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 6:30:11 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 6:30:11 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 6:30:11 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 6:30:11 - PHP Warning:  Division by zero in D:\xampp\htdocs\OpenCart\upload\catalog\controller\product\category.php on line 332
+2020-04-15 7:03:38 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 7:03:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 7:03:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 7:03:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 7:03:38 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 7:03:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 7:03:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 7:03:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 7:03:38 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 7:03:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 7:03:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 7:03:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 7:03:38 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 7:03:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 7:03:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 7:03:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 7:03:38 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 7:03:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 7:03:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 7:03:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 7:03:38 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 7:03:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
+2020-04-15 7:03:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 7:03:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-04-15 7:03:38 - PHP Warning:  Division by zero in D:\xampp\htdocs\OpenCart\upload\catalog\controller\product\category.php on line 332
+2020-04-15 7:37:40 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 169
+2020-04-15 7:37:40 - PHP Warning:  imagealphablending() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 172
+2020-04-15 7:37:40 - PHP Warning:  imagesavealpha() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 173
+2020-04-15 7:37:40 - PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 174
+2020-04-15 7:37:40 - PHP Warning:  imagecolortransparent() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 175
+2020-04-15 7:37:40 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
+2020-04-15 7:37:40 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182

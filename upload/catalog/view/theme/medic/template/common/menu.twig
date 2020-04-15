@@ -1,803 +1,609 @@
-<header class="header-type-8">
-    <div class="background-header"></div>
-    <div class="slider-header">
-        <!-- Top of pages -->
-        <div id="top" class="full-width">
-            <div class="background-top"></div>
-            <div class="background">
-                <div class="shadow"></div>
-                <div class="pattern">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Header Left -->
-                            <div class="col-sm-4" id="header-left">
-                                <!-- Logo -->
-                                <div class="logo">
-                                    {% if logo %}
-                                        <a href="{{ home }}">
-                                            <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}">
-                                        </a>
-                                    {% else %}
-                                        <h1><a href="{{ home }}">{{ name }}</a></h1>
-                                    {% endif %}
-                                </div>
-                            </div>
-
-                            <!-- Header Right -->
-                            <div class="col-sm-8" id="header-right">
-                                <div class="medic-phone hidden-md hidden-sm">
-                                    <img src="catalog/view/theme/medic/image/icon-phone.png" alt="Phone">
-                                    <div class="heading">Do you have<br>a question?</div>
-                                    <p>{{ telephone }}</p>
-                                </div>
-
-                                <!-- Search -->
-                                {{ search }}
-
-                                <!-- Cart block -->
-                                <div id="cart_block" class="dropdown">
-                                    <div class="cart-heading dropdown-toogle" data-hover="dropdown"
-                                         data-toggle="dropdown"
-                                         onclick="window.location.href = &#39;http://fastortheme.com/medic/index.php?route=checkout/cart&#39;">
-                                        <i class="cart-count"><span id="total_count_ajax">0</span></i>
-
-                                        <i class="cart-icon cart-icon-no-hover"><img
-                                                    src="./Your Store_files/icon-cart.png" class="cart-icon-hover"
-                                                    alt=""><img src="./Your Store_files/icon-cart.png"
-                                                                class="cart-icon-standard" alt=""></i>
-
-                                        <p><strong id="total_price_ajax"><span
-                                                        id="total_price">$0.00</span></strong></p>
+<div class="standard-body">
+    <div id="main" class="">
+        <header class="header-type-8">
+            <div class="background-header"></div>
+            <div class="slider-header">
+                <!-- Top of pages -->
+                <div id="top" class="full-width">
+                    <div class="background-top"></div>
+                    <div class="background">
+                        <div class="shadow"></div>
+                        <div class="pattern">
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Header Left -->
+                                    <div class="col-sm-4" id="header-left">
+                                        <!-- Logo -->
+                                        <div class="logo">
+                                            {% if logo %}
+                                                <a href="{{ home }}">
+                                                    <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}">
+                                                </a>
+                                            {% else %}
+                                                <h1><a href="{{ home }}">{{ name }}</a></h1>
+                                            {% endif %}
+                                        </div>
                                     </div>
 
-                                    <div class="dropdown-menu" id="cart_content">
-                                        <div id="cart_content_ajax">
-                                            <div class="empty">Your shopping cart is empty!</div>
+                                    <!-- Header Right -->
+                                    <div class="col-sm-8" id="header-right">
+                                        <div class="medic-phone hidden-md hidden-sm">
+                                            <img src="catalog/view/theme/medic/image/icon-phone.png" alt="Phone">
+                                            <div class="heading">Do you have<br>a question?</div>
+                                            <p>{{ telephone }}</p>
+                                        </div>
+
+                                        <!-- Search -->
+                                        {{ search }}
+
+                                        <!-- Cart block -->
+                                        <div id="cart_block" class="dropdown">
+                                            <div class="cart-heading dropdown-toogle" data-hover="dropdown"
+                                                 data-toggle="dropdown" onclick="window.location.href = &#39;http://fastortheme.com/medic/index.php?route=checkout/cart&#39;">
+                                                <i class="cart-count"><span id="total_count_ajax">0</span></i>
+
+                                                <i class="cart-icon cart-icon-no-hover"><img
+                                                            src="/catalog/view/theme/medic/image/icon-cart.png" class="cart-icon-hover"
+                                                            alt=""><img src="/catalog/view/theme/medic/image/icon-cart.png"
+                                                                        class="cart-icon-standard" alt=""></i>
+
+                                                <p><strong id="total_price_ajax"><span
+                                                                id="total_price">$0.00</span></strong></p>
+                                            </div>
+
+                                            <div class="dropdown-menu" id="cart_content">
+                                                <div id="cart_content_ajax">
+                                                    <div class="empty">Your shopping cart is empty!</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="megamenu-background">
-                        <div class="">
-                            <div class="overflow-megamenu container">
-                                <div class="row mega-menu-modules">
-                                    <div class="col-md-3">
-                                        <div id="megamenu_11973796"
-                                             class="container-megamenu container vertical mobile-disabled">
-                                            <div id="menuHeading">
-                                                <div class="megamenuToogle-wrapper">
-                                                    <div class="megamenuToogle-pattern">
-                                                        <div class="container">
-                                                            Categories
+                            <div class="megamenu-background">
+                                <div class="">
+                                    <div class="overflow-megamenu container">
+                                        <div class="row mega-menu-modules">
+                                            <div class="col-md-3">
+                                                <div id="megamenu_11973796"
+                                                     class="container-megamenu container vertical mobile-disabled">
+                                                    <div id="menuHeading">
+                                                        <div class="megamenuToogle-wrapper">
+                                                            <div class="megamenuToogle-pattern">
+                                                                <div class="container">
+                                                                    {{ catagories_name }}
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="megamenu-wrapper">
-                                                <div class="megamenu-pattern">
-                                                    <div class="container">
-                                                        <ul class="megamenu shift-left">
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=25"
-                                                                        class="clearfix"><span><strong>Men<span
-                                                                                    class="megamenu-label"
-                                                                                    style="background: #0a191b;color:  #ffffff;"><span
-                                                                                        style="background: #0a191b;border-color: #0a191b"></span>NEW</span></strong></span></a>
-                                                            </li>
-                                                            <li class="with-sub-menu hover"><p
-                                                                        class="close-menu"></p>
-                                                                <p class="open-menu"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=18"
-                                                                        class="clearfix"><span><strong>     Women</strong></span></a>
-                                                                <div class="sub-menu " style="width:190px">
-                                                                    <div class="content"><p class="arrow"></p>
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12  mobile-enabled">
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-12 hover-menu">
-                                                                                        <div class="menu">
-                                                                                            <ul>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu ">Shirt</a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu with-submenu">Pants<span
-                                                                                                                class="megamenu-label"
-                                                                                                                style="background: #0a191b;color: #ffffff"><span
-                                                                                                                    style="background: #0a191b;border-color: #0a191b"></span>NEW</span></a>
-                                                                                                    <div class="open-categories"></div>
-                                                                                                    <div class="close-categories"></div>
-                                                                                                    <ul>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="">Long</a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="">Short</a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="with-submenu">Medium</a>
-                                                                                                            <div class="open-categories"></div>
-                                                                                                            <div class="close-categories"></div>
+                                                    <div class="megamenu-wrapper">
+                                                        <div class="megamenu-pattern">
+                                                            <div class="container">
+                                                                <ul class="megamenu shift-left">
+                                                                    {% for category in categories %}
+                                                                        {% if category.children %}
+                                                                            <li class="with-sub-menu hover">
+                                                                                <p class="close-menu"></p>
+                                                                                <p class="open-menu"></p>
+                                                                                <a href="{{ category.href }}" class="clearfix">
+                                                                                    <span>
+                                                                                        <strong>{{ category.name }}</strong>
+                                                                                    </span>
+                                                                                </a>
+                                                                                <div class="sub-menu " style="width:190px">
+                                                                                    <div class="content"><p class="arrow"></p>
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12  mobile-enabled">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-sm-12 hover-menu">
+                                                                                                        <div class="menu">
                                                                                                             <ul>
+                                                                                                                {% for child in category.children %}
                                                                                                                 <li>
-                                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                                       class="">New</a>
+                                                                                                                    <a href="{{ child.href }}"  class="main-menu ">{{ child.name }}</a>
                                                                                                                 </li>
-                                                                                                                <li>
-                                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                                       class="">Popular</a>
-                                                                                                                </li>
+                                                                                                                {% endfor %}
                                                                                                             </ul>
-                                                                                                        </li>
-                                                                                                    </ul>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu with-submenu">Jeans</a>
-                                                                                                    <div class="open-categories"></div>
-                                                                                                    <div class="close-categories"></div>
-                                                                                                    <ul>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="">Long</a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="">Short</a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="">Medium</a>
-                                                                                                        </li>
-                                                                                                    </ul>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu ">Socks<span
-                                                                                                                class="megamenu-label"
-                                                                                                                style="background: #e6e6e6;color: #333"><span
-                                                                                                                    style="background: #e6e6e6;border-color: #e6e6e6"></span>HOT</span></a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu ">Hats</a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu ">Accessories</a>
-                                                                                                </li>
-                                                                                            </ul>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=25"
-                                                                        class="clearfix"><span><strong>Accessories<span
-                                                                                    class="megamenu-label"
-                                                                                    style="background: #e6e6e6;color:  #333;"><span
-                                                                                        style="background: #e6e6e6;border-color: #e6e6e6"></span>HOT</span></strong></span></a>
-                                                            </li>
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=25"
-                                                                        class="clearfix"><span><strong>Lookbook</strong></span></a>
-                                                            </li>
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=account/wishlist"
-                                                                        class="clearfix"><span><strong>Wishlist</strong></span></a>
-                                                            </li>
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=information/contact"
-                                                                        class="clearfix"><span><strong>Contact</strong></span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <script type="text/javascript">
-                                            $(window).load(function () {
-                                                var css_tpl = '<style type="text/css">';
-                                                css_tpl += '#megamenu_11973796 ul.megamenu > li > .sub-menu > .content {';
-                                                css_tpl += '-webkit-transition: all 200ms ease-out !important;';
-                                                css_tpl += '-moz-transition: all 200ms ease-out !important;';
-                                                css_tpl += '-o-transition: all 200ms ease-out !important;';
-                                                css_tpl += '-ms-transition: all 200ms ease-out !important;';
-                                                css_tpl += 'transition: all 200ms ease-out !important;';
-                                                css_tpl += '}</style>'
-                                                $("head").append(css_tpl);
-                                            });
-                                        </script>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div id="megamenu_138771624" class="container-megamenu  horizontal">
-                                            <div class="megaMenuToggle">
-                                                <div class="megamenuToogle-wrapper">
-                                                    <div class="megamenuToogle-pattern">
-                                                        <div class="container">
-                                                            <div><span></span><span></span><span></span></div>
-                                                            Navigation
+                                                                            </li>
+                                                                        {% else %}
+                                                                            <li class=""><p class="close-menu"></p>
+                                                                                <p class="open-menu mobile-disabled"></p>
+                                                                                <a href="{{ category.href }}" class="clearfix">
+                                                                                    <span>
+                                                                                        <strong>
+                                                                                            {{ category.name }}
+                                                                                            {% if catagory.is_new %}
+                                                                                            <span class="megamenu-label" style="background: #0a191b;color:  #ffffff;">
+                                                                                                <span style="background: #0a191b;border-color: #0a191b">
+                                                                                                </span>
+                                                                                                NEW
+                                                                                            </span>
+                                                                                            {% endif %}
+                                                                                            {% if catagory.is_hot %}
+                                                                                            {% endif %}
+                                                                                        </strong>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <script type="text/javascript">
+                                                    $(window).load(function () {
+                                                        var css_tpl = '<style type="text/css">';
+                                                        css_tpl += '#megamenu_11973796 ul.megamenu > li > .sub-menu > .content {';
+                                                        css_tpl += '-webkit-transition: all 200ms ease-out !important;';
+                                                        css_tpl += '-moz-transition: all 200ms ease-out !important;';
+                                                        css_tpl += '-o-transition: all 200ms ease-out !important;';
+                                                        css_tpl += '-ms-transition: all 200ms ease-out !important;';
+                                                        css_tpl += 'transition: all 200ms ease-out !important;';
+                                                        css_tpl += '}</style>'
+                                                        $("head").append(css_tpl);
+                                                    });
+                                                </script>
                                             </div>
-                                            <div class="megamenu-wrapper">
-                                                <div class="megamenu-pattern">
-                                                    <div class="container">
-                                                        <ul class="megamenu shift-up">
-                                                            <li class="with-sub-menu hover"><p
-                                                                        class="close-menu"></p>
-                                                                <p class="open-menu"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                        class="clearfix"><span><strong>Men<span
-                                                                                    class="megamenu-label"
-                                                                                    style="background: #0a191b;color:  #ffffff;"><span
-                                                                                        style="background: #0a191b;border-color: #0a191b"></span>NEW</span></strong></span></a>
-                                                                <div class="sub-menu "
-                                                                     style="width: 190px; right: auto;">
-                                                                    <div class="content"><p class="arrow"
-                                                                                            style="left: 27.5px;"></p>
-                                                                        <div class="row">
-                                                                            <div class="col-sm-12  mobile-enabled">
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-12 hover-menu">
-                                                                                        <div class="menu">
-                                                                                            <ul>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu ">Shirt</a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu with-submenu">Pants<span
-                                                                                                                class="megamenu-label"
-                                                                                                                style="background: #0a191b;color: #ffffff"><span
-                                                                                                                    style="background: #0a191b;border-color: #0a191b"></span>NEW</span></a>
-                                                                                                    <div class="open-categories"></div>
-                                                                                                    <div class="close-categories"></div>
-                                                                                                    <ul>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="">Long</a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="with-submenu">Short</a>
-                                                                                                            <div class="open-categories"></div>
-                                                                                                            <div class="close-categories"></div>
+                                            <div class="col-md-9">
+                                                <div id="megamenu_138771624" class="container-megamenu  horizontal">
+                                                    <div class="megaMenuToggle">
+                                                        <div class="megamenuToogle-wrapper">
+                                                            <div class="megamenuToogle-pattern">
+                                                                <div class="container">
+                                                                    <div><span></span><span></span><span></span></div>
+                                                                    Navigation
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="megamenu-wrapper">
+                                                        <div class="megamenu-pattern">
+                                                            <div class="container">
+                                                                <ul class="megamenu shift-up">
+                                                                    {% for category in categories %}
+                                                                        {% if category.children %}
+
+                                                                            <li class="with-sub-menu hover">
+                                                                                <p class="close-menu"></p>
+                                                                                <p class="open-menu"></p>
+                                                                                <a href="{{ category.href }}" class="clearfix">
+                                                                                    <span>
+                                                                                        <strong>{{ category.name }}
+                                                                                            {% if category.is_new %}
+                                                                                                <span class="megamenu-label" style="background: #0a191b;color:  #ffffff;">
+                                                                                                    <span style="background: #0a191b;border-color: #0a191b"></span>
+                                                                                                    NEW
+                                                                                                </span>
+                                                                                            {% endif %}
+                                                                                        </strong>
+                                                                                    </span>
+                                                                                </a>
+                                                                                <div class="sub-menu" style="width: 190px; right: auto;">
+                                                                                    <div class="content"><p class="arrow" style="left: 27.5px;"></p>
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12  mobile-enabled">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-sm-12 hover-menu">
+                                                                                                        <div class="menu">
                                                                                                             <ul>
+                                                                                                                {% for child in category.children %}
                                                                                                                 <li>
-                                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                                       class="">New</a>
+                                                                                                                    <a href="{{ child.href }}" onclick="" class="main-menu ">
+                                                                                                                        {{ child.name }}
+                                                                                                                    </a>
                                                                                                                 </li>
-                                                                                                                <li>
-                                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                                       class="">Popular</a>
-                                                                                                                </li>
+                                                                                                                {% endfor %}
                                                                                                             </ul>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="with-submenu">Medium</a>
-                                                                                                            <div class="open-categories"></div>
-                                                                                                            <div class="close-categories"></div>
-                                                                                                            <ul>
-                                                                                                                <li>
-                                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                                       class="">New</a>
-                                                                                                                </li>
-                                                                                                                <li>
-                                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                                       class="">Popular</a>
-                                                                                                                </li>
-                                                                                                            </ul>
-                                                                                                        </li>
-                                                                                                    </ul>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu with-submenu">Jeans</a>
-                                                                                                    <div class="open-categories"></div>
-                                                                                                    <div class="close-categories"></div>
-                                                                                                    <ul>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="">Long</a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="">Short</a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                               onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                               class="">Medium</a>
-                                                                                                        </li>
-                                                                                                    </ul>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu ">Socks<span
-                                                                                                                class="megamenu-label"
-                                                                                                                style="background: #e6e6e6;color: #333"><span
-                                                                                                                    style="background: #e6e6e6;border-color: #e6e6e6"></span>HOT</span></a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu ">Hats</a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                                                       onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;"
-                                                                                                       class="main-menu ">Accessories</a>
-                                                                                                </li>
-                                                                                            </ul>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                        class="clearfix"><span><strong>Women</strong></span></a>
-                                                            </li>
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                        class="clearfix"><span><strong>Accessories<span
-                                                                                    class="megamenu-label"
-                                                                                    style="background: #e6e6e6;color:  #333333;"><span
-                                                                                        style="background: #e6e6e6;border-color: #e6e6e6"></span>HOT</span></strong></span></a>
-                                                            </li>
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=product/category&amp;path=20"
-                                                                        class="clearfix"><span><strong>Lookbook</strong></span></a>
-                                                            </li>
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=account/wishlist"
-                                                                        class="clearfix"><span><strong>Wishlist</strong></span></a>
-                                                            </li>
-                                                            <li class=""><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=information/contact"
-                                                                        class="clearfix"><span><strong>Contact</strong></span></a>
-                                                            </li>
-                                                            <li class="pull-right"><p class="close-menu"></p>
-                                                                <p class="open-menu mobile-disabled"></p><a
-                                                                        href="http://fastortheme.com/medic/index.php?route=blog/blog"
-                                                                        class="clearfix"><span><strong>Blog</strong></span></a>
-                                                            </li>
-                                                        </ul>
+                                                                            </li>
+                                                                        {% else %}
+                                                                            <li class="">
+                                                                                <p class="close-menu"></p>
+                                                                                <p class="open-menu mobile-disabled"></p>
+                                                                                <a href="{{ category.href }}" class="clearfix">
+                                                                                    <span>
+                                                                                        <strong>{{ category.name }}</strong>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                                </ul>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
+
+                                                <script type="text/javascript">
+                                                    $(window).load(function () {
+                                                        var css_tpl = '<style type="text/css">';
+                                                        css_tpl += '#megamenu_138771624 ul.megamenu > li > .sub-menu > .content {';
+                                                        css_tpl += '-webkit-transition: all 200ms ease-out !important;';
+                                                        css_tpl += '-moz-transition: all 200ms ease-out !important;';
+                                                        css_tpl += '-o-transition: all 200ms ease-out !important;';
+                                                        css_tpl += '-ms-transition: all 200ms ease-out !important;';
+                                                        css_tpl += 'transition: all 200ms ease-out !important;';
+                                                        css_tpl += '}</style>'
+                                                        $("head").append(css_tpl);
+                                                    });
+                                                </script>
                                             </div>
                                         </div>
-
-                                        <script type="text/javascript">
-                                            $(window).load(function () {
-                                                var css_tpl = '<style type="text/css">';
-                                                css_tpl += '#megamenu_138771624 ul.megamenu > li > .sub-menu > .content {';
-                                                css_tpl += '-webkit-transition: all 200ms ease-out !important;';
-                                                css_tpl += '-moz-transition: all 200ms ease-out !important;';
-                                                css_tpl += '-o-transition: all 200ms ease-out !important;';
-                                                css_tpl += '-ms-transition: all 200ms ease-out !important;';
-                                                css_tpl += 'transition: all 200ms ease-out !important;';
-                                                css_tpl += '}</style>'
-                                                $("head").append(css_tpl);
-                                            });
-                                        </script>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Slider -->
-    <div id="slider" class="full-width">
-        <div class="background-slider"></div>
-        <div class="background">
-            <div class="shadow"></div>
-            <div class="pattern">
-                <link rel="stylesheet" type="text/css" href="./Your Store_files/settings.css"
-                      property="stylesheet">
-                <link rel="stylesheet" type="text/css" href="./Your Store_files/static-captions.css"
-                      property="stylesheet">
-                <link rel="stylesheet" type="text/css" href="./Your Store_files/dynamic-captions.css"
-                      property="stylesheet">
-                <link rel="stylesheet" type="text/css" href="./Your Store_files/captions.css"
-                      property="stylesheet">
-                <link rel="stylesheet" type="text/css" href="./Your Store_files/slider.css"
-                      property="stylesheet">
-                <script type="text/javascript"
-                        src="./Your Store_files/jquery.themepunch.tools.min.js.下载"></script>
-                <script type="text/javascript"
-                        src="./Your Store_files/jquery.themepunch.revolution.min.js.下载"></script>
-                <!-- START REVOLUTION SLIDER  fullwidth mode -->
+            <!-- Slider -->
+            <div id="slider" class="full-width" style="display: none">
+                <div class="background-slider"></div>
+                <div class="background">
+                    <div class="shadow"></div>
+                    <div class="pattern">
+                        <link rel="stylesheet" type="text/css" href="/catalog/view/theme/medic/css/settings.css"
+                              property="stylesheet">
+                        <link rel="stylesheet" type="text/css" href="/catalog/view/theme/medic/css/static-captions.css"
+                              property="stylesheet">
+                        <link rel="stylesheet" type="text/css" href="/catalog/view/theme/medic/css/dynamic-captions.css"
+                              property="stylesheet">
+                        <link rel="stylesheet" type="text/css" href="/catalog/view/theme/medic/css/captions.css"
+                              property="stylesheet">
+                        <link rel="stylesheet" type="text/css" href="/catalog/view/theme/medic/css/slider.css"
+                              property="stylesheet">
+                        <script type="text/javascript"
+                                src="/catalog/view/theme/medic/js/jquery.themepunch.tools.min.js"></script>
+                        <script type="text/javascript"
+                                src="/catalog/view/theme/medic/js/jquery.themepunch.revolution.min.js"></script>
+                        <!-- START REVOLUTION SLIDER  fullwidth mode -->
 
-                <div id="rev_slider_7_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
-                     style="margin: 0px auto; padding: 0px; max-height: 592px; height: 592px; overflow: visible;">
-                    <div id="rev_slider_7_1"
-                         class="rev_slider fullwidthabanner revslider-initialised tp-simpleresponsive"
-                         style="max-height: 592px; height: 592px;">
-                        <ul style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: 592px;">
-                            <!-- SLIDE  -->
-                            <li data-transition="fade" data-slotamount="7" data-masterspeed="300"
-                                data-saveperformance="off"
-                                style="width: 100%; height: 100%; overflow: hidden; z-index: 20; visibility: inherit; opacity: 1;"
-                                class="active-revslide current-sr-slide-visible">
-                                <!-- MAIN IMAGE -->
-                                <div class="slotholder" style="width:100%;height:100%;"
-                                     data-duration="undefined" data-zoomstart="undefined"
-                                     data-zoomend="undefined" data-rotationstart="undefined"
-                                     data-rotationend="undefined" data-ease="undefined"
-                                     data-bgpositionend="undefined" data-bgposition="center top"
-                                     data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover"
-                                     data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
-                                    <div class="tp-bgimg defaultimg" data-lazyload="undefined"
-                                         data-bgfit="cover" data-bgposition="center top"
-                                         data-bgrepeat="no-repeat" data-lazydone="undefined"
-                                         src="http://fastortheme.com/medic/system/config/revslider/images/transparent.png"
-                                         data-src="http://fastortheme.com/medic/system/config/revslider/images/transparent.png"
-                                         style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;http://fastortheme.com/medic/system/config/revslider/images/transparent.png&quot;); background-size: cover; background-position: center top; width: 100%; height: 100%; opacity: 1; visibility: inherit;"></div>
+                        <div id="rev_slider_7_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
+                             style="margin: 0px auto; padding: 0px; max-height: 592px; height: 592px; overflow: visible;">
+                            <div id="rev_slider_7_1"
+                                 class="rev_slider fullwidthabanner revslider-initialised tp-simpleresponsive"
+                                 style="max-height: 592px; height: 592px;">
+                                <ul style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: 592px;">
+                                    <!-- SLIDE  -->
+                                    <li data-transition="fade" data-slotamount="7" data-masterspeed="300"
+                                        data-saveperformance="off"
+                                        style="width: 100%; height: 100%; overflow: hidden; z-index: 20; visibility: inherit; opacity: 1;"
+                                        class="active-revslide current-sr-slide-visible">
+                                        <!-- MAIN IMAGE -->
+                                        <div class="slotholder" style="width:100%;height:100%;"
+                                             data-duration="undefined" data-zoomstart="undefined"
+                                             data-zoomend="undefined" data-rotationstart="undefined"
+                                             data-rotationend="undefined" data-ease="undefined"
+                                             data-bgpositionend="undefined" data-bgposition="center top"
+                                             data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover"
+                                             data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
+                                            <div class="tp-bgimg defaultimg" data-lazyload="undefined"
+                                                 data-bgfit="cover" data-bgposition="center top"
+                                                 data-bgrepeat="no-repeat" data-lazydone="undefined"
+                                                 src="http://fastortheme.com/medic/system/config/revslider/images/transparent.png"
+                                                 data-src="http://fastortheme.com/medic/system/config/revslider/images/transparent.png"
+                                                 style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;http://fastortheme.com/medic/system/config/revslider/images/transparent.png&quot;); background-size: cover; background-position: center top; width: 100%; height: 100%; opacity: 1; visibility: inherit;"></div>
+                                        </div>
+                                        <!-- LAYERS -->
+
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption tp-fade start" data-x="-105" data-y="0" data-speed="700"
+                                             data-start="300" data-easing="Power3.easeInOut" data-elementdelay="0.1"
+                                             data-endelementdelay="0.1" data-endspeed="700"
+                                             style="z-index: 2; left: 36.5px; top: 0px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
+                                            <img src="/catalog/view/theme/medic/image/4902733_medic-1.png" alt=""
+                                                 style="width: 1350px; height: 592px;">
+                                        </div>
+
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption lft start" data-x="750" data-y="0" data-speed="1000"
+                                             data-start="2200" data-easing="Power3.easeInOut" data-elementdelay="0.1"
+                                             data-endelementdelay="0.1" data-endspeed="1000"
+                                             style="z-index: 3; left: 891.5px; top: 0px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
+                                            <img src="/catalog/view/theme/medic/image/2259483_medic-2.png" alt=""
+                                                 style="width: 546px; height: 347px;">
+                                        </div>
+
+                                        <!-- LAYER NR. 3 -->
+                                        <div class="tp-caption medic_text_1 sfl tp-resizeme start" data-x="528"
+                                             data-y="177" data-speed="700" data-start="800"
+                                             data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
+                                             data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700"
+                                             style="z-index: 4; white-space: nowrap; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 50px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 50px; left: 669.5px; top: 177px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
+                                            Equipment you need
+                                        </div>
+
+                                        <!-- LAYER NR. 4 -->
+                                        <div class="tp-caption medic_text_2 sfl tp-resizeme start" data-x="527"
+                                             data-y="235" data-speed="700" data-start="1300"
+                                             data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
+                                             data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="600"
+                                             style="z-index: 5; max-width: 500px; white-space: normal; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 68px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 80px; left: 668.5px; top: 235px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
+                                            For your new cabinet
+                                        </div>
+
+                                        <!-- LAYER NR. 5 -->
+                                        <div class="tp-caption sfl tp-resizeme start" data-x="528" data-y="404"
+                                             data-speed="700" data-start="1800" data-easing="Power3.easeInOut"
+                                             data-splitin="none" data-splitout="none" data-elementdelay="0.1"
+                                             data-endelementdelay="0.1" data-endspeed="600"
+                                             style="z-index: 6; white-space: nowrap; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 24px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 15px; left: 669.5px; top: 404px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
+                                            <a href="http://fastortheme.com/medic/#" class="button"
+                                               style="transition: all 0.2s ease-out 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px; margin: 5px 0px; padding: 12px 38px 11px; letter-spacing: 0px; font-size: 13px;">Read
+                                                more</a>
+                                        </div>
+                                    </li>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="fade" data-slotamount="7" data-masterspeed="300"
+                                        data-saveperformance="off"
+                                        style="width: 100%; height: 100%; overflow: hidden; visibility: hidden; opacity: 0; z-index: 18;">
+                                        <!-- MAIN IMAGE -->
+                                        <div class="slotholder" style="width:100%;height:100%;"
+                                             data-duration="undefined" data-zoomstart="undefined"
+                                             data-zoomend="undefined" data-rotationstart="undefined"
+                                             data-rotationend="undefined" data-ease="undefined"
+                                             data-bgpositionend="undefined" data-bgposition="center top"
+                                             data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover"
+                                             data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
+                                            <div class="tp-bgimg defaultimg" data-lazyload="undefined"
+                                                 data-bgfit="cover" data-bgposition="center top"
+                                                 data-bgrepeat="no-repeat" data-lazydone="undefined"
+                                                 src="http://fastortheme.com/medic/system/config/revslider/images/transparent.png"
+                                                 data-src="http://fastortheme.com/medic/system/config/revslider/images/transparent.png"
+                                                 style="background-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;background-image:url(http://fastortheme.com/medic/system/config/revslider/images/transparent.png);background-size:cover;background-position:center top;width:100%;height:100%;"></div>
+                                        </div>
+                                        <!-- LAYERS -->
+
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption tp-fade start" data-x="-105" data-y="0" data-speed="700"
+                                             data-start="300" data-easing="Power3.easeInOut" data-elementdelay="0.1"
+                                             data-endelementdelay="0.1" data-endspeed="700" style="z-index: 2;"><img
+                                                    src="/catalog/view/theme/medic/image/4902733_medic-1.png" alt="">
+                                        </div>
+
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption lft start" data-x="750" data-y="0" data-speed="1000"
+                                             data-start="2200" data-easing="Power3.easeInOut" data-elementdelay="0.1"
+                                             data-endelementdelay="0.1" data-endspeed="1000" style="z-index: 3;"><img
+                                                    src="/catalog/view/theme/medic/image/2259483_medic-2.png" alt="">
+                                        </div>
+
+                                        <!-- LAYER NR. 3 -->
+                                        <div class="tp-caption medic_text_1 sfl tp-resizeme start" data-x="528"
+                                             data-y="177" data-speed="700" data-start="800"
+                                             data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
+                                             data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700"
+                                             style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                            Equipment you need
+                                        </div>
+
+                                        <!-- LAYER NR. 4 -->
+                                        <div class="tp-caption medic_text_2 sfl tp-resizeme start" data-x="527"
+                                             data-y="235" data-speed="700" data-start="1300"
+                                             data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
+                                             data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="600"
+                                             style="z-index: 5; max-width: 500px; max-height: auto; white-space: normal;">
+                                            For your new cabinet
+                                        </div>
+
+                                        <!-- LAYER NR. 5 -->
+                                        <div class="tp-caption sfl tp-resizeme start" data-x="528" data-y="404"
+                                             data-speed="700" data-start="1800" data-easing="Power3.easeInOut"
+                                             data-splitin="none" data-splitout="none" data-elementdelay="0.1"
+                                             data-endelementdelay="0.1" data-endspeed="600"
+                                             style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+                                            <a href="http://fastortheme.com/medic/#" class="button">Read more</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="tp-bannertimer tp-bottom"
+                                     style="visibility: hidden !important; width: 0%;"></div>
+                                <div class="tp-loader spinner0" style="display: none;">
+                                    <div class="dot1"></div>
+                                    <div class="dot2"></div>
+                                    <div class="bounce1"></div>
+                                    <div class="bounce2"></div>
+                                    <div class="bounce3"></div>
                                 </div>
-                                <!-- LAYERS -->
+                            </div>
 
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption tp-fade start" data-x="-105" data-y="0" data-speed="700"
-                                     data-start="300" data-easing="Power3.easeInOut" data-elementdelay="0.1"
-                                     data-endelementdelay="0.1" data-endspeed="700"
-                                     style="z-index: 2; left: 36.5px; top: 0px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
-                                    <img src="./Your Store_files/4902733_medic-1.png" alt=""
-                                         style="width: 1350px; height: 592px;">
-                                </div>
+                            <script type="text/javascript">
 
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption lft start" data-x="750" data-y="0" data-speed="1000"
-                                     data-start="2200" data-easing="Power3.easeInOut" data-elementdelay="0.1"
-                                     data-endelementdelay="0.1" data-endspeed="1000"
-                                     style="z-index: 3; left: 891.5px; top: 0px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
-                                    <img src="./Your Store_files/2259483_medic-2.png" alt=""
-                                         style="width: 546px; height: 347px;">
-                                </div>
-
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption medic_text_1 sfl tp-resizeme start" data-x="528"
-                                     data-y="177" data-speed="700" data-start="800"
-                                     data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-                                     data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700"
-                                     style="z-index: 4; white-space: nowrap; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 50px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 50px; left: 669.5px; top: 177px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
-                                    Equipment you need
-                                </div>
-
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption medic_text_2 sfl tp-resizeme start" data-x="527"
-                                     data-y="235" data-speed="700" data-start="1300"
-                                     data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-                                     data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="600"
-                                     style="z-index: 5; max-width: 500px; white-space: normal; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 68px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 80px; left: 668.5px; top: 235px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
-                                    For your new cabinet
-                                </div>
-
-                                <!-- LAYER NR. 5 -->
-                                <div class="tp-caption sfl tp-resizeme start" data-x="528" data-y="404"
-                                     data-speed="700" data-start="1800" data-easing="Power3.easeInOut"
-                                     data-splitin="none" data-splitout="none" data-elementdelay="0.1"
-                                     data-endelementdelay="0.1" data-endspeed="600"
-                                     style="z-index: 6; white-space: nowrap; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 24px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 15px; left: 669.5px; top: 404px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">
-                                    <a href="http://fastortheme.com/medic/#" class="button"
-                                       style="transition: all 0.2s ease-out 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px; margin: 5px 0px; padding: 12px 38px 11px; letter-spacing: 0px; font-size: 13px;">Read
-                                        more</a>
-                                </div>
-                            </li>
-                            <!-- SLIDE  -->
-                            <li data-transition="fade" data-slotamount="7" data-masterspeed="300"
-                                data-saveperformance="off"
-                                style="width: 100%; height: 100%; overflow: hidden; visibility: hidden; opacity: 0; z-index: 18;">
-                                <!-- MAIN IMAGE -->
-                                <div class="slotholder" style="width:100%;height:100%;"
-                                     data-duration="undefined" data-zoomstart="undefined"
-                                     data-zoomend="undefined" data-rotationstart="undefined"
-                                     data-rotationend="undefined" data-ease="undefined"
-                                     data-bgpositionend="undefined" data-bgposition="center top"
-                                     data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover"
-                                     data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
-                                    <div class="tp-bgimg defaultimg" data-lazyload="undefined"
-                                         data-bgfit="cover" data-bgposition="center top"
-                                         data-bgrepeat="no-repeat" data-lazydone="undefined"
-                                         src="http://fastortheme.com/medic/system/config/revslider/images/transparent.png"
-                                         data-src="http://fastortheme.com/medic/system/config/revslider/images/transparent.png"
-                                         style="background-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;background-image:url(http://fastortheme.com/medic/system/config/revslider/images/transparent.png);background-size:cover;background-position:center top;width:100%;height:100%;"></div>
-                                </div>
-                                <!-- LAYERS -->
-
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption tp-fade start" data-x="-105" data-y="0" data-speed="700"
-                                     data-start="300" data-easing="Power3.easeInOut" data-elementdelay="0.1"
-                                     data-endelementdelay="0.1" data-endspeed="700" style="z-index: 2;"><img
-                                            src="./Your Store_files/4902733_medic-1.png" alt="">
-                                </div>
-
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption lft start" data-x="750" data-y="0" data-speed="1000"
-                                     data-start="2200" data-easing="Power3.easeInOut" data-elementdelay="0.1"
-                                     data-endelementdelay="0.1" data-endspeed="1000" style="z-index: 3;"><img
-                                            src="./Your Store_files/2259483_medic-2.png" alt="">
-                                </div>
-
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption medic_text_1 sfl tp-resizeme start" data-x="528"
-                                     data-y="177" data-speed="700" data-start="800"
-                                     data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-                                     data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700"
-                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
-                                    Equipment you need
-                                </div>
-
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption medic_text_2 sfl tp-resizeme start" data-x="527"
-                                     data-y="235" data-speed="700" data-start="1300"
-                                     data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-                                     data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="600"
-                                     style="z-index: 5; max-width: 500px; max-height: auto; white-space: normal;">
-                                    For your new cabinet
-                                </div>
-
-                                <!-- LAYER NR. 5 -->
-                                <div class="tp-caption sfl tp-resizeme start" data-x="528" data-y="404"
-                                     data-speed="700" data-start="1800" data-easing="Power3.easeInOut"
-                                     data-splitin="none" data-splitout="none" data-elementdelay="0.1"
-                                     data-endelementdelay="0.1" data-endspeed="600"
-                                     style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
-                                    <a href="http://fastortheme.com/medic/#" class="button">Read more</a>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="tp-bannertimer tp-bottom"
-                             style="visibility: hidden !important; width: 0%;"></div>
-                        <div class="tp-loader spinner0" style="display: none;">
-                            <div class="dot1"></div>
-                            <div class="dot2"></div>
-                            <div class="bounce1"></div>
-                            <div class="bounce2"></div>
-                            <div class="bounce3"></div>
-                        </div>
-                    </div>
-
-                    <script type="text/javascript">
-
-                        /******************************************
-                         -    PREPARE PLACEHOLDER FOR SLIDER    -
-                         ******************************************/
+                                /******************************************
+                                 -    PREPARE PLACEHOLDER FOR SLIDER    -
+                                 ******************************************/
 
 
-                        var setREVStartSize = function () {
-                            var tpopt = new Object();
-                            tpopt.startwidth = 1140;
-                            tpopt.startheight = 592;
-                            tpopt.container = jQuery('#rev_slider_7_1');
-                            tpopt.fullScreen = "off";
-                            tpopt.forceFullWidth = "off";
+                                var setREVStartSize = function () {
+                                    var tpopt = new Object();
+                                    tpopt.startwidth = 1140;
+                                    tpopt.startheight = 592;
+                                    tpopt.container = jQuery('#rev_slider_7_1');
+                                    tpopt.fullScreen = "off";
+                                    tpopt.forceFullWidth = "off";
 
-                            tpopt.container.closest(".rev_slider_wrapper").css({height: tpopt.container.height()});
-                            tpopt.width = parseInt(tpopt.container.width(), 0);
-                            tpopt.height = parseInt(tpopt.container.height(), 0);
-                            tpopt.bw = tpopt.width / tpopt.startwidth;
-                            tpopt.bh = tpopt.height / tpopt.startheight;
-                            if (tpopt.bh > tpopt.bw) tpopt.bh = tpopt.bw;
-                            if (tpopt.bh < tpopt.bw) tpopt.bw = tpopt.bh;
-                            if (tpopt.bw < tpopt.bh) tpopt.bh = tpopt.bw;
-                            if (tpopt.bh > 1) {
-                                tpopt.bw = 1;
-                                tpopt.bh = 1
-                            }
-                            if (tpopt.bw > 1) {
-                                tpopt.bw = 1;
-                                tpopt.bh = 1
-                            }
-                            tpopt.height = Math.round(tpopt.startheight * (tpopt.width / tpopt.startwidth));
-                            if (tpopt.height > tpopt.startheight && tpopt.autoHeight != "on") tpopt.height = tpopt.startheight;
-                            if (tpopt.fullScreen == "on") {
-                                tpopt.height = tpopt.bw * tpopt.startheight;
-                                var cow = tpopt.container.parent().width();
-                                var coh = jQuery(window).height();
-                                if (tpopt.fullScreenOffsetContainer != undefined) {
-                                    try {
-                                        var offcontainers = tpopt.fullScreenOffsetContainer.split(",");
-                                        jQuery.each(offcontainers, function (e, t) {
-                                            coh = coh - jQuery(t).outerHeight(true);
-                                            if (coh < tpopt.minFullScreenHeight) coh = tpopt.minFullScreenHeight
-                                        })
-                                    } catch (e) {
+                                    tpopt.container.closest(".rev_slider_wrapper").css({height: tpopt.container.height()});
+                                    tpopt.width = parseInt(tpopt.container.width(), 0);
+                                    tpopt.height = parseInt(tpopt.container.height(), 0);
+                                    tpopt.bw = tpopt.width / tpopt.startwidth;
+                                    tpopt.bh = tpopt.height / tpopt.startheight;
+                                    if (tpopt.bh > tpopt.bw) tpopt.bh = tpopt.bw;
+                                    if (tpopt.bh < tpopt.bw) tpopt.bw = tpopt.bh;
+                                    if (tpopt.bw < tpopt.bh) tpopt.bh = tpopt.bw;
+                                    if (tpopt.bh > 1) {
+                                        tpopt.bw = 1;
+                                        tpopt.bh = 1
                                     }
-                                }
-                                tpopt.container.parent().height(coh);
-                                tpopt.container.height(coh);
-                                tpopt.container.closest(".rev_slider_wrapper").height(coh);
-                                tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh);
-                                tpopt.container.css({height: "100%"});
-                                tpopt.height = coh;
-                            } else {
-                                tpopt.container.height(tpopt.height);
-                                tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height);
-                                tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height);
-                            }
-                        };
+                                    if (tpopt.bw > 1) {
+                                        tpopt.bw = 1;
+                                        tpopt.bh = 1
+                                    }
+                                    tpopt.height = Math.round(tpopt.startheight * (tpopt.width / tpopt.startwidth));
+                                    if (tpopt.height > tpopt.startheight && tpopt.autoHeight != "on") tpopt.height = tpopt.startheight;
+                                    if (tpopt.fullScreen == "on") {
+                                        tpopt.height = tpopt.bw * tpopt.startheight;
+                                        var cow = tpopt.container.parent().width();
+                                        var coh = jQuery(window).height();
+                                        if (tpopt.fullScreenOffsetContainer != undefined) {
+                                            try {
+                                                var offcontainers = tpopt.fullScreenOffsetContainer.split(",");
+                                                jQuery.each(offcontainers, function (e, t) {
+                                                    coh = coh - jQuery(t).outerHeight(true);
+                                                    if (coh < tpopt.minFullScreenHeight) coh = tpopt.minFullScreenHeight
+                                                })
+                                            } catch (e) {
+                                            }
+                                        }
+                                        tpopt.container.parent().height(coh);
+                                        tpopt.container.height(coh);
+                                        tpopt.container.closest(".rev_slider_wrapper").height(coh);
+                                        tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh);
+                                        tpopt.container.css({height: "100%"});
+                                        tpopt.height = coh;
+                                    } else {
+                                        tpopt.container.height(tpopt.height);
+                                        tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height);
+                                        tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height);
+                                    }
+                                };
 
-                        /* CALL PLACEHOLDER */
-                        setREVStartSize();
-
-
-                        var tpj = jQuery;
-
-                        var revapi7;
-
-                        tpj(document).ready(function () {
-
-                            if (tpj('#rev_slider_7_1').revolution == undefined)
-                                revslider_showDoubleJqueryError('#rev_slider_7_1');
-                            else
-                                revapi7 = tpj('#rev_slider_7_1').show().revolution(
-                                    {
-                                        dottedOverlay: "none",
-                                        delay: 9000,
-                                        startwidth: 1140,
-                                        startheight: 592,
-                                        hideThumbs: 200,
-
-                                        thumbWidth: 100,
-                                        thumbHeight: 50,
-                                        thumbAmount: 1,
+                                /* CALL PLACEHOLDER */
+                                setREVStartSize();
 
 
-                                        simplifyAll: "off",
+                                var tpj = jQuery;
 
-                                        navigationType: "none",
-                                        navigationArrows: "none",
-                                        navigationStyle: "round",
+                                var revapi7;
 
-                                        touchenabled: "on",
-                                        onHoverStop: "on",
-                                        nextSlideOnWindowFocus: "off",
+                                tpj(document).ready(function () {
 
-                                        swipe_threshold: 75,
-                                        swipe_min_touches: 1,
-                                        drag_block_vertical: false,
+                                    if (tpj('#rev_slider_7_1').revolution == undefined)
+                                        revslider_showDoubleJqueryError('#rev_slider_7_1');
+                                    else
+                                        revapi7 = tpj('#rev_slider_7_1').show().revolution(
+                                            {
+                                                dottedOverlay: "none",
+                                                delay: 9000,
+                                                startwidth: 1140,
+                                                startheight: 592,
+                                                hideThumbs: 200,
 
-
-                                        keyboardNavigation: "off",
-
-                                        navigationHAlign: "center",
-                                        navigationVAlign: "bottom",
-                                        navigationHOffset: 0,
-                                        navigationVOffset: 20,
-
-                                        soloArrowLeftHalign: "left",
-                                        soloArrowLeftValign: "center",
-                                        soloArrowLeftHOffset: 20,
-                                        soloArrowLeftVOffset: 0,
-
-                                        soloArrowRightHalign: "right",
-                                        soloArrowRightValign: "center",
-                                        soloArrowRightHOffset: 20,
-                                        soloArrowRightVOffset: 0,
-
-                                        shadow: 0,
-                                        fullWidth: "on",
-                                        fullScreen: "off",
-
-                                        spinner: "spinner0",
-
-                                        stopLoop: "on",
-                                        stopAfterLoops: 0,
-                                        stopAtSlide: 1,
-
-                                        shuffle: "off",
-
-                                        autoHeight: "off",
-                                        forceFullWidth: "off",
+                                                thumbWidth: 100,
+                                                thumbHeight: 50,
+                                                thumbAmount: 1,
 
 
-                                        hideTimerBar: "on",
-                                        hideThumbsOnMobile: "off",
-                                        hideNavDelayOnMobile: 1500,
-                                        hideBulletsOnMobile: "off",
-                                        hideArrowsOnMobile: "off",
-                                        hideThumbsUnderResolution: 0,
+                                                simplifyAll: "off",
 
-                                        hideSliderAtLimit: 0,
-                                        hideCaptionAtLimit: 0,
-                                        hideAllCaptionAtLilmit: 0,
-                                        startWithSlide: 0
-                                    });
+                                                navigationType: "none",
+                                                navigationArrows: "none",
+                                                navigationStyle: "round",
 
+                                                touchenabled: "on",
+                                                onHoverStop: "on",
+                                                nextSlideOnWindowFocus: "off",
 
-                        });
-                        /*ready*/
-
-                    </script>
+                                                swipe_threshold: 75,
+                                                swipe_min_touches: 1,
+                                                drag_block_vertical: false,
 
 
-                    <div style="visibility:hidden;display:none" class="tp-leftarrow tparrows round hidearrows">
-                        <div class="tp-arr-allwrapper">
-                            <div class="tp-arr-iwrapper">
-                                <div class="tp-arr-imgholder"
-                                     style="visibility: inherit; opacity: 1; background-image: url(&quot;http://fastortheme.com/medic/system/config/revslider/images/transparent.png&quot;);"></div>
-                                <div class="tp-arr-imgholder2"></div>
-                                <div class="tp-arr-titleholder"></div>
-                                <div class="tp-arr-subtitleholder"></div>
+                                                keyboardNavigation: "off",
+
+                                                navigationHAlign: "center",
+                                                navigationVAlign: "bottom",
+                                                navigationHOffset: 0,
+                                                navigationVOffset: 20,
+
+                                                soloArrowLeftHalign: "left",
+                                                soloArrowLeftValign: "center",
+                                                soloArrowLeftHOffset: 20,
+                                                soloArrowLeftVOffset: 0,
+
+                                                soloArrowRightHalign: "right",
+                                                soloArrowRightValign: "center",
+                                                soloArrowRightHOffset: 20,
+                                                soloArrowRightVOffset: 0,
+
+                                                shadow: 0,
+                                                fullWidth: "on",
+                                                fullScreen: "off",
+
+                                                spinner: "spinner0",
+
+                                                stopLoop: "on",
+                                                stopAfterLoops: 0,
+                                                stopAtSlide: 1,
+
+                                                shuffle: "off",
+
+                                                autoHeight: "off",
+                                                forceFullWidth: "off",
+
+
+                                                hideTimerBar: "on",
+                                                hideThumbsOnMobile: "off",
+                                                hideNavDelayOnMobile: 1500,
+                                                hideBulletsOnMobile: "off",
+                                                hideArrowsOnMobile: "off",
+                                                hideThumbsUnderResolution: 0,
+
+                                                hideSliderAtLimit: 0,
+                                                hideCaptionAtLimit: 0,
+                                                hideAllCaptionAtLilmit: 0,
+                                                startWithSlide: 0
+                                            });
+
+
+                                });
+                                /*ready*/
+
+                            </script>
+
+
+                            <div style="visibility:hidden;display:none" class="tp-leftarrow tparrows round hidearrows">
+                                <div class="tp-arr-allwrapper">
+                                    <div class="tp-arr-iwrapper">
+                                        <div class="tp-arr-imgholder"
+                                             style="visibility: inherit; opacity: 1; background-image: url(&quot;http://fastortheme.com/medic/system/config/revslider/images/transparent.png&quot;);"></div>
+                                        <div class="tp-arr-imgholder2"></div>
+                                        <div class="tp-arr-titleholder"></div>
+                                        <div class="tp-arr-subtitleholder"></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div style="visibility:hidden;display:none" class="tp-rightarrow tparrows round hidearrows">
-                        <div class="tp-arr-allwrapper">
-                            <div class="tp-arr-iwrapper">
-                                <div class="tp-arr-imgholder"
-                                     style="visibility: inherit; opacity: 1; background-image: url(&quot;http://fastortheme.com/medic/system/config/revslider/images/transparent.png&quot;);"></div>
-                                <div class="tp-arr-imgholder2"></div>
-                                <div class="tp-arr-titleholder"></div>
-                                <div class="tp-arr-subtitleholder"></div>
+                            <div style="visibility:hidden;display:none" class="tp-rightarrow tparrows round hidearrows">
+                                <div class="tp-arr-allwrapper">
+                                    <div class="tp-arr-iwrapper">
+                                        <div class="tp-arr-imgholder"
+                                             style="visibility: inherit; opacity: 1; background-image: url(&quot;http://fastortheme.com/medic/system/config/revslider/images/transparent.png&quot;);"></div>
+                                        <div class="tp-arr-imgholder2"></div>
+                                        <div class="tp-arr-titleholder"></div>
+                                        <div class="tp-arr-subtitleholder"></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </div><!-- END REVOLUTION SLIDER -->
                     </div>
-                </div><!-- END REVOLUTION SLIDER -->
+                </div>
             </div>
-        </div>
-    </div>
-</header>
+        </header>

@@ -7,9 +7,28 @@ class ControllerCommonMenu extends Controller {
 		$this->load->model('catalog/category');
 
 		$this->load->model('catalog/product');
+		
+        if ($this->request->server['HTTPS']) {
+            $server = $this->config->get('config_ssl');
+        } else {
+            $server = $this->config->get('config_url');
+        }
+        //Logo
+        if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
+            $data['logo'] = $server . 'image/' . $this->config->get('config_logo');
+        } else {
+            $data['logo'] = '';
+        }
+        //home
+        $data['home'] = $this->url->link('common/home');
+        $data['name'] = $this->config->get('config_name');
+        $data['telephone'] = $this->config->get('config_telephone');
+        //search
+        $data['search']=$this->load->controller('common/search');
+        $data['categories'] = array();
 
-		$data['categories'] = array();
-
+        $data['catagories_name']='Categories';
+        
 		$categories = $this->model_catalog_category->getCategories(0);
 
 		foreach ($categories as $category) {
@@ -40,7 +59,6 @@ class ControllerCommonMenu extends Controller {
 				);
 			}
 		}
-
 		return $this->load->view('common/menu', $data);
 	}
 }
