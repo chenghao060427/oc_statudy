@@ -44,7 +44,12 @@ class ControllerCommonHeader extends Controller {
 		}
 
 		$this->load->language('common/header');
-
+        if (isset($this->request->get['route'])) {
+            $route = $this->request->get['route'];
+        } else {
+            $route = $this->config->get('action_default');
+        }
+        $data['body_class']=str_replace('/','-',$route);
 		// Wishlist
 		if ($this->customer->isLogged()) {
 			$this->load->model('account/wishlist');
