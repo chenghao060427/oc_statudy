@@ -59,6 +59,10 @@ class ControllerCommonMenu extends Controller {
 				);
 			}
 		}
-		return $this->load->view('common/menu', $data);
+		
+        $data['cart'] = $this->load->controller('common/cart');
+        $data['account'] = $this->url->link('account/account', '', true);
+        
+        return $this->load->view('common/menu', $data);
 	}
 }

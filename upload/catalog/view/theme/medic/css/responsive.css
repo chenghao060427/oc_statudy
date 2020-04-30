@@ -937,7 +937,7 @@
                left: -30px !important;
                right: -30px !important;
                height: 1px;
-               background: url(../img/bg-megamenu.png) top left repeat-x;
+               background: url(../image/bg-megamenu.png) top left repeat-x;
                display: block !important;
           }
 
@@ -1503,7 +1503,7 @@
 			     left: -10px;
 			     right: -30px;
 			     height: 1px;
-			     background: url(../img/bg-megamenu.png) top left repeat-x;
+			     background: url(../image/bg-megamenu.png) top left repeat-x;
 			     display: block;
 			}
 			
@@ -2511,7 +2511,7 @@
                     right: -20px;
                     width: auto;
                     height: 1px;
-                    background: url(../img/bg-megamenu.png) top left repeat-x;
+                    background: url(../image/bg-megamenu.png) top left repeat-x;
                }
                
      
@@ -3216,7 +3216,7 @@
                bottom: auto;
                left: 10px;
                right: 10px;
-               background: url(../img/bg-megamenu.png);
+               background: url(../image/bg-megamenu.png);
                width: auto;
                height: 1px;
           }
@@ -4261,7 +4261,7 @@
                          bottom: auto;
                          height: 1px;
                          display: block !important;
-                         background: url(../img/bg-megamenu.png) top left repeat-x;
+                         background: url(../image/bg-megamenu.png) top left repeat-x;
                     }
                     
                          .responsive .category-wall2 .row:first-child > div:first-child:before {

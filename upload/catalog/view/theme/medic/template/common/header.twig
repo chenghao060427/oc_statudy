@@ -3,7 +3,7 @@
 <!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
 <!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html dir="{{ direction }}" lang="{{ lang }}">
+<html dir="{{ direction }}" lang="{{ lang }}" class="responsive">
 <!--<![endif]-->
 
 <head>
@@ -1039,6 +1039,9 @@
         var responsive_design = 'yes';
     </script>
 
+    {% for script in scripts %}
+        <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
 
     <!--[if lt IE 9]>
     <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>

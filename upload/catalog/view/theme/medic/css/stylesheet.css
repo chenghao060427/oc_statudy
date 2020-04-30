@@ -1154,7 +1154,7 @@ header {
 /* @group 6. Top Bar */
 
 .top-bar {
-     background: url(../img/bg-megamenu.png) bottom left repeat-x;
+     background: url(../image/bg-megamenu.png) bottom left repeat-x;
      padding-bottom: 8px;
      position: relative;
 }
@@ -1216,7 +1216,7 @@ header {
           bottom: 1px;
           display: block;
           position: absolute;
-          background: url(../img/bg-megamenu.png) top left repeat;
+          background: url(../image/bg-megamenu.png) top left repeat;
           margin-left: -21px;
      }
      
@@ -1247,7 +1247,7 @@ header {
                bottom: 1px;
                display: block;
                position: absolute;
-               background: url(../img/bg-megamenu.png) top left repeat;
+               background: url(../image/bg-megamenu.png) top left repeat;
                margin-left: -21px;
           }
           
@@ -2049,7 +2049,7 @@ header {
 					
 					.mini-cart-total {
 						text-align: right;
-						background: url(../img/bg-megamenu.png) top left repeat-x;
+						background: url(../image/bg-megamenu.png) top left repeat-x;
 						margin: 0px;
 						padding: 26px 30px 14px 30px;
 					}
@@ -3355,7 +3355,7 @@ header {
 .header-type-24 #top .overflow-change-menu {
      display: inline-block;
      vertical-align: top;
-     background: url(../img/bg-megamenu.png) bottom left repeat-x;
+     background: url(../image/bg-megamenu.png) bottom left repeat-x;
      padding: 20px 0px 14px 0px;
 }
 
@@ -3586,7 +3586,7 @@ header {
 
      #main .breadcrumb .background {
           background-color: #fff;
-          background-image: url(../img/bg-megamenu.png);
+          background-image: url(../image/bg-megamenu.png);
           background-position: bottom left;
           background-repeat: repeat-x;
      }
@@ -4327,7 +4327,7 @@ header {
 			     right: 0;
 			     margin-top: -1px;
 			     position: absolute;
-			     background: url(../img/bg-megamenu.png) top left repeat-x;
+			     background: url(../image/bg-megamenu.png) top left repeat-x;
 			     z-index: 1;
 			     display: block;
 			}
@@ -4348,7 +4348,7 @@ header {
 			     bottom: 0;
 			     right: 0;
 			     position: absolute;
-			     background: url(../img/bg-megamenu.png) top left repeat-x;
+			     background: url(../image/bg-megamenu.png) top left repeat-x;
 			     z-index: 1;
 			     display: block;
 			}
@@ -4745,7 +4745,7 @@ header {
 	               position: absolute;
 	               left: 0;
 	               right: 0;
-	               background: url(../img/bg-megamenu.png) top left repeat-x;
+	               background: url(../image/bg-megamenu.png) top left repeat-x;
 	          }
 	          
 	               .product-grid-type-2 .product-grid > .row:before {
@@ -4802,7 +4802,7 @@ header {
 		          top: 0;
 		          right: 0;
 		          height: 1px;
-		          background: url(../img/bg-megamenu.png) top left repeat-x;
+		          background: url(../image/bg-megamenu.png) top left repeat-x;
 		          position: absolute;
 		          content: '';
 		     }
@@ -4847,7 +4847,7 @@ header {
 		          bottom: 0;
 		          right: 0;
 		          height: 1px;
-		          background: url(../img/bg-megamenu.png) top left repeat-x;
+		          background: url(../image/bg-megamenu.png) top left repeat-x;
 		          position: absolute;
 		          content: '';
 		     }
@@ -4952,7 +4952,7 @@ header {
                     right: -16px;
                     width: 1px;
                     display: block;
-                    background: url(../img/bg-megamenu.png) top left repeat-y;
+                    background: url(../image/bg-megamenu.png) top left repeat-y;
                     border-color: #fff;
                     transition: border-color 0.2s ease-in;
                     -webkit-transition: border-color 0.2s ease-in;
@@ -5504,7 +5504,7 @@ header {
 			          top: 0;
 			          bottom: 0;
 			          position: absolute;
-			          background: url(../img/bg-megamenu.png) top left repeat-y;
+			          background: url(../image/bg-megamenu.png) top left repeat-y;
 			          left: 100%;
 			     }
 			     
@@ -5694,7 +5694,7 @@ header {
 				margin: 0px;
 				padding: 28px;
 				text-align: left;
-				background: url(../img/bg-megamenu.png) top left repeat-x;
+				background: url(../image/bg-megamenu.png) top left repeat-x;
 				box-shadow: none;
 				-webkit-box-shadow: none;
 				-moz-box-shadow: none;
@@ -5813,7 +5813,7 @@ header {
 		}
 		
 		.product-list {
-		     background: #fff url(../img/bg-megamenu.png) top left repeat-x;
+		     background: #fff url(../image/bg-megamenu.png) top left repeat-x;
 		}
 	
 	          
@@ -5899,7 +5899,7 @@ header {
 		          right: 13px;
 		          height: 1px;
 		          z-index: -1;
-		          background: url(../img/bg-megamenu.png) bottom left repeat-x;
+		          background: url(../image/bg-megamenu.png) bottom left repeat-x;
 		     }
 		     
 		          .box-type-3 .product-list > div:last-child:before {
@@ -5946,7 +5946,7 @@ header {
 			          margin-left: -5px;
 			          z-index: -1;
 			          width: 1px;
-			          background: url(../img/bg-megamenu.png) bottom left repeat-y;
+			          background: url(../image/bg-megamenu.png) bottom left repeat-y;
 			     }
 			     
 			          .product-list-type-2 .product-list .name-actions:before {
@@ -6077,7 +6077,7 @@ header {
 			          margin-left: -40px;
 			          z-index: -1;
 			          width: 1px;
-			          background: url(../img/bg-megamenu.png) bottom left repeat-y;
+			          background: url(../image/bg-megamenu.png) bottom left repeat-y;
 			     }
 
 	/* @end */
@@ -6111,7 +6111,7 @@ header {
 	          left: 0;
 	          right: 30px;
 	          height: 1px;
-	          background: url(../img/bg-megamenu.png) top left repeat-x;
+	          background: url(../image/bg-megamenu.png) top left repeat-x;
 	          content: '';
 	          position: absolute;
 	          display: block;
@@ -6178,7 +6178,7 @@ header {
 	     height: 1px;
 	     display: block;
 	     z-index: 1;
-	     background: url(../img/bg-megamenu.png) bottom left repeat-x;
+	     background: url(../image/bg-megamenu.png) bottom left repeat-x;
 	}
 	
 	     .standard-body .fixed .col-md-12 .col-md-12.center-column .refine_search_overflow:after {
@@ -6197,7 +6197,7 @@ header {
 	     }
 	
 	.category-list {
-		background: #fff url(../img/bg-megamenu.png) bottom left repeat-x;
+		background: #fff url(../image/bg-megamenu.png) bottom left repeat-x;
 		padding: 30px 0px 4px 0px;
 		position: relative;
 		margin-top: -1px;
@@ -6303,7 +6303,7 @@ header {
 			          top: 0;
 			          bottom: 0;
 			          width: 1px;
-			          background: url(../img/bg-megamenu.png) top left repeat-y;
+			          background: url(../image/bg-megamenu.png) top left repeat-y;
 			          content: '';
 			          position: absolute;
 			          margin-left: -30px;
@@ -6380,7 +6380,7 @@ header {
 			          top: 0;
 			          bottom: 0;
 			          width: 1px;
-			          background: url(../img/bg-megamenu.png) top left repeat-y;
+			          background: url(../image/bg-megamenu.png) top left repeat-y;
 			          content: '';
 			          position: absolute;
 			          margin-left: -30px;
@@ -6480,7 +6480,7 @@ header {
 			          top: 0;
 			          bottom: 0;
 			          width: 1px;
-			          background: url(../img/bg-megamenu.png) top left repeat-y;
+			          background: url(../image/bg-megamenu.png) top left repeat-y;
 			          content: '';
 			          position: absolute;
 			          margin-left: -31px;
@@ -6951,7 +6951,7 @@ header {
 			.product-info .price,
 			.product-info .options {
 				padding: 24px 0px 22px 0px;
-				background: url(../img/bg-megamenu.png) bottom left repeat-x;
+				background: url(../image/bg-megamenu.png) bottom left repeat-x;
 			}
 			
 			     .product-info .description {
@@ -7478,7 +7478,7 @@ header {
 	
 	.custom-footer .background,
 	.standard-body .custom-footer .background {
-		background: #fafafa url(../img/bg-megamenu.png) top left repeat-x;
+		background: #fafafa url(../image/bg-megamenu.png) top left repeat-x;
 		padding: 1px 0px 0px 0px;
 	}
 	
@@ -7505,7 +7505,7 @@ header {
 	               top: 0;
 	               bottom: 0;
 	               position: absolute;
-	               background: url(../img/bg-megamenu.png) top left repeat-y;
+	               background: url(../image/bg-megamenu.png) top left repeat-y;
 	               display: block;
 	               margin-left: -35px;
 	          }
@@ -8669,7 +8669,7 @@ header {
 			margin: 0px !important;
 			cursor: pointer !important;
 			border: none !important;
-			background: url(../img/bg-megamenu.png) top left repeat-x !important;
+			background: url(../image/bg-megamenu.png) top left repeat-x !important;
 			list-style: none !important;
 		}
 		
@@ -8789,7 +8789,7 @@ div.pagination-results {
      .list-box li {
      	padding: 5px 30px 0px 30px;
      	line-height: 35px;
-     	background: url(../img/bg-megamenu.png) top left repeat-x;
+     	background: url(../image/bg-megamenu.png) top left repeat-x;
      }
      
           .list-box li:first-child {
@@ -8992,7 +8992,7 @@ table.form {
           right: 0;
           top: 0;
           position: absolute;
-          background: url(../img/bg-megamenu.png) top left repeat-x;
+          background: url(../image/bg-megamenu.png) top left repeat-x;
           z-index: 1;
           display: block;
      }
@@ -9004,7 +9004,7 @@ table.form {
           bottom: 0;
           right: 0;
           position: absolute;
-          background: url(../img/bg-megamenu.png) top left repeat-x;
+          background: url(../image/bg-megamenu.png) top left repeat-x;
           z-index: 1;
           display: block;
      }
@@ -10577,7 +10577,7 @@ body .popup-module .mfp-close {
           left: 0;
           right: 0;
           top: 0;
-          background: url(../img/bg-megamenu.png) top left repeat-x;
+          background: url(../image/bg-megamenu.png) top left repeat-x;
           z-index: 1;
      }
      
@@ -10589,7 +10589,7 @@ body .popup-module .mfp-close {
           left: 0;
           right: 0;
           bottom: 0;
-          background: url(../img/bg-megamenu.png) top left repeat-x;
+          background: url(../image/bg-megamenu.png) top left repeat-x;
           z-index: 1;
      }
      
@@ -10618,7 +10618,7 @@ body .popup-module .mfp-close {
                     left: 0;
                     bottom: 0;
                     top: 0;
-                    background: url(../img/bg-megamenu.png) top left repeat-y;
+                    background: url(../image/bg-megamenu.png) top left repeat-y;
                     z-index: 1;
                }
                
@@ -10976,7 +10976,7 @@ body .popup-module .mfp-close {
           right: 0;
           height: 1px;
           display: block;
-          background: url(../img/bg-megamenu.png) top left repeat-x;
+          background: url(../image/bg-megamenu.png) top left repeat-x;
      }
      
           .category-wall2 .row:first-child:before {
@@ -10994,7 +10994,7 @@ body .popup-module .mfp-close {
                     bottom: 0;
                     content: '';
                     display: block;
-                    background: url(../img/bg-megamenu.png) top left repeat-y;
+                    background: url(../image/bg-megamenu.png) top left repeat-y;
                     position: absolute;
                }
                
@@ -11122,7 +11122,7 @@ body .popup-module .mfp-close {
           left: 0;
           bottom: 0;
           width: 1px;
-          background: url(../img/bg-megamenu.png);
+          background: url(../image/bg-megamenu.png);
      }
      
           .jewelry-banners > div:first-child:before {
@@ -11357,7 +11357,7 @@ body .popup-module .mfp-close {
           .antique-products .advanced-grid-products .product,
           .antique-products .advanced-grid-products .product:first-child {
                padding: 30px;
-               background: url(../img/bg-megamenu.png) top left repeat-x;
+               background: url(../image/bg-megamenu.png) top left repeat-x;
           }
           
                .antique-products .advanced-grid-products .product:first-child {
@@ -11736,13 +11736,13 @@ body .popup-module .mfp-close {
 /* @group Computer4 products */
 
 .computer4-products.box .box-content.products {
-     background: #fff url(../img/bg-megamenu.png) top left repeat-x;
+     background: #fff url(../image/bg-megamenu.png) top left repeat-x;
      position: relative;
      margin-top: -1px;
 }
 
      .computer4-products.box .box-content.products > .clearfix {
-          background: url(../img/bg-megamenu.png) bottom left repeat-x;
+          background: url(../image/bg-megamenu.png) bottom left repeat-x;
      }
      
      .computer4-products .advanced-grid-products .product, 
@@ -11996,7 +11996,7 @@ body .popup-module .mfp-close {
                display: block;
                position: absolute;
                height: 1px;
-               background: url(../img/bg-megamenu.png) top left repeat-x;
+               background: url(../image/bg-megamenu.png) top left repeat-x;
           }
           
                .furniture-collections:first-child:before {
@@ -12010,7 +12010,7 @@ body .popup-module .mfp-close {
                left: -1px;
                position: absolute;
                width: 1px;
-               background: url(../img/bg-megamenu.png) top left repeat-y;
+               background: url(../image/bg-megamenu.png) top left repeat-y;
           }
           
                .furniture-collections > div:first-child:before {
@@ -12076,7 +12076,7 @@ body .popup-module .mfp-close {
 /* @group Furniture why our products? */
 
 .furniture-why-our-products {
-     background: url(../img/bg-megamenu.png) bottom left repeat-x;
+     background: url(../image/bg-megamenu.png) bottom left repeat-x;
      padding: 0px 0px 126px 0px;
 }
 
@@ -12393,7 +12393,7 @@ body .popup-module .mfp-close {
      }
      
           .cosmetics-categories > div {
-               background: url(../img/bg-megamenu.png) top left repeat-y;
+               background: url(../image/bg-megamenu.png) top left repeat-y;
           }
      
                .cosmetics-categories > div:first-child {
@@ -12804,7 +12804,7 @@ body .popup-module .mfp-close {
           .fashion2-products .advanced-grid-products .product,
           .fashion2-products .advanced-grid-products .product:first-child {
                padding: 29px;
-               background: url(../img/bg-megamenu.png) top left repeat-x;
+               background: url(../image/bg-megamenu.png) top left repeat-x;
           }
           
                .fashion2-products .advanced-grid-products .product:first-child {
@@ -12990,7 +12990,7 @@ body .popup-module .mfp-close {
                bottom: 0;
                left: 0;
                width: 1px;
-               background: url(../img/bg-megamenu.png) top left repeat-y;
+               background: url(../image/bg-megamenu.png) top left repeat-y;
           }
           
                .fashion3-columns > div:first-child:before {
@@ -13790,7 +13790,7 @@ ul.social-icons-default {
                width: 1px;
                top: 0;
                bottom: 0;
-               background: url(../img/bg-megamenu.png) top left repeat;
+               background: url(../image/bg-megamenu.png) top left repeat;
                position: absolute;
                content: '';
                display: block;
@@ -14371,7 +14371,7 @@ ul.social-icons-default {
 }
 
      .sport-products .box-heading-img {
-          background: url(../img/bg-megamenu.png) bottom left repeat-x;
+          background: url(../image/bg-megamenu.png) bottom left repeat-x;
      }
      
           .sport-products .box-heading-img img {
@@ -14713,7 +14713,7 @@ ul.social-icons-default {
 
 .exclusive-banners {
      padding: 0px 0px 1px 0px;
-     background: url(../img/bg-megamenu.png) bottom left repeat-x;
+     background: url(../image/bg-megamenu.png) bottom left repeat-x;
 }
 
      .exclusive-banners .row > div:before {
@@ -14722,7 +14722,7 @@ ul.social-icons-default {
           top: 0;
           bottom: 0;
           left: 0;
-          background: url(../img/bg-megamenu.png);
+          background: url(../image/bg-megamenu.png);
           width: 1px;
      }
      

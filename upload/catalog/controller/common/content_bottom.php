@@ -34,17 +34,17 @@ class ControllerCommonContentBottom extends Controller {
 		if (!$layout_id) {
 			$layout_id = $this->model_design_layout->getLayout($route);
 		}
-
+  
 		if (!$layout_id) {
 			$layout_id = $this->config->get('config_layout_id');
 		}
-
+  
 		$this->load->model('setting/module');
 
 		$data['modules'] = array();
 
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_bottom');
-
+  
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
 
@@ -68,7 +68,7 @@ class ControllerCommonContentBottom extends Controller {
 				}
 			}
 		}
-
+  
 		return $this->load->view('common/content_bottom', $data);
 	}
 }

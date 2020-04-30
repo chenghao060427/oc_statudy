@@ -142,11 +142,11 @@
 	}
 	
 	     .megamenu-background > div {
-	          background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-x;
+	          background: url(../image/bg-megamenu.png) top left repeat-x;
 	     }
 
 	     .megamenu-type-7 .megamenu-background > div .overflow-megamenu {
-	          background: url(../catalog/view/theme/medic/image//bg-megamenu.png) bottom left repeat-x;
+	          background: url(../image/bg-megamenu.png) bottom left repeat-x;
 	     }
 
 	     .megamenu-type-6 .megamenu-background {
@@ -444,7 +444,7 @@
 
 				          .megamenu-type-11 #main ul.megamenu > li.pull-right {
 				          	border: none;
-				          	background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-y;
+				          	background: url(../image/bg-megamenu.png) top left repeat-y;
 				          }
 
 				          .megamenu-type-11 .standard-body #main .fixed ul.megamenu > li.pull-right {
@@ -457,7 +457,7 @@
 
 				          .megamenu-type-22 #main ul.megamenu > li.pull-right {
 				          	border: none;
-				          	background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-y;
+				          	background: url(../image/bg-megamenu.png) top left repeat-y;
 				          }
 
 				          .megamenu-type-22 .standard-body #main .fixed ul.megamenu > li.pull-right {
@@ -762,7 +762,7 @@
 				               margin: -1px 22px -1px -1px;
 				               height: 61px;
 				               padding-top: 20px;
-				               background: url(../catalog/view/theme/medic/image//bg-show-all-products.png) top left repeat-x;
+				               background: url(../image//bg-show-all-products.png) top left repeat-x;
 				               color: #fff;
 				          }
 
@@ -989,13 +989,13 @@
 					     }
 
 					     .megamenu-label-type-2 ul.megamenu .megamenu-label {
-					          background-image: url(../catalog/view/theme/medic/image//megamenu-label-type-2.png) !important;
+					          background-image: url(../image//megamenu-label-type-2.png) !important;
 					          background-position: top left;
 					          background-repeat: repeat-x;
 					     }
 
 					     .megamenu-label-type-3 ul.megamenu .megamenu-label {
-					          background-image: url(../catalog/view/theme/medic/image//megamenu-label-type-2.png) !important;
+					          background-image: url(../image//megamenu-label-type-2.png) !important;
 					          background-position: top left;
 					          background-repeat: repeat-x;
 					          border-radius: 0px;
@@ -1015,7 +1015,7 @@
 					          border-radius: 0px;
 					          -webkit-border-radius: 0px;
 					          -moz-border-radius: 0px;
-					          background-image: url(../catalog/view/theme/medic/image//megamenu-label-type-2.png) !important;
+					          background-image: url(../image//megamenu-label-type-2.png) !important;
 					          background-position: top left;
 					          background-repeat: repeat-x;
 					     }
@@ -1545,7 +1545,7 @@
                                              right: -1px;
                                              width: 1px;
                                              display: block;
-                                             background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-y;
+                                             background: url(../image/bg-megamenu.png) top left repeat-y;
                                              transition: border-color 0.2s ease-in;
                                              -webkit-transition: border-color 0.2s ease-in;
                                              -moz-transition: border-color 0.2s ease-in;
@@ -1634,7 +1634,7 @@
                                         right: 0;
                                         margin-top: -1px;
                                         position: absolute;
-                                        background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-x;
+                                        background: url(../image/bg-megamenu.png) top left repeat-x;
                                         z-index: 1;
                                         display: block;
                                    }
@@ -1646,7 +1646,7 @@
                                         bottom: 0;
                                         right: 0;
                                         position: absolute;
-                                        background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-x;
+                                        background: url(../image/bg-megamenu.png) top left repeat-x;
                                         z-index: 1;
                                         display: block;
                                    }
@@ -1751,7 +1751,7 @@
 
 							     ul.megamenu li .sub-menu .content .hover-menu .col-sm-12 a.main-menu,
 							     ul.megamenu li .sub-menu .content .col-sm-12 .hover-menu a.main-menu {
-							          background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-x;
+							          background: url(../image/bg-megamenu.png) top left repeat-x;
 							     }
 
 							     ul.megamenu li .sub-menu .content .hover-menu li:first-child a.main-menu {
@@ -1907,7 +1907,7 @@
 									     	position: relative;
 									     	margin: 0px;
 									     	padding: 10px 30px 8px 30px;
-									     	background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-x;
+									     	background: url(../image/bg-megamenu.png) top left repeat-x;
 									     	font-size: 14px;
 									     	font-weight: 600;
 									     }
@@ -1952,11 +1952,11 @@
 		          }
 
 		     .megamenuToogle-wrapper .megamenuToogle-pattern {
-		          background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-x;
+		          background: url(../image/bg-megamenu.png) top left repeat-x;
 		     }
 
 		          .megamenu-type-7 .megamenuToogle-wrapper .megamenuToogle-pattern > .container {
-		               background: url(../catalog/view/theme/medic/image//bg-megamenu.png) bottom left repeat-x;
+		               background: url(../image/bg-megamenu.png) bottom left repeat-x;
 		          }
 
 		          .megamenu-type-23 .megamenuToogle-wrapper .megamenuToogle-pattern {
@@ -2449,7 +2449,7 @@
           }
 
      .megamenu-background .vertical .megamenuToogle-wrapper .megamenuToogle-pattern {
-          background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top right repeat-y;
+          background: url(../image/bg-megamenu.png) top right repeat-y;
      }
 
           .megamenu-type-2 .megamenu-background .vertical .megamenuToogle-wrapper .megamenuToogle-pattern {
@@ -2461,7 +2461,7 @@
           }
 
           .megamenu-type-28 .megamenu-background .vertical .megamenuToogle-wrapper .megamenuToogle-pattern {
-               background: url(../catalog/view/theme/medic/image//bg-lingerie2-vertical-menu.png) top right repeat-y !important;
+               background: url(../image//bg-lingerie2-vertical-menu.png) top right repeat-y !important;
                border: 1px solid rgba(0, 0, 0, .1);
                border-top: none;
                margin-bottom: -1px;
@@ -2499,7 +2499,7 @@
 
      .megamenu-background .vertical .megamenuToogle-wrapper .container {
      	padding: 26px 30px 23px 45px !important;
-     	background: url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-x;
+     	background: url(../image/bg-megamenu.png) top left repeat-x;
      	color: #333;
      	transition: all 0.2s ease-in;
      	-webkit-transition: all 0.2s ease-in;
@@ -2672,7 +2672,7 @@
                width: 1020px;
                height: 71px;
                z-index: -1;
-               background: #fafafa url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-x;
+               background: #fafafa url(../image/bg-megamenu.png) top left repeat-x;
                display: block;
           }
 
@@ -3033,7 +3033,7 @@
                border-radius: 0px 0px 5px 5px;
                -webkit-border-radius: 0px 0px 5px 5px;
                -moz-border-radius: 0px 0px 5px 5px;
-               background-image: url(../catalog/view/theme/medic/image//bg-vertical-megamenu-toys2.png) !important;
+               background-image: url(../image//bg-vertical-megamenu-toys2.png) !important;
                background-position: top right !important;
                background-repeat: no-repeat !important;
                -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.4);
@@ -3051,7 +3051,7 @@
                border-radius: 0px 0px 2px 2px;
                -webkit-border-radius: 0px 0px 2px 2px;
                -moz-border-radius: 0px 0px 2px 2px;
-               background-image: url(../catalog/view/theme/medic/image//bg-vertical-megamenu-cleaning.png) !important;
+               background-image: url(../image//bg-vertical-megamenu-cleaning.png) !important;
                background-position: top right !important;
                background-repeat: no-repeat !important;
           }
@@ -3963,7 +3963,7 @@
 	     right: -500%;
 	     bottom: 0;
 	     z-index: -1;
-	     background: #fafafa url(../catalog/view/theme/medic/image//bg-megamenu.png) top left repeat-x;
+	     background: #fafafa url(../image/bg-megamenu.png) top left repeat-x;
 	     display: block;
 	}
 
@@ -4416,7 +4416,7 @@
           width: 1px;
           top: -30px;
           bottom: -30px;
-          background: url(../catalog/view/theme/medic/image//bg-megamenu.png) repeat;
+          background: url(../image/bg-megamenu.png) repeat;
           margin-left: -31px;
      }
      

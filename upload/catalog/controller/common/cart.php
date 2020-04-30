@@ -46,7 +46,11 @@ class ControllerCommonCart extends Controller {
 
 			array_multisort($sort_order, SORT_ASC, $totals);
 		}
-
+		//多少件商品
+        $data['cart_count']=$this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
+		
+		$data['cart_total']=$this->currency->format($total, $this->session->data['currency']);
+		
 		$data['text_items'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
 
 		$this->load->model('tool/image');

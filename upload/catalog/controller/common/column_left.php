@@ -17,6 +17,7 @@ class ControllerCommonColumnLeft extends Controller {
 			$path = explode('_', (string)$this->request->get['path']);
 
 			$layout_id = $this->model_catalog_category->getCategoryLayoutId(end($path));
+			
 		}
 
 		if ($route == 'product/product' && isset($this->request->get['product_id'])) {
@@ -34,7 +35,8 @@ class ControllerCommonColumnLeft extends Controller {
 		if (!$layout_id) {
 			$layout_id = $this->model_design_layout->getLayout($route);
 		}
-
+//        echo $layout_id;die;
+        
 		if (!$layout_id) {
 			$layout_id = $this->config->get('config_layout_id');
 		}
