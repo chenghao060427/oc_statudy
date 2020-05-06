@@ -46,8 +46,52 @@
                             <div class="{{ class }} center-column content-with-background" id="content">
 
                                 {{ content_top }}
-                                {% if downloads %}
+                                {% if error_warning %}
+                                    <div class="danger">
+                                        <button type="button" class="close" data-dismiss="alert">×</button>
+                                        {{ error_warning }}
+                                    </div>
+                                {% endif %}
+                                {% if success %}
+                                    <div class="success">
+                                        <button type="button" class="close" data-dismiss="alert">×</button>
+                                        {{ success }}
+                                    </div>
+                                {% endif %}
 
+                                {% if downloads %}
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                            <tr>
+                                                <td class="text-right">{{ column_order_id }}</td>
+                                                <td class="text-left">{{ column_name }}</td>
+                                                <td class="text-left">{{ column_size }}</td>
+                                                <td class="text-left">{{ column_date_added }}</td>
+                                                <td></td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for download in downloads %}
+                                                <tr>
+                                                    <td class="text-right">#{{ download.order_id }}</td>
+                                                    <td class="text-left">{{ download.name }}</td>
+                                                    <td class="text-left">{{ download.size }}</td>
+                                                    <td class="text-left">{{ download.date_added }}</td>
+                                                    <td class="text-right">
+                                                        <a href="{{ download.href }}" data-toggle="tooltip" title="{{ button_download }}" class="btn btn-info" data-original-title="{{ button_download }}">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 text-left">{{ pagination }}</div>
+                                        <div class="col-sm-6 text-right">{{ results }}</div>
+                                    </div>
                                 {% else %}
                                     <p>{{ text_empty }}</p>
                                 {% endif %}

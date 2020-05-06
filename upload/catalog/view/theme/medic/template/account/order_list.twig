@@ -47,7 +47,38 @@
 
                                 {{ content_top }}
                                 {% if orders %}
-
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                            <tr>
+                                                <td class="text-right">{{ column_order_id }}</td>
+                                                <td class="text-left">{{ column_status }}</td>
+                                                <td class="text-left">{{ column_date_added }}</td>
+                                                <td class="text-right">{{ column_product }}</td>
+                                                <td class="text-left">{{ column_customer }}</td>
+                                                <td class="text-right">{{ column_total }}</td>
+                                                <td></td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for order in orders %}
+                                                <tr>
+                                                    <td class="text-right">#{{ order.order_id }}</td>
+                                                    <td class="text-left">{{ order.status }}</td>
+                                                    <td class="text-left">{{ order.date_added }}</td>
+                                                    <td class="text-right">{{ order.products }}</td>
+                                                    <td class="text-left">{{ column_customer }}</td>
+                                                    <td class="text-right">{{ order.total }}</td>
+                                                    <td class="text-right">
+                                                        <a href="{{ order.view }}" data-toggle="tooltip" title="{{ button_view }}" class="btn btn-info" data-original-title="View">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 {% else %}
                                     <p>{{ text_empty }}</p>
                                 {% endif %}
