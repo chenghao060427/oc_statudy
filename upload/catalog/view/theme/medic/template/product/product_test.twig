@@ -1,0 +1,229 @@
+{{ header }}
+<!-- BREADCRUMB
+================================================== -->
+<div class="breadcrumb full-width">
+    <div class="background-breadcrumb"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+                <div class="clearfix">
+                    <h1 id="title-page"> {{ heading_title }} </h1>
+
+                    <ul>
+                        {% for breadcrumb in breadcrumbs %}
+                            <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MAIN CONTENT
+	================================================== -->
+<div class="main-content full-width inner-page">
+    <div class="background-content"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+
+
+                <div class="row">
+
+                    <div class="col-md-12">
+
+
+                        <div class="row">
+                            {{ column_left }}
+                            {% if column_left and column_right %}
+                                {% set class = 'col-sm-6' %}
+                            {% elseif column_left or column_right %}
+                                {% set class = 'col-sm-9' %}
+                            {% else %}
+                                {% set class = 'col-sm-12' %}
+                            {% endif %}
+                            <div class="{{ class }} center-column content-without-background" id="content">
+                                {{ content_top }}
+
+
+                                <div itemscope="" itemtype="http://data-vocabulary.org/Product">
+                                    <span itemprop="name" class="hidden">{{ heading_title }}</span>
+                                    <div class="product-info">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12">
+                                                <div class="row" id="quickview_product">
+                                                    <script>
+                                                        $(document).ready(function(){
+                                                            if($(window).width() > 992) {
+                                                                $('#image').elevateZoom({
+                                                                    zoomType: "inner",
+                                                                    cursor: "pointer",
+                                                                    zoomWindowFadeIn: 500,
+                                                                    zoomWindowFadeOut: 750
+                                                                });
+
+                                                                var z_index = 0;
+
+                                                                $(document).on('click', '.open-popup-image', function () {
+                                                                    $('.popup-gallery').magnificPopup('open', z_index);
+                                                                    return false;
+                                                                });
+
+                                                                $('.thumbnails a, .thumbnails-carousel a').click(function() {
+                                                                    var smallImage = $(this).attr('data-image');
+                                                                    var largeImage = $(this).attr('data-zoom-image');
+                                                                    var ez =   $('#image').data('elevateZoom');
+                                                                    $('#ex1').attr('href', largeImage);
+                                                                    ez.swaptheimage(smallImage, largeImage);
+                                                                    z_index = $(this).index('.thumbnails a, .thumbnails-carousel a');
+                                                                    return false;
+                                                                });
+                                                            } else {
+                                                                $(document).on('click', '.open-popup-image', function () {
+                                                                    $('.popup-gallery').magnificPopup('open', 0);
+                                                                    return false;
+                                                                });
+                                                            }
+                                                        });
+                                                    </script>
+                                                    <div class="col-sm-7 popup-gallery">
+
+                                                        <div class="row">
+
+                                                            <div class="col-sm-12">
+                                                                <div class="product-image inner-cloud-zoom">
+                                                                    {#<div class="sale">Sale</div>#}
+                                                                    {% if thumb %}
+                                                                    <a href="{{ popup }}" id="ex1" class="open-popup-image">
+                                                                        <img src="{{ popup }}" title="{{ heading_title }}" alt="{{ heading_title }}" id="image" itemprop="image" data-zoom-image="http://fastortheme.com/medic/image/cache/catalog/demo/apple_cinema_30-1000x1000.jpg">
+                                                                    </a>
+                                                                    {% endif%}
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-12">
+                                                                <div class="overflow-thumbnails-carousel clearfix">
+                                                                    <div class="thumbnails-carousel owl-carousel owl-theme" style="opacity: 1; display: block;">
+                                                                        <div class="owl-wrapper-outer">
+                                                                            <div class="owl-wrapper" style="width: 1812px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                                                                                {% if thumb %}
+                                                                                    <div class="owl-item" style="width: 151px;">
+                                                                                        <div class="item">
+                                                                                            <a href="{{ popup }}" class="popup-image" data-image="{{ popup }}" data-zoom-image="{{ popup }}">
+                                                                                                <img src="{{ thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}">
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                {% endif %}
+                                                                                {% if images %}
+                                                                                {% for image in images %}
+                                                                                    <div class="owl-item" style="width: 151px;"><div class="item">
+                                                                                            <a href="{{ image.popup }}" class="popup-image" data-image="{{ image.popup }}" data-zoom-image="{{ image.popup }}">
+                                                                                                <img src="{{ image.thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}">
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                {% endfor %}
+                                                                                {% endif %}
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div><div class="owl-buttons"><div class="owl-prev"></div><div class="owl-next"></div></div></div></div>
+                                                                </div>
+
+                                                                <script type="text/javascript">
+                                                                    $(document).ready(function() {
+                                                                        $(".thumbnails-carousel").owlCarousel({
+                                                                            autoPlay: 6000, //Set AutoPlay to 3 seconds
+                                                                            navigation: true,
+                                                                            navigationText: ['', ''],
+                                                                            itemsCustom : [
+                                                                                [0, 4],
+                                                                                [450, 5],
+                                                                                [550, 6],
+                                                                                [768, 3],
+                                                                                [1200, 4]
+                                                                            ],
+                                                                        });
+                                                                    });
+                                                                </script>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-sm-5 product-center clearfix">
+                                                        <div itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+
+                                                            <div class="review">
+                                                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>&nbsp;&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click'); $('html, body').animate({scrollTop:$('#tab-review').offset().top}, '500', 'swing');">0 reviews</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click'); $('html, body').animate({scrollTop:$('#tab-review').offset().top}, '500', 'swing');">Write a review</a></div>
+                                                            </div>
+
+                                                            <div class="description">
+                                                                {% if manufacturer %}
+                                                                <span>{{ text_manufacturer }}</span> <a href="{{ manufacturers }}">{{ manufacturer }}</a><br>
+                                                                {% endif %}
+                                                                <span>{{ text_model }}</span> {{ model }}<br>
+                                                                {% if reward %}
+                                                                <span>{{ text_reward }}</span> {{ reward }}<br>
+                                                                {% endif %}
+                                                                <span>{{ text_stock }}</span>{{ stock }}</div>
+                                                            <div class="price">
+                                                                {#<script>#}
+                                                                    {#$(function () {#}
+                                                                        {#var austDay = new Date();#}
+                                                                        {#austDay = new Date(2020, 06 - 1, 16);#}
+                                                                        {#$('#countdown206125').countdown({until: austDay});#}
+                                                                    {#});#}
+                                                                {#</script>#}
+                                                                {#<h3>Limited time offer</h3>#}
+                                                                {#<div id="countdown206125" class="clearfix is-countdown"><span class="countdown-row countdown-show4"><span class="countdown-section"><span class="countdown-amount">49</span><span class="countdown-period">Days</span></span><span class="countdown-section"><span class="countdown-amount">14</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">39</span><span class="countdown-period">Min</span></span><span class="countdown-section"><span class="countdown-amount">28</span><span class="countdown-period">Sec</span></span></span></div>#}
+                                                                {% if not special %}
+                                                                    <span class="price-new"><span itemprop="price" id="price-special">{{ price }}</span></span>
+                                                                    <br>
+                                                                {% else %}
+                                                                    <span class="price-new"><span itemprop="price" id="price-special">{{ special }}</span></span>
+                                                                    <span class="price-old" id="price-old">{{ price }}</span>
+                                                                    <br>
+                                                                {% endif %}
+
+                                                                {% if tax %}
+                                                                    <span class="price-tax">{{ text_tax }}<span id="price-tax">{{ tax }}</span></span><br>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <script type="text/javascript" src="catalog/view/theme/fastor/js/jquery.elevateZoom-3.0.3.min.js"></script>
+                                {{ content_bottom }}
+                            </div>
+                            {{ column_right }}
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ footer }}
