@@ -359,7 +359,7 @@ class ControllerDesignLayout extends Controller {
 		} else {
 			$layout_modules = array();
 		}
-
+		
 		$data['layout_modules'] = array();
 		
 		// Add all the modules which have multiple settings for each module
@@ -389,7 +389,9 @@ class ControllerDesignLayout extends Controller {
 					);
 				}				
 			}
-		}		
+		}
+		
+//		var_dump($data['extensions']);die;
 		
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
