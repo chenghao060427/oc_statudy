@@ -31,10 +31,7 @@ class ControllerCommonMenu extends Controller {
         
 		$categories = $this->model_catalog_category->getCategories(0);
   
-		//最多显示6个分类
-        if(count($categories)>6){
-            $categories = array_slice($categories,0,6);
-        }
+
 		
 		
 		foreach ($categories as $category) {

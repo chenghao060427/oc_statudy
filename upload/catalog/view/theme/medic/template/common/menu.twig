@@ -155,6 +155,7 @@
                                                             <div class="container">
                                                                 <ul class="megamenu shift-up">
                                                                     {% for category in categories %}
+                                                                        {% if loop.index0<6 %}
                                                                         {% if category.children %}
 
                                                                             <li class="with-sub-menu hover">
@@ -206,6 +207,7 @@
                                                                                     </span>
                                                                                 </a>
                                                                             </li>
+                                                                        {% endif %}
                                                                         {% endif %}
                                                                     {% endfor %}
                                                                 </ul>
