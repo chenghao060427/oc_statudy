@@ -43,7 +43,7 @@ class ControllerCommonCurrency extends Controller {
 
 			$data['redirect'] = $this->url->link($route, $url, $this->request->server['HTTPS']);
 		}
-
+//        var_dump($data);die;
 		return $this->load->view('common/currency', $data);
 	}
 

@@ -1,6 +1,6 @@
 {{ header }}
 <!-- BREADCRUMB
-================================================== -->
+	================================================== -->
 <div class="breadcrumb full-width">
     <div class="background-breadcrumb"></div>
     <div class="background">
@@ -8,7 +8,7 @@
         <div class="pattern">
             <div class="container">
                 <div class="clearfix">
-                    <h1 id="title-page"> {{ heading_title }} </h1>
+                    <h1 id="title-page">{{ heading_title }}</h1>
 
                     <ul>
                         {% for breadcrumb in breadcrumbs %}
@@ -21,6 +21,7 @@
         </div>
     </div>
 </div>
+
 <!-- MAIN CONTENT
 	================================================== -->
 <div class="main-content full-width inner-page">
@@ -47,32 +48,11 @@
                             {% endif %}
                             <div class="{{ class }} center-column content-with-background" id="content">
                                 {{ content_top }}
-                                {% if error_warning %}
-                                <div class="warning">
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
-                                    {{ error_warning }}
+                                {{ text_message }}
+                                <div class="buttons" style="padding-top: 10px">
+                                    <div class="pull-right"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
                                 </div>
-                                {% endif %}
-
-                                <p>{{ text_email }}</p>
-                                <form action="{{ action }}" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                    <fieldset>
-                                        <legend>{{ text_your_email }}</legend>
-                                        <div class="form-group required">
-                                            <label class="col-sm-2 control-label" for="input-email">{{ entry_email }}</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" name="email" value="{{ email }}" placeholder="{{ entry_email }}" id="input-email" class="form-control">
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                    <div class="buttons clearfix">
-                                        <div class="pull-left"><a href="{{ back }}" class="btn btn-default">{{ button_back }}</a></div>
-                                        <div class="pull-right">
-                                            <input type="submit" value="{{ button_continue }}" class="btn btn-primary">
-                                        </div>
-                                    </div>
-                                </form>
-
+                                {{ content_bottom }}
                             </div>
 
 

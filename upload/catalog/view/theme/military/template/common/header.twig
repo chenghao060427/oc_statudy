@@ -41,9 +41,7 @@
     {% for style in styles %}
         <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
     {% endfor %}
-    {% for script in scripts %}
-        <script src="{{ script }}" type="text/javascript"></script>
-    {% endfor %}
+
 
     <style type="text/css">
         body,
@@ -1498,7 +1496,9 @@
     <script type="text/javascript">
         var responsive_design = 'yes';
     </script>
-
+    {% for script in scripts %}
+        <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
 
 
 
@@ -1550,172 +1550,33 @@
                                     <!-- Header Left -->
                                     <div class="col-sm-4" id="header-left">
                                         <!-- Search -->
-                                        <div class="search_form">
-                                            <div class="button-search"></div>
-                                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" class="input-block-level search-query ui-autocomplete-input" name="search" placeholder="Search" id="search_query" value="" autocomplete="off">
-
-                                            <div id="autocomplete-results" class="autocomplete-results"><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul></div>
-
-                                            <script type="text/javascript">
-                                                $(document).ready(function() {
-                                                    $('#search_query').autocomplete({
-                                                        delay: 0,
-                                                        appendTo: "#autocomplete-results",
-                                                        source: function(request, response) {
-                                                            $.ajax({
-                                                                url: 'index.php?route=search/autocomplete&filter_name=' +  encodeURIComponent(request.term),
-                                                                dataType: 'json',
-                                                                success: function(json) {
-                                                                    response($.map(json, function(item) {
-                                                                        return {
-                                                                            label: item.name,
-                                                                            value: item.product_id,
-                                                                            href: item.href,
-                                                                            thumb: item.thumb,
-                                                                            desc: item.desc,
-                                                                            price: item.price
-                                                                        }
-                                                                    }));
-                                                                }
-                                                            });
-                                                        },
-                                                        select: function(event, ui) {
-                                                            document.location.href = ui.item.href;
-
-                                                            return false;
-                                                        },
-                                                        focus: function(event, ui) {
-                                                            return false;
-                                                        },
-                                                        minLength: 2
-                                                    })
-                                                        .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-                                                        return $( "<li>" )
-                                                            .append( "<a>" + item.label + "</a>" )
-                                                            .appendTo( ul );
-                                                    };
-                                                });
-                                            </script>
-                                        </div>
+                                        {{ search }}
                                     </div>
 
                                     <!-- Header Center -->
                                     <div class="col-sm-4" id="header-center">
                                         <!-- Logo -->
-                                        <div class="logo"><a href="http://fastortheme.com/military/index.php?route=common/home"><img src="/catalog/view/theme/military/image/logo.png" title="Your Store" alt="Your Store"></a></div>
+                                        <div class="logo">
+                                            {% if logo %}
+                                                <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}"></a>
+                                            {% else %}
+                                                <h1><a href="{{ home }}">{{ name }}</a></h1>
+                                            {% endif %}
+                                        </div>
                                     </div>
 
                                     <!-- Header Right -->
                                     <div class="col-sm-4" id="header-right">
 
-                                        <a href="http://fastortheme.com/military/index.php?route=account/account" class="my-account"><i class="fa fa-user"></i></a>
+                                        <a href="{{ account }}" class="my-account"><i class="fa fa-user"></i></a>
 
                                         <!-- Cart block -->
-                                        <div id="cart_block" class="dropdown">
-                                            <div class="cart-heading dropdown-toogle" data-hover="dropdown" data-toggle="dropdown" onclick="window.location.href = &#39;http://fastortheme.com/military/index.php?route=checkout/cart&#39;">
-                                                <i class="cart-count"><span id="total_count_ajax">0</span></i>
-
-                                                <i class="cart-icon cart-icon-no-hover"><img src="/catalog/view/theme/military/image/icon-cart.png" class="cart-icon-hover" alt=""><img src="/catalog/view/theme/military/image/icon-cart.png" class="cart-icon-standard" alt=""></i>
-
-                                                <p><strong id="total_price_ajax"><span id="total_price">$0.00</span></strong></p>
-                                            </div>
-
-                                            <div class="dropdown-menu" id="cart_content"><div id="cart_content_ajax">
-                                                    <div class="empty">Your shopping cart is empty!</div>
-                                                </div></div>
-                                        </div>
+                                        {{ cart }}
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="megamenu-background">
-                                <div class="">
-                                    <div class="overflow-megamenu container">
-                                        <div class="row mega-menu-modules"><div class="col-md-3">
-                                                <div id="megamenu_72799350" class="container-megamenu container vertical mobile-disabled">
-                                                    <div id="menuHeading">
-                                                        <div class="megamenuToogle-wrapper">
-                                                            <div class="megamenuToogle-pattern">
-                                                                <div class="container">
-                                                                    Categories				</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="megamenu-wrapper">
-                                                        <div class="megamenu-pattern">
-                                                            <div class="container">
-                                                                <ul class="megamenu shift-left">
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=25" class="clearfix"><span><strong>Men<span class="megamenu-label" style="background: #f6921e;color:  #ffffff;"><span style="background: #f6921e;border-color: #f6921e"></span>NEW</span></strong></span></a></li>
-                                                                    <li class=" with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=18" class="clearfix"><span><strong>     Women</strong></span></a><div class="sub-menu " style="width:190px"><div class="content"><p class="arrow"></p><div class="row"><div class="col-sm-12  mobile-enabled"><div class="row"><div class="col-sm-12 hover-menu"><div class="menu"><ul><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu ">Shirt</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu with-submenu">Pants<span class="megamenu-label" style="background: #f6921e;color: #ffffff"><span style="background: #f6921e;border-color: #f6921e"></span>NEW</span></a><div class="open-categories"></div><div class="close-categories"></div><ul><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Long</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Short</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="with-submenu">Medium</a><div class="open-categories"></div><div class="close-categories"></div><ul><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">New</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Popular</a></li></ul></li></ul></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu with-submenu">Jeans</a><div class="open-categories"></div><div class="close-categories"></div><ul><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Long</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Short</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Medium</a></li></ul></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu ">Socks<span class="megamenu-label" style="background: #c7c9b9;color: #333"><span style="background: #c7c9b9;border-color: #c7c9b9"></span>HOT</span></a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu ">Hats</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu ">Accessories</a></li></ul></div></div></div></div></div></div></div></li>
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=25" class="clearfix"><span><strong>Accessories<span class="megamenu-label" style="background: #c7c9b9;color:  #333;"><span style="background: #c7c9b9;border-color: #c7c9b9"></span>HOT</span></strong></span></a></li>
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=25" class="clearfix"><span><strong>Lookbook</strong></span></a></li>
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=account/wishlist" class="clearfix"><span><strong>Wishlist</strong></span></a></li>
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=information/contact" class="clearfix"><span><strong>Contact</strong></span></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <script type="text/javascript">
-                                                    $(window).load(function(){
-                                                        var css_tpl = '<style type="text/css">';
-                                                        css_tpl += '#megamenu_72799350 ul.megamenu > li > .sub-menu > .content {';
-                                                        css_tpl += '-webkit-transition: all 200ms ease-out !important;';
-                                                        css_tpl += '-moz-transition: all 200ms ease-out !important;';
-                                                        css_tpl += '-o-transition: all 200ms ease-out !important;';
-                                                        css_tpl += '-ms-transition: all 200ms ease-out !important;';
-                                                        css_tpl += 'transition: all 200ms ease-out !important;';
-                                                        css_tpl += '}</style>'
-                                                        $("head").append(css_tpl);
-                                                    });
-                                                </script>
-                                            </div><div class="col-md-9">
-                                                <div id="megamenu_76100530" class="container-megamenu  horizontal">
-                                                    <div class="megaMenuToggle">
-                                                        <div class="megamenuToogle-wrapper">
-                                                            <div class="megamenuToogle-pattern">
-                                                                <div class="container">
-                                                                    <div><span></span><span></span><span></span></div>
-                                                                    Navigation				</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="megamenu-wrapper">
-                                                        <div class="megamenu-pattern">
-                                                            <div class="container">
-                                                                <ul class="megamenu shift-up">
-                                                                    <li class=" with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" class="clearfix"><span><strong>Men<span class="megamenu-label" style="background: #f6921e;color:  #ffffff;"><span style="background: #f6921e;border-color: #f6921e"></span>NEW</span></strong></span></a><div class="sub-menu " style="width:190px"><div class="content"><p class="arrow"></p><div class="row"><div class="col-sm-12  mobile-enabled"><div class="row"><div class="col-sm-12 hover-menu"><div class="menu"><ul><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu ">Shirt</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu with-submenu">Pants<span class="megamenu-label" style="background: #f6921e;color: #ffffff"><span style="background: #f6921e;border-color: #f6921e"></span>NEW</span></a><div class="open-categories"></div><div class="close-categories"></div><ul><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Long</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="with-submenu">Short</a><div class="open-categories"></div><div class="close-categories"></div><ul><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">New</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Popular</a></li></ul></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="with-submenu">Medium</a><div class="open-categories"></div><div class="close-categories"></div><ul><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">New</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Popular</a></li></ul></li></ul></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu with-submenu">Jeans</a><div class="open-categories"></div><div class="close-categories"></div><ul><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Long</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Short</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="">Medium</a></li></ul></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu ">Socks<span class="megamenu-label" style="background: #c7c9b9;color: #333"><span style="background: #c7c9b9;border-color: #c7c9b9"></span>HOT</span></a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu ">Hats</a></li><li><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" onclick="window.location = &#39;index.php?route=product/category&amp;path=20&#39;;" class="main-menu ">Accessories</a></li></ul></div></div></div></div></div></div></div></li>
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" class="clearfix"><span><strong>Women</strong></span></a></li>
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" class="clearfix"><span><strong>Accessories<span class="megamenu-label" style="background: #c7c9b9;color:  #333333;"><span style="background: #c7c9b9;border-color: #c7c9b9"></span>HOT</span></strong></span></a></li>
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=product/category&amp;path=20" class="clearfix"><span><strong>Lookbook</strong></span></a></li>
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=account/wishlist" class="clearfix"><span><strong>Wishlist</strong></span></a></li>
-                                                                    <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=information/contact" class="clearfix"><span><strong>Contact</strong></span></a></li>
-                                                                    <li class=" pull-right"><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/military/index.php?route=blog/blog" class="clearfix"><span><strong>Blog</strong></span></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <script type="text/javascript">
-                                                    $(window).load(function(){
-                                                        var css_tpl = '<style type="text/css">';
-                                                        css_tpl += '#megamenu_76100530 ul.megamenu > li > .sub-menu > .content {';
-                                                        css_tpl += '-webkit-transition: all 200ms ease-out !important;';
-                                                        css_tpl += '-moz-transition: all 200ms ease-out !important;';
-                                                        css_tpl += '-o-transition: all 200ms ease-out !important;';
-                                                        css_tpl += '-ms-transition: all 200ms ease-out !important;';
-                                                        css_tpl += 'transition: all 200ms ease-out !important;';
-                                                        css_tpl += '}</style>'
-                                                        $("head").append(css_tpl);
-                                                    });
-                                                </script>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {{ menu }}
 
                         </div>
                     </div>

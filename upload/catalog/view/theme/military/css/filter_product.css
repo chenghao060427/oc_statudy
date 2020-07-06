@@ -111,7 +111,7 @@
           right: 0;
           top: 0;
           position: absolute;
-          background: url(../img/bg-megamenu.png) top left repeat-x;
+          background: url(../image/bg-megamenu.png) top left repeat-x;
           z-index: 1;
           display: block;
      }
@@ -128,7 +128,7 @@
           bottom: 0;
           right: 0;
           position: absolute;
-          background: url(../img/bg-megamenu.png) top left repeat-x;
+          background: url(../image/bg-megamenu.png) top left repeat-x;
           z-index: 1;
           display: block;
      }

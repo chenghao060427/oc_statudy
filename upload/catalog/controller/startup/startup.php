@@ -7,7 +7,7 @@ class ControllerStartupStartup extends Controller {
 		} else {
 			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "store WHERE REPLACE(`url`, 'www.', '') = '" . $this->db->escape('http://' . str_replace('www.', '', $_SERVER['HTTP_HOST']) . rtrim(dirname($_SERVER['PHP_SELF']), '/.\\') . '/') . "'");
 		}
-		
+
 		if (isset($this->request->get['store_id'])) {
 			$this->config->set('config_store_id', (int)$this->request->get['store_id']);
 		} else if ($query->num_rows) {

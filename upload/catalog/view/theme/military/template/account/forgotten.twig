@@ -1,6 +1,6 @@
 {{ header }}
 <!-- BREADCRUMB
-================================================== -->
+	================================================== -->
 <div class="breadcrumb full-width">
     <div class="background-breadcrumb"></div>
     <div class="background">
@@ -8,7 +8,7 @@
         <div class="pattern">
             <div class="container">
                 <div class="clearfix">
-                    <h1 id="title-page"> {{ heading_title }} </h1>
+                    <h1 id="title-page">{{ heading_title }}</h1>
 
                     <ul>
                         {% for breadcrumb in breadcrumbs %}
@@ -21,6 +21,7 @@
         </div>
     </div>
 </div>
+
 <!-- MAIN CONTENT
 	================================================== -->
 <div class="main-content full-width inner-page">
@@ -48,10 +49,10 @@
                             <div class="{{ class }} center-column content-with-background" id="content">
                                 {{ content_top }}
                                 {% if error_warning %}
-                                <div class="warning">
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
-                                    {{ error_warning }}
-                                </div>
+                                    <div class="warning">
+                                        <button type="button" class="close" data-dismiss="alert">×</button>
+                                        {{ error_warning }}
+                                    </div>
                                 {% endif %}
 
                                 <p>{{ text_email }}</p>
@@ -75,8 +76,8 @@
 
                             </div>
 
+                            {{ column-right }}
 
-                            {{ column_right }}
                         </div>
 
                     </div>

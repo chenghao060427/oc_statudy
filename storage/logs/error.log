@@ -948,3 +948,7 @@
 2020-06-11 2:28:03 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 177
 2020-06-11 2:28:03 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 180
 2020-06-11 2:28:03 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\xampp\htdocs\OpenCart\upload\system\library\image.php on line 182
+2020-06-24 2:44:23 - PHP Warning:  mysqli::mysqli(): (HY000/2002): ����Ŀ����������ܾ����޷����ӡ�
+ in D:\xampp\htdocs\OpenCart\upload\system\library\db\mysqli.php on line 7
+2020-06-24 2:44:23 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in D:\xampp\htdocs\OpenCart\upload\system\library\db\mysqli.php on line 10
+2020-06-24 2:44:23 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in D:\xampp\htdocs\OpenCart\upload\system\library\db\mysqli.php on line 10

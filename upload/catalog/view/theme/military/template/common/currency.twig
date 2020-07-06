@@ -13,7 +13,7 @@
 
         <ul class="dropdown-menu">
             {% for currency in currencies %}
-                <li><a href="javascript:;" onclick="$('input[name=code]').attr('value', '{{   currency.code }} '); $('#currency_form').submit();">{{ currency.title }}</a></li>
+                <li><a href="javascript:;" onclick="$('input[name=code]').attr('value', '{{ currency.code }}'); $('#currency_form').submit();">{{ currency.title }}</a></li>
             {% endfor %}
         </ul>
     </div>

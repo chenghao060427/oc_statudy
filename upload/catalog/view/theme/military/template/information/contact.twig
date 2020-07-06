@@ -8,7 +8,7 @@
         <div class="pattern">
             <div class="container">
                 <div class="clearfix">
-                    <h1 id="title-page"> {{ heading_title }} </h1>
+                    <h1 id="title-page">{{ heading_title }}</h1>
 
                     <ul>
                         {% for breadcrumb in breadcrumbs %}
@@ -47,12 +47,16 @@
                             {% endif %}
                             <div class="{{ class }} center-column content-with-background" id="content">
 
+
+
                                 <div class="row">
                                     <div class="col-sm-12">
                                         {{ content_top}}
                                         <h3>{{ text_location }}</h3>
                                         <div class="row" style="padding-bottom: 10px">
-                                            <div class="col-sm-3"><strong>{{ store }}</strong><br>
+
+                                            <div class="col-sm-3">
+                                                <strong>{{ store }}</strong><br>
                                                 <address>
                                                     {{ address }}
                                                 </address>
@@ -60,7 +64,8 @@
                                                     <a href="https://maps.google.com/maps?q={{ geocode|url_encode }}&hl={{ geocode_hl }}&t=m&z=15" target="_blank" class="btn btn-info"><i class="fa fa-map-marker"></i> {{ button_map }}</a>
                                                 {% endif %}
                                             </div>
-                                            <div class="col-sm-3"><strong>{{ text_telephone }}</strong><br>
+                                            <div class="col-sm-3">
+                                                <strong>{{ text_telephone }}</strong><br>
                                                 {{ telephone }}<br>
                                                 <br>
                                                 {% if fax %}
@@ -69,6 +74,15 @@
                                                 {% endif %}
                                             </div>
                                             <div class="col-sm-3">
+                                                {% if open %}
+                                                    <strong>{{ text_open }}</strong><br />
+                                                    {{ open }}<br />
+                                                    <br />
+                                                {% endif %}
+                                                {% if comment %}
+                                                    <strong>{{ text_comment }}</strong><br />
+                                                    {{ comment }}
+                                                {% endif %}
                                             </div>
                                         </div>
                                         <form action="{{ action }}" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -86,7 +100,7 @@
                                                 <div class="form-group required">
                                                     <label class="col-sm-2 control-label" for="input-email">{{ entry_email }}</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" name="email" value="{{ email }}" id="input-email" class="form-control">
+                                                        <input type="text" name="email" value="" id="input-email" class="form-control">
                                                         {% if error_email %}
                                                             <div class="text-danger">{{ error_email }}</div>
                                                         {% endif %}
@@ -128,4 +142,5 @@
         </div>
     </div>
 </div>
+
 {{ footer }}
