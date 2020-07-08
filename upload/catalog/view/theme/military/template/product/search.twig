@@ -32,20 +32,20 @@
 
 
                 <div class="row">
-
-                    <div class="col-md-12">
+                    {{ column_left }}
+                    {% if column_left and column_right %}
+                        {% set class = 'col-sm-6' %}
+                    {% elseif column_left or column_right %}
+                        {% set class = 'col-sm-9' %}
+                    {% else %}
+                        {% set class = 'col-sm-12' %}
+                    {% endif %}
+                    <div class="{{ class }}">
 
 
                         <div class="row">
-                            {{ column_left }}
-                            {% if column_left and column_right %}
-                                {% set class = 'col-sm-6' %}
-                            {% elseif column_left or column_right %}
-                                {% set class = 'col-sm-9' %}
-                            {% else %}
-                                {% set class = 'col-sm-12' %}
-                            {% endif %}
-                            <div class="{{ class }} center-column content-without-background" id="content">
+
+                            <div class="col-md-12 center-column content-without-background" id="content">
                                 {{ content_top }}
 
                                 <div id="mfilter-content-container">
@@ -55,7 +55,8 @@
                                             <input type="text" name="search" value="{{ search }}" placeholder="{{ text_keyword }}" id="input-search" class="form-control">
                                         </div>
                                         <div class="col-sm-3">
-                                            <div class="select"><select name="category_id" class="form-control">
+                                            <div class="select">
+                                                <select name="category_id" class="form-control">
                                                     <option value="0">{{ text_category }}</option>
                                                     {% for category_1 in categories %}
                                                         {% if category_1.category_id == category_id %}
@@ -78,13 +79,13 @@
                                                             {% endfor %}
                                                         {% endfor %}
                                                     {% endfor %}
-
-                                                </select></div>
+                                                </select>
+                                            </div>
                                         </div>
                                         <div class="col-sm-3" style="padding-top: 7px">
                                             <label class="checkbox-inline">
                                                 {% if sub_category %}
-                                                <input type="checkbox" name="sub_category" value="1" checked="checked" />
+                                                    <input type="checkbox" name="sub_category" value="1" checked="checked" />
                                                 {% else %}
                                                     <input type="checkbox" name="sub_category" value="1" />
                                                 {% endif %}
@@ -103,22 +104,23 @@
                                         </label>
                                     </p>
                                     <input type="button" value="{{ button_search }}" id="button-search" class="btn btn-primary" style="margin-top: 10px">
-                                    <h2 style="padding-top: 40px">{{ text_search }}</h2>
-                                    {% if products %}
+                                    <h2 style="padding-top: 40px">Products meeting the search criteria</h2>
+
                                     <!-- Filter -->
                                     <div class="product-filter clearfix">
                                         <div class="options">
                                             <div class="product-compare"><a href="{{ compare }}" id="compare-total">{{ text_compare }}</a></div>
 
                                             <div class="button-group display" data-toggle="buttons-radio">
-                                                <button id="grid" rel="tooltip" title="{{ button_grid }}" onclick="display('grid');"><i class="fa fa-th-large"></i></button>
-                                                <button class="active" id="list" rel="tooltip" title="{{ button_list }}" onclick="display('list');"><i class="fa fa-th-list"></i></button>
+                                                <button class="active" id="grid" rel="tooltip" title="{{ button_grid }}" onclick="display('grid');"><i class="fa fa-th-large"></i></button>
+                                                <button id="list" rel="tooltip" title="{{ button_list }}" onclick="display('list');"><i class="fa fa-th-list"></i></button>
                                             </div>
                                         </div>
 
                                         <div class="list-options">
                                             <div class="sort">
-                                                <div class="select"><select onchange="location = this.value;">
+                                                <div class="select">
+                                                    <select onchange="location = this.value;">
                                                         {% for sorts in sorts %}
                                                             {% if sorts.value == '%s-%s'|format(sort, order) %}
                                                                 <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
@@ -126,11 +128,13 @@
                                                                 <option value="{{ sorts.href }}">{{ sorts.text }}</option>
                                                             {% endif %}
                                                         {% endfor %}
-                                                    </select></div>
+                                                    </select>
+                                                </div>
                                             </div>
 
                                             <div class="limit">
-                                                <div class="select"><select onchange="location = this.value;">
+                                                <div class="select">
+                                                    <select onchange="location = this.value;">
                                                         {% for limits in limits %}
                                                             {% if limits.value == limit %}
                                                                 <option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>
@@ -138,58 +142,49 @@
                                                                 <option value="{{ limits.href }}">{{ limits.text }}</option>
                                                             {% endif %}
                                                         {% endfor %}
-                                                    </select></div>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
                                     <!-- Products list -->
-                                    <div class="product-list active">
-                                        <!-- Product -->
+                                    <div class="product-list">
                                         {% for product in products %}
+                                        <!-- Product -->
                                         <div>
                                             <div class="row">
                                                 <div class="image col-sm-3">
-                                                    {#<div class="sale">Sale</div>#}
 
                                                     <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}"></a>
 
-                                                    {#<script>#}
-                                                        {#$(function () {#}
-                                                            {#var austDay = new Date();#}
-                                                            {#austDay = new Date(2020, 06 - 1, 15);#}
-                                                            {#$('#countdown2319550').countdown({until: austDay});#}
-                                                        {#});#}
-                                                    {#</script>#}
-                                                    {#<div id="countdown2319550" class="clearfix is-countdown"><span class="countdown-row countdown-show4"><span class="countdown-section"><span class="countdown-amount">49</span><span class="countdown-period">Days</span></span><span class="countdown-section"><span class="countdown-amount">14</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">30</span><span class="countdown-period">Min</span></span><span class="countdown-section"><span class="countdown-amount">15</span><span class="countdown-period">Sec</span></span></span></div>#}
                                                 </div>
 
                                                 <div class="name-actions col-sm-4">
                                                     <div class="name"><a href="{{ product.href }}">{{ product.name }}</a></div>
-                                                    <div class="price">
-                                                        {% if  not product.special %}
-                                                            {{ product.price }}
-                                                        {% else %}
-                                                            <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
-                                                        {% endif %}
-                                                        {% if product.tax %}
-                                                            <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>
-                                                        {% endif %}
-                                                    </div>
+                                                    {% if product.price %}
+                                                        <div class="price">
+                                                            {% if not product.special %}
+                                                                {{ product.price }}
+                                                            {% else %}<span class="price-old">{{ product.price }}</span>  <span class="price-new">{{ product.special }}</span> {% endif %}
+                                                            {% if product.tax %} <span class="price-tax">{{ text_tax }} {{ product.tax }}</span> {% endif %}
+                                                        </div>
+                                                    {% endif %}
 
                                                     <ul>
-                                                        <li><a onclick="cart.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                                                        <li><a onclick="cart.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_cart }}"><i class="fa fa-shopping-cart"></i></a></li>
 
 
-                                                        <li><a onclick="compare.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="Add to compare"><i class="fa fa-exchange"></i></a></li>
+                                                        <li><a onclick="compare.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_compare }}"><i class="fa fa-exchange"></i></a></li>
 
-                                                        <li><a onclick="wishlist.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="Add to wishlist"><i class="fa fa-heart"></i></a></li>
+                                                        <li><a onclick="wishlist.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_wishlist }}"><i class="fa fa-heart"></i></a></li>
                                                     </ul>
                                                 </div>
 
                                                 <div class="desc col-sm-5">
                                                     <div class="description">
-                                                        {{ product.description }}</div>
+                                                        {{ product.description }}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -197,46 +192,37 @@
                                     </div>
 
                                     <!-- Products grid -->
-                                    <div class="product-grid">
-                                        <div class="row">
+                                    <div class="product-grid active">
+                                        {% for product in products %}
+                                            {% if (loop.index%4==1) %}
+                                                <div class="row">
+                                            {% endif %}
                                             <div class="col-sm-3 col-xs-6">
+
                                                 <!-- Product -->
-                                                {% for product in products %}
                                                 <div class="product clearfix product-hover">
                                                     <div class="left">
-                                                        {#<div class="sale">Sale</div>#}
 
                                                         <div class="image ">
                                                             <a href="{{ product.href }}">
+
                                                                 <img src="{{ product.thumb }}" alt="{{ product.name }}" class="">
                                                             </a>
                                                         </div>
-                                                        {#<script>#}
-                                                            {#$(function () {#}
-                                                                {#var austDay = new Date();#}
-                                                                {#austDay = new Date(2020, 06 - 1, 15);#}
-                                                                {#$('#countdown3535194').countdown({until: austDay});#}
-                                                            {#});#}
-                                                        {#</script>#}
-                                                        {#<div id="countdown3535194" class="clearfix is-countdown"><span class="countdown-row countdown-show4"><span class="countdown-section"><span class="countdown-amount">49</span><span class="countdown-period">Days</span></span><span class="countdown-section"><span class="countdown-amount">14</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">30</span><span class="countdown-period">Min</span></span><span class="countdown-section"><span class="countdown-amount">15</span><span class="countdown-period">Sec</span></span></span></div>#}
                                                     </div>
                                                     <div class="right">
                                                         <div class="name"><a href="{{ product.href }}">{{ product.name }}</a></div>
                                                         {% if product.price %}
                                                             <div class="price">
-                                                                {% if  not product.special %}
+                                                                {% if not product.special %}
                                                                     {{ product.price }}
-                                                                {% else %}
-                                                                    <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
-                                                                {% endif %}
-                                                                {% if product.tax %}
-                                                                    <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>
-                                                                {% endif %}
+                                                                {% else %}<span class="price-old">{{ product.price }}</span>  <span class="price-new">{{ product.special }}</span> {% endif %}
+                                                                {% if product.tax %} <span class="price-tax">{{ text_tax }} {{ product.tax }}</span> {% endif %}
                                                             </div>
                                                         {% endif %}
                                                         <div class="only-hover">
                                                             <ul>
-                                                                <li><a onclick="cart.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_cart }}t"><i class="fa fa-shopping-cart"></i></a></li>
+                                                                <li><a onclick="cart.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_cart }}"><i class="fa fa-shopping-cart"></i></a></li>
 
 
                                                                 <li><a onclick="compare.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_compare }}"><i class="fa fa-exchange"></i></a></li>
@@ -246,18 +232,17 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                {% endfor %}
                                             </div>
-                                        </div>
+                                            {% if (loop.index%4==0) %}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
-                                    <div class="row pagination-results">
-                                        <div class="col-sm-6 text-left">{{ pagination }}</div>
-                                        <div class="col-sm-6 text-right">{{ results }}</div>
-                                    </div>
-                                    {% else %}
-                                        <p>{{ text_empty }}</p>
-                                    {% endif %}
 
+                                </div>
+                                <div class="row pagination-results">
+                                    <div class="col-sm-6 text-left">{{ pagination }}</div>
+                                    <div class="col-sm-6 text-right">{{ results }}</div>
                                 </div>
                                 <script type="text/javascript"><!--
                                     $('#content-search input[name=\'search\']').keydown(function(e) {
@@ -335,10 +320,11 @@
                                     //--></script>
                                 {{ content_bottom }}
                             </div>
-                            {{ column_right }}
+
                         </div>
 
                     </div>
+                    {{ column_right }}
                 </div>
 
                 <div class="row">

@@ -1,0 +1,6 @@
+
+<div class="row banners banners-with-padding-0-2">
+    {% for banner in banners %}
+      <div class="col-sm-3 col-xs-6"><a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="Image" style="width: 100%"></a></div>
+    {% endfor %}
+</div>
