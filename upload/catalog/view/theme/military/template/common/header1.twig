@@ -1,37 +1,44 @@
-
 <!DOCTYPE html>
-<!--[if IE 7]> <html lang="en" class="ie7 responsive"> <![endif]-->
-<!--[if IE 8]> <html lang="en" class="ie8 responsive"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 responsive"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en" class="responsive"> <!--<![endif]-->
+<!--[if IE]><html dir="{{ direction }}" lang="{{ lang }}" class="ie7 responsive"><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8 responsive"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9 responsive"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="{{ lang }}" class="responsive">
+<!--<![endif]-->
+
 <head>
     <title>{{ title }}</title>
+    <!-- Base -->
     <base href="{{ base }}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if description %}
+        <meta name="description" content="{{ description }}" />
+    {% endif %}
+    {% if keywords %}
+        <meta name="keywords" content="{{ keywords }}" />
+    {% endif %}
 
-    <link href="{{ icon }}" rel="icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     {% for style in styles %}
         <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
     {% endfor %}
 
-    <!-- Google Fonts -->
-    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Oswald:800,700,600,500,400,300,200,100" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/filter_product.css">
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/wide-grid.css">
 
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/stylesheet.css" />
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/responsive.css" />
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/menu.css" />
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/filter_product.css" />
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/wide-grid.css" />
+
+
     <style type="text/css">
         body,
         .product-filter .list-options select,
@@ -1418,11 +1425,11 @@
 
     <style type="text/css">
 
-        body { background-image:url(catalog/view/theme/military/image/bg-body.png);background-position:top left;background-repeat:repeat !important;background-attachment:scroll !important; }
+        body { background-image:url(/catalog/view/theme/military/image/bg-body.png);background-position:top left;background-repeat:repeat !important;background-attachment:scroll !important; }
 
 
         body .standard-body:before,
-        body .fixed-body:before { background-image:url(catalog/view/theme/military/image/bg-body2.png);background-position:top left;background-repeat:repeat-x !important;background-attachment:scroll !important; }
+        body .fixed-body:before { background-image:url(/catalog/view/theme/military/image/bg-body2.png);background-position:top left;background-repeat:repeat-x !important;background-attachment:scroll !important; }
 
 
 
@@ -1430,7 +1437,7 @@
 
 
         .megamenu-background > div {
-            background-image:url(catalog/view/theme/military/image/bg-menu.png);background-position:top left;background-repeat:repeat !important;background-attachment:scroll !important;
+            background-image:url(/catalog/view/theme/military/image/bg-menu.png);background-position:top left;background-repeat:repeat !important;background-attachment:scroll !important;
         }
 
         .standard-body .full-width .megamenu-background .mega-menu-modules > div:first-child:before,
@@ -1438,16 +1445,16 @@
 
 
 
-        .footer .pattern { background-image:url(catalog/view/theme/military/image/bg-footer.png);background-position:top left;background-repeat:repeat !important;background-attachment:scroll !important; }
+        .footer .pattern { background-image:url(/catalog/view/theme/military/image/bg-footer.png);background-position:top left;background-repeat:repeat !important;background-attachment:scroll !important; }
 
 
-        .box-with-categories .box-heading { background-image:url(catalog/view/theme/military/image/bg-categories.png);background-repeat: repeat;background-position: top left; }
+        .box-with-categories .box-heading { background-image:url(/catalog/view/theme/military/image/bg-categories.png);background-repeat: repeat;background-position: top left; }
 
 
 
 
 
-        .button, .btn, .button:hover, .btn:hover { background-image:url(catalog/view/theme/military/image/bg-button2.png) !important;background-repeat: repeat !important;background-position: top left !important; }
+        .button, .btn, .button:hover, .btn:hover { background-image:url(/catalog/view/theme/military/image/bg-button2.png) !important;background-repeat: repeat !important;background-position: top left !important; }
 
 
         .buttons .left .button,
@@ -1457,47 +1464,52 @@
         .buttons .left .button:hover,
         .buttons .center .button:hover,
         .btn-default:hover,
-        .input-group-btn .btn-primary:hover { background-image:url(catalog/view/theme/military/image/bg-button.png) !important;background-repeat: repeat !important;background-position: top left !important; }
+        .input-group-btn .btn-primary:hover { background-image:url(/catalog/view/theme/military/image/bg-button.png) !important;background-repeat: repeat !important;background-position: top left !important; }
     </style>
 
 
 
-    <link rel="stylesheet" type="text/css" href="catalog/view/theme/military/css/magnific-popup.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/catalog/view/theme/military/css/magnific-popup.css" media="screen">
 
 
+    <script type="text/javascript" src="/catalog/view/theme/military/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/twitter-bootstrap-hover-dropdown.js"></script>
 
-    <script type="text/javascript" src="catalog/view/theme/military/js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="catalog/view/theme/military/js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="catalog/view/theme/military/js/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="catalog/view/theme/military/js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="catalog/view/theme/military/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="catalog/view/theme/military/js/twitter-bootstrap-hover-dropdown.js"></script>
-    <script type="text/javascript" src="catalog/view/theme/military/js/common.js"></script>
-    <script type="text/javascript" src="catalog/view/theme/military/js/tweetfeed.min.js"></script>
-    <script type="text/javascript" src="catalog/view/theme/military/js/bootstrap-notify.min.js"></script>
+    <style type="text/css">.dropdown-submenu:hover>.dropdown-menu{display:none}</style>
+
+    <script type="text/javascript" src="/catalog/view/theme/military/js/common.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/tweetfeed.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/bootstrap-notify.min.js"></script>
 
 
-    <script type="text/javascript" src="catalog/view/theme/military/js//owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/owl.carousel.min.js"></script>
 
-    <script type="text/javascript" src="catalog/view/theme/military/js//jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/jquery-ui-1.10.4.custom.min.js"></script>
 
-    <script type="text/javascript" src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/military/js/jquery.magnific-popup.min.js"></script>
 
     <script type="text/javascript">
         var responsive_design = 'yes';
     </script>
-
-
     {% for script in scripts %}
         <script src="{{ script }}" type="text/javascript"></script>
     {% endfor %}
 
+
+
     <!--[if lt IE 9]>
     <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="catalog/view/theme/military/js//respond.min.js"></script>
+    <script src="catalog/view/theme/fastor/js/respond.min.js"></script>
     <![endif]-->
+    {#<style type="text/css">#}
+        {##megamenu_72799350 ul.megamenu > li > .sub-menu > .content {-webkit-transition: all 200ms ease-out !important;-moz-transition: all 200ms ease-out !important;-o-transition: all 200ms ease-out !important;-ms-transition: all 200ms ease-out !important;transition: all 200ms ease-out !important;}</style><style type="text/css">#megamenu_76100530 ul.megamenu > li > .sub-menu > .content {-webkit-transition: all 200ms ease-out !important;-moz-transition: all 200ms ease-out !important;-o-transition: all 200ms ease-out !important;-ms-transition: all 200ms ease-out !important;transition: all 200ms ease-out !important;}#}
+    {#</style>#}
 </head>
-<body class="{{ body_class }}       inputs-type-2 cart-block-type-2 my-account-type-2 top-bar-type-2    megamenu-type-2 search-type-3 megamenu-label-type-3 no-box-type-7   sale-new-type-2 button-body-type-4  footer-type-10  border-width-0 body-other    body-header-type-2">
+<body class="{{ body_class }}         inputs-type-2 cart-block-type-2 my-account-type-2 top-bar-type-2    megamenu-type-2 search-type-3 megamenu-label-type-3 no-box-type-7   sale-new-type-2 button-body-type-4  footer-type-10  border-width-0 body-other    body-header-type-2">
 
 
 
