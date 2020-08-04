@@ -1,0 +1,87 @@
+
+
+<div class="search_form">
+    <div class="button-search"></div>
+
+    <div class="search-cat">
+        <select name="category_id" class="form-control">
+            <option value="0">{{ text_category }}</option>
+            {% for category_1 in categories %}
+                {% if category_1.category_id == category_id %}
+                    <option value="{{ category_1.category_id }}" selected="selected">{{ category_1.name }}</option>
+                {% else %}
+                    <option value="{{ category_1.category_id }}">{{ category_1.name }}</option>
+                {% endif %}
+                {% for category_2 in category_1.children %}
+                    {% if category_2.category_id == category_id %}
+                        <option value="{{ category_2.category_id }}" selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ category_2.name }}</option>
+                    {% else %}
+                        <option value="{{ category_2.category_id }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ category_2.name }}</option>
+                    {% endif %}
+                    {% for category_3 in category_2.children %}
+                        {% if category_3.category_id == category_id %}
+                            <option value="{{ category_3.category_id }}" selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ category_3.name }}</option>
+                        {% else %}
+                            <option value="{{ category_3.category_id }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ category_3.name }}</option>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="overflow-input"><input type="text" class="input-block-level search-query" name="search" placeholder="Search..." id="search_query" value="" /></div>
+
+
+    <div id="autocomplete-results" class="autocomplete-results">
+        <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#search_query').autocomplete({
+                delay: 0,
+                appendTo: "#autocomplete-results",
+                source: function(request, response) {
+
+                    var category_filter = $('header select[name=\'category_id\']').val();
+                    var category_filter_url = '';
+                    if (category_filter) {
+                        category_filter_url = '&filter_category_id=' + encodeURIComponent(category_filter);
+                    }
+                    $.ajax({
+                        url: 'index.php?route=search/autocomplete&filter_name=' +  encodeURIComponent(request.term) + category_filter_url,
+                        dataType: 'json',
+                        success: function(json) {
+                            response($.map(json, function(item) {
+                                return {
+                                    label: item.name,
+                                    value: item.product_id,
+                                    href: item.href,
+                                    thumb: item.thumb,
+                                    desc: item.desc,
+                                    price: item.price
+                                }
+                            }));
+                        }
+                    });
+                },
+                select: function(event, ui) {
+                    document.location.href = ui.item.href;
+
+                    return false;
+                },
+                focus: function(event, ui) {
+                    return false;
+                },
+                minLength: 2
+            })
+                .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                return $( "<li>" )
+                    .append( "<a>" + item.label + "</a>" )
+                    .appendTo( ul );
+            };
+        });
+    </script>
+</div>

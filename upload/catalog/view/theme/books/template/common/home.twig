@@ -1,0 +1,32 @@
+{{ header }}
+<!-- MAIN CONTENT
+	================================================== -->
+<div class="main-content full-width home">
+    <div class="background-content"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+                {{ column_left }}
+                {% if column_left and column_right %}
+                    {% set class = 'col-sm-6' %}
+                {% elseif column_left or column_right %}
+                    {% set class = 'col-sm-9' %}
+                {% else %}
+                    {% set class = 'col-sm-12' %}
+                {% endif %}
+                <div class="row">
+                    <div class="{{ class }}">
+                        {{ content_top }}
+                        {{ content_bottom }}
+
+                    </div>
+                </div>
+                {{ column_right }}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ footer }}

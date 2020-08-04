@@ -1,0 +1,71 @@
+<div class="box clearfix box-with-products  box-no-advanced">
+
+    <div class="box-heading">{{ heading_title }}</div>
+    <div class="strip-line"></div>
+    <div class="clear"></div>
+    <div class="box-content products">
+        <div class="box-product">
+            <div id="myCarousel113387877">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <div class="product-grid">
+                            <div class="row">
+                                {% for product in products %}
+                                    <div class="col-sm-3 col-xs-6  ">
+                                        <!-- Product -->
+                                        <div class="product clearfix product-hover">
+                                            <div class="left">
+
+                                                <div class="image ">
+                                                    <a href="{{ product.href }}">
+
+                                                        <img src="{{ product.thumb }}" alt="{{ product.name }}" class="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="name"><a href="{{ product.href }}">{{ product.name }}</a></div>
+                                                {% if product.rating %}
+                                                    <div class="rating">
+                                                        {% for i in 5 %}
+                                                            {% if product.rating < i %}
+                                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                            {% else %}
+                                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                {% endif %}
+                                                {% if product.price %}
+                                                    <div class="price">
+                                                        {% if not product.special %}
+                                                            <span class="price-new">{{ product.price }}</span>
+                                                        {% else %}
+                                                            <span class="price-old">{{ product.special }}</span> <span class="price-new">{{ product.price }}</span>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                                <div class="only-hover">
+                                                    <ul>
+                                                        <li><a onclick="cart.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_cart }}"><i class="fa fa-shopping-cart"></i></a></li>
+
+
+                                                        <li><a onclick="compare.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_compare }}"><i class="fa fa-exchange"></i></a></li>
+
+                                                        <li><a onclick="wishlist.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_wishlist }}"><i class="fa fa-heart"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

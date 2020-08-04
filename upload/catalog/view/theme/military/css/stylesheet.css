@@ -16998,13 +16998,13 @@ ul.social-icons-default {
 /* @group Books newsletter */
 
 .overflow-books-newsletter {
-     background: url(../img/bg-books-newsletter-top.png) top left repeat-x;
+     background: url(../image/bg-books-newsletter-top.png) top left repeat-x;
      position: relative;
      margin: 0px -4000px;
 }
 
      .books-newsletter {
-          background: url(../img/bg-books-newsletter-bottom.png) bottom left repeat-x;
+          background: url(../image/bg-books-newsletter-bottom.png) bottom left repeat-x;
           height: 164px;
           padding: 0px 4000px;
      }

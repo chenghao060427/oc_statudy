@@ -1,0 +1,259 @@
+<!-- CUSTOM FOOTER
+		================================================== -->
+<div class="custom-footer full-width">
+    <div class="background-custom-footer"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+
+
+                <div class="advanced-grid advanced-grid-17582400  hidden-xs hidden-sm" style="margin-top: 21px;margin-bottom: 0px;">
+                    <div style="background-image: url(catalog/view/theme/books/image/bg-newsletter.png);background-position: top center;background-repeat: repeat;background-attachment: scroll;">                         <div class="container">
+                            <div style="padding-top: 0px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="overflow-books-newsletter">
+                                            <div class="books-newsletter clearfix row" id="newsletter17582400">
+                                                <div class="col-sm-7">
+                                                    <div class="heading">
+                                                        <img src="catalog/view/theme/books/image/icon-newsletter.png" alt="Newsletter">
+                                                        <div class="first-heading">Subscribe to our newsletter</div>
+                                                        <div class="second-heading">Sign up to get discount for next order</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inputs col-sm-5">
+                                                    <input type="text" class="email" placeholder="e-mail" />
+                                                    <a class="button subscribe">Ok</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                function Unsubscribe() {
+                                                    $.post('http://fastortheme.com/books/index.php?route=module/newsletter/unsubscribe',
+                                                        {
+                                                            email: $('#newsletter17582400 .email').val()
+                                                        }, function (e) {
+                                                            $('#newsletter17582400 .email').val('');
+                                                            alert(e.message);
+                                                        }
+                                                        , 'json');
+                                                }
+
+                                                function Subscribe() {
+                                                    $.post('http://fastortheme.com/books/index.php?route=module/newsletter/subscribe',
+                                                        {
+                                                            email: $('#newsletter17582400 .email').val()
+                                                        }, function (e) {
+                                                            if(e.error === 1) {
+                                                                var r = confirm(e.message);
+                                                                if (r == true) {
+                                                                    $.post('http://fastortheme.com/books/index.php?route=module/newsletter/unsubscribe', {
+                                                                        email: $('#newsletter17582400 .email').val()
+                                                                    }, function (e) {
+                                                                        $('#newsletter17582400 .email').val('');
+                                                                        alert(e.message);
+                                                                    }, 'json');
+                                                                }
+                                                            } else {
+                                                                $('#newsletter17582400 .email').val('');
+                                                                alert(e.message);
+                                                            }
+                                                        }
+                                                        , 'json');
+                                                }
+
+                                                $('#newsletter17582400 .subscribe').click(Subscribe);
+                                                $('#newsletter17582400 .unsubscribe').click(Unsubscribe);
+                                                $('#newsletter17582400 .email').keypress(function (e) {
+                                                    if (e.which == 13) {
+                                                        Subscribe();
+                                                    }
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script type="text/javascript">
+                    function force_full_width_17582400() {
+                        var p = $(".standard-body .full-width .advanced-grid-17582400");
+                        if(p.size() > 0) {
+                            p.width($('body').width());
+                            p.css("left", "0px");
+                            var position = p.offset();
+                            p.css("left", "-" + position.left + "px");
+                            p.find(".container").css("padding-left", position.left);
+                            p.find(".container").css("padding-right", position.left);
+                        }
+
+                        var s = $(".standard-body .fixed .advanced-grid-17582400");
+                        if(s.size() > 0) {
+                            s.width($('.standard-body .fixed .pattern').width());
+                            s.css("left", "0px");
+                            var position = s.offset();
+                            var position2 = $('.standard-body .fixed .pattern').offset();
+                            var position3 = position.left-position2.left;
+                            s.css("left", "-" + position3 + "px");
+                            s.find(".container").css("padding-left", position3);
+                            s.find(".container").css("padding-right", position3);
+                        }
+
+                        var b = $(".standard-body .fixed2 .advanced-grid-17582400");
+                        if(b.size() > 0) {
+                            b.width($('body').width());
+                            b.css("left", "0px");
+                            var position = b.offset();
+                            b.css("left", "-" + position.left + "px");
+                            b.find(".container").css("padding-left", position.left);
+                            b.find(".container").css("padding-right", position.left);
+                        }
+
+                        var c = $(".fixed-body .advanced-grid-17582400");
+                        if(c.size() > 0) {
+                            c.width($('.fixed-body .main-fixed').width());
+                            c.css("left", "0px");
+                            var position = c.offset();
+                            var position2 = $('.fixed-body .main-fixed').offset();
+                            var position3 = position.left-position2.left;
+                            c.css("left", "-" + position3 + "px");
+                            c.find(".container").css("padding-left", position3);
+                            c.find(".container").css("padding-right", position3);
+                        }
+                    }
+
+                    force_full_width_17582400();
+
+                    $(window).resize(function() {
+                        force_full_width_17582400();
+                    });
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER
+    ================================================== -->
+<div class="footer full-width">
+    <div class="background-footer"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+
+                <div class="advanced-grid advanced-grid-11939312  " style="margin-top: 0px;margin-left: 0px;margin-right: 0px;margin-bottom: 0px;">
+                    <div style="">
+                        <div class="container">
+                            <div style="padding-top: 0px;padding-left: 0px;padding-bottom: 0px;padding-right: 0px;">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="books-contact">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img src="catalog/view/theme/books/image/icon-phone.png" alt="Phone">
+                                                    <p style="color: #5ab015"> {{ telephone }}</p>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <img src="catalog/view/theme/books/image/icon-mail.png" alt="Mail">
+                                                    <p style="color: #fe7f02">{{ email }}</p>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <img src="catalog/view/theme/books/image/icon-support.png" alt="Support">
+                                                    <p>{{ email }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="#"><img src="catalog/view/theme/books/image/banner-01.png" style="margin-top: 35px;display: block" class="responsive-margin-top-30 responsive-margin-bottom-15" alt="Banner"></a>                                                                                                                        </div>
+                                </div>
+                                <div class="row">
+                                    {% if informations %}
+                                    <div class="col-sm-3">
+                                        <h4>{{ text_information }}</h4>
+                                        <div class="strip-line"></div>
+                                        <div class="row" style="clear: both">
+                                            <div class="col-sm-12">
+                                                <ul>
+                                                    {% for information in informations %}
+                                                        <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+                                                    {% endfor %}
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    <div class="col-sm-3">
+                                        <h4>{{ text_service }}</h4>
+                                        <div class="strip-line"></div>
+                                        <div class="row" style="clear: both">
+                                            <div class="col-sm-12">
+                                                <ul>
+                                                    <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+                                                    <li><a href="{{ return }}">{{ text_return }}</a></li>
+                                                    <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h4>{{ text_extra }}</h4>
+                                        <div class="strip-line"></div>
+                                        <div class="row" style="clear: both">
+                                            <div class="col-sm-12">
+                                                <ul>
+                                                    <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+                                                    <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+                                                    <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+                                                    <li><a href="{{ special }}">{{ text_special }}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h4>{{ text_account }}</h4>
+                                        <div class="strip-line"></div>
+                                        <div class="row" style="clear: both">
+                                            <div class="col-sm-12">
+                                                <ul>
+                                                    <li><a href="{{ account }}">{{ text_account }}</a></li>
+                                                    <li><a href="{{ order }}">{{ text_order }}</a></li>
+                                                    <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+                                                    <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        {{ powered }}                                                                                                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="catalog/view/theme/books/js/megamenu.js"></script>
+</div>
+</div>
+</body>
+</html>

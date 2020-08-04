@@ -1,0 +1,42 @@
+<div id="megamenu_16792297" class="container-megamenu container vertical">
+    <div id="menuHeading">
+        <div class="megamenuToogle-wrapper">
+            <div class="megamenuToogle-pattern">
+                <div class="container">
+                    {{ text_category }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="megamenu-wrapper">
+        <div class="megamenu-pattern">
+            <div class="container">
+                <ul class="megamenu shift-left">
+                    {% for category in categories %}
+                        <li class='' >
+                            <p class='close-menu'></p>
+                            <p class='open-menu'></p>
+                            <a href='{{ category.href }}' class='clearfix' >
+                                <span><strong>{{ category.name }}</strong></span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(window).load(function(){
+        var css_tpl = '<style type="text/css">';
+        css_tpl += '#megamenu_16792297 ul.megamenu > li > .sub-menu > .content {';
+        css_tpl += '-webkit-transition: all 200ms ease-out !important;';
+        css_tpl += '-moz-transition: all 200ms ease-out !important;';
+        css_tpl += '-o-transition: all 200ms ease-out !important;';
+        css_tpl += '-ms-transition: all 200ms ease-out !important;';
+        css_tpl += 'transition: all 200ms ease-out !important;';
+        css_tpl += '}</style>'
+        $("head").append(css_tpl);
+    });
+</script>
