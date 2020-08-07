@@ -1,0 +1,913 @@
+{{ header }}
+<!-- BREADCRUMB
+================================================== -->
+<div class="breadcrumb full-width">
+    <div class="background-breadcrumb"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+                <div class="clearfix">
+                    <h1 id="title-page"> {{ heading_title }} </h1>
+
+                    <ul>
+                        {% for breadcrumb in breadcrumbs %}
+                            <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MAIN CONTENT
+	================================================== -->
+<div class="main-content full-width inner-page">
+    <div class="background-content"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+
+
+                <div class="row">
+
+                    <div class="col-md-12">
+
+
+                        <div class="row">
+                            {{ column_left }}
+                            {% if column_left and column_right %}
+                                {% set class = 'col-sm-6' %}
+                            {% elseif column_left or column_right %}
+                                {% set class = 'col-sm-9' %}
+                            {% else %}
+                                {% set class = 'col-sm-12' %}
+                            {% endif %}
+                            <div class="{{ class }} center-column content-without-background" id="content">
+                                {{ content_top }}
+
+
+                                <div itemscope="" itemtype="http://data-vocabulary.org/Product">
+                                    <span itemprop="name" class="hidden">{{ heading_title }}</span>
+                                    <div class="product-info">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12">
+                                                <div class="row" id="quickview_product">
+                                                    <script>
+                                                        $(document).ready(function(){
+                                                            if($(window).width() > 992) {
+                                                                $('#image').elevateZoom({
+                                                                    zoomType: "inner",
+                                                                    cursor: "pointer",
+                                                                    zoomWindowFadeIn: 500,
+                                                                    zoomWindowFadeOut: 750
+                                                                });
+
+                                                                var z_index = 0;
+
+                                                                $(document).on('click', '.open-popup-image', function () {
+                                                                    $('.popup-gallery').magnificPopup('open', z_index);
+                                                                    return false;
+                                                                });
+
+                                                                $('.thumbnails a, .thumbnails-carousel a').click(function() {
+                                                                    var smallImage = $(this).attr('data-image');
+                                                                    var largeImage = $(this).attr('data-zoom-image');
+                                                                    var ez =   $('#image').data('elevateZoom');
+                                                                    $('#ex1').attr('href', largeImage);
+                                                                    ez.swaptheimage(smallImage, largeImage);
+                                                                    z_index = $(this).index('.thumbnails a, .thumbnails-carousel a');
+                                                                    return false;
+                                                                });
+                                                            } else {
+                                                                $(document).on('click', '.open-popup-image', function () {
+                                                                    $('.popup-gallery').magnificPopup('open', 0);
+                                                                    return false;
+                                                                });
+                                                            }
+                                                        });
+                                                    </script>
+                                                    <div class="col-sm-7 popup-gallery">
+
+                                                        <div class="row">
+
+                                                            <div class="col-sm-12">
+                                                                <div class="product-image inner-cloud-zoom">
+                                                                    {#<div class="sale">Sale</div>#}
+                                                                    {% if thumb %}
+                                                                    <a href="{{ popup }}" id="ex1" class="open-popup-image">
+                                                                        <img src="{{ popup }}" title="{{ heading_title }}" alt="{{ heading_title }}" id="image" itemprop="image" data-zoom-image="{{ popup }}">
+                                                                    </a>
+                                                                    {% endif %}
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-12">
+                                                                <div class="overflow-thumbnails-carousel clearfix">
+                                                                    <div class="thumbnails-carousel owl-carousel owl-theme" style="">
+                                                                        {#<div class="owl-wrapper-outer">#}
+                                                                            {#<div class="owl-wrapper" style="">#}
+                                                                                {% if thumb %}
+                                                                                {#<div class="owl-item" style="width: 151px;">#}
+                                                                                    <div class="item">
+                                                                                        <a href="{{ popup }}" class="popup-image" data-image="{{ popup }}" data-zoom-image="{{ popup }}">
+                                                                                            <img src="{{ thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                {#</div>#}
+                                                                                {% endif %}
+                                                                                {% if images %}
+                                                                                {% for image in images %}
+                                                                                {#<div class="owl-item" style="width: 151px;">#}
+                                                                                    <div class="item">
+                                                                                        <a href="{{ image.popup }}" class="popup-image" data-image="{{ image.popup }}" data-zoom-image="{{ image.popup }}">
+                                                                                            {#<img src="{{ thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}">#}
+                                                                                            <img src="{{ image.thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}">
+                                                                                        </a>
+                                                                                    </div>
+                                                                                {#</div>#}
+                                                                                {% endfor %}
+                                                                                {% endif %}
+
+                                                                            {#</div>#}
+                                                                        {#</div>#}
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <script type="text/javascript">
+                                                                    $(document).ready(function() {
+                                                                        $(".thumbnails-carousel").owlCarousel({
+
+                                                                            autoPlay: 6000, //Set AutoPlay to 3 seconds
+                                                                            navigation: true,
+                                                                            navigationText: ['', ''],
+                                                                            singleItem : false
+                                                                        });
+                                                                    });
+                                                                </script>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-sm-5 product-center clearfix">
+                                                        <div itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+
+                                                            <div class="review">
+                                                                <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>&nbsp;&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click'); $('html, body').animate({scrollTop:$('#tab-review').offset().top}, '500', 'swing');">0 reviews</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click'); $('html, body').animate({scrollTop:$('#tab-review').offset().top}, '500', 'swing');">Write a review</a></div>
+                                                            </div>
+
+                                                            <div class="description">
+                                                                {% if manufacturer %}
+                                                                <span>{{ text_manufacturer }}</span> <a href="{{ manufacturers }}">{{ manufacturer }}</a><br>
+                                                                {% endif %}
+                                                                <span>{{ text_model }}</span> {{ model }}<br>
+                                                                {% if reward %}
+                                                                <span>{{ text_reward }}</span> {{ reward }}<br>
+                                                                {% endif %}
+                                                                <span>{{ text_stock }}</span>{{ stock }}</div>
+                                                            <div class="price">
+                                                                {#<script>#}
+                                                                    {#$(function () {#}
+                                                                        {#var austDay = new Date();#}
+                                                                        {#austDay = new Date(2020, 06 - 1, 16);#}
+                                                                        {#$('#countdown206125').countdown({until: austDay});#}
+                                                                    {#});#}
+                                                                {#</script>#}
+                                                                {#<h3>Limited time offer</h3>#}
+                                                                {#<div id="countdown206125" class="clearfix is-countdown"><span class="countdown-row countdown-show4"><span class="countdown-section"><span class="countdown-amount">49</span><span class="countdown-period">Days</span></span><span class="countdown-section"><span class="countdown-amount">14</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">39</span><span class="countdown-period">Min</span></span><span class="countdown-section"><span class="countdown-amount">28</span><span class="countdown-period">Sec</span></span></span></div>#}
+                                                                {% if not special %}
+                                                                    <span class="price-new"><span itemprop="price" id="price-special">{{ price }}</span></span>
+                                                                    <br>
+                                                                {% else %}
+                                                                    <span class="price-new"><span itemprop="price" id="price-special">{{ special }}</span></span>
+                                                                    <span class="price-old" id="price-old">{{ price }}</span>
+                                                                    <br>
+                                                                {% endif %}
+
+                                                                {% if tax %}
+                                                                    <span class="price-tax">{{ text_tax }}<span id="price-tax">{{ tax }}</span></span><br>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
+
+                                                        <div id="product">
+                                                            {% if options %}
+
+                                                            <div class="options">
+                                                                <div class="options2">
+                                                                    <h2>{{ text_option }}</h2>
+                                                                    {% for option in options %}
+                                                                        {% if option.type == 'select' %}
+                                                                            <div class="form-group {% if option.required %} required {% endif %}">
+                                                                                <label class="control-label" for="input-option217">{{ option.name }}</label>
+                                                                                <div class="select">
+                                                                                    <select name="option[217]" id="input-option217" class="form-control">
+                                                                                        <option value=""> --- Please Select --- </option>
+                                                                                        {% for option_value in option.product_option_value %}
+                                                                                            <option value="4">
+                                                                                                {{ option_value.name }} {% if option_value.price %}({{ option_value.price_prefix }}{{ option_value.price }}) {% endif %}
+                                                                                            </option>
+                                                                                        {% endfor %}
+
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        {% endif %}
+
+                                                                        {% if option.type == 'radio' %}
+                                                                            <div class="form-group {% if option.required %} required {% endif %}">
+                                                                                <label class="control-label">{{ option.name }}</label>
+                                                                                <div id="input-option{{ option.product_option_id }}">
+                                                                                    {% for option_value in option.product_option_value %}
+                                                                                        {% if option_value.image %}
+                                                                                            <div class="radio radio-type-button">
+                                                                                                <label>
+                                                                                                    <input type="radio" name="option[{{ option.product_option_id }}]" value="{{ option_value.product_option_value_id }}" >
+                                                                                                    <span data-toggle="tooltip" data-placement="top" title="" data-original-title="{{ option_value.name }} {% if option_value.price %}({{ option_value.price_prefix }}{{ option_value.price }}) {% endif %} ">
+                                                                                                        <img src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price %}({{ option_value.price_prefix }}{{ option_value.price }}) {% endif %}" width="25px" height="25px">
+                                                                                                    </span>
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        {% else %}
+                                                                                            <div class="radio radio-type-button2">
+                                                                                                <label>
+                                                                                                    <input type="radio" name="option[{{ option.product_option_id }}]" value="{{ option_value.product_option_value_id }}">
+                                                                                                    <span>{{ option_value.name }}</span>
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        {% endif %}
+                                                                                    {% endfor %}
+
+
+                                                                                    <script type="text/javascript">
+                                                                                        $(document).ready(function(){
+                                                                                            $('#input-option{{ option.product_option_id }}').on('click', 'span', function () {
+                                                                                                $('#input-option{{ option.product_option_id }} span').removeClass("active");
+                                                                                                {#$('#input-option{{ option.product_option_id }} input').prop("checked",false);#}
+                                                                                                $(this).addClass("active");
+                                                                                                // $(this).siblings('input').prop('checked',true);
+                                                                                            });
+                                                                                        });
+                                                                                    </script>
+                                                                                </div>
+                                                                            </div>
+                                                                        {% endif %}
+
+                                                                        {% if option.type == 'checkbox' %}
+                                                                            <div class="form-group{% if option.required %} required {% endif %}">
+                                                                                <label class="control-label">{{ option.name }}</label>
+                                                                                <div id="input-option{{ option.product_option_id }}"> {% for option_value in option.product_option_value %}
+                                                                                        <div class="checkbox">
+                                                                                            <label>
+                                                                                                <input type="checkbox" name="option[{{ option.product_option_id }}][]" value="{{ option_value.product_option_value_id }}" />
+                                                                                                {% if option_value.image %} <img src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price %} {{ option_value.price_prefix }} {{ option_value.price }} {% endif %}" class="img-thumbnail" /> {% endif %}
+                                                                                                {{ option_value.name }}
+                                                                                                {% if option_value.price %}
+                                                                                                    ({{ option_value.price_prefix }}{{ option_value.price }})
+                                                                                                {% endif %} </label>
+                                                                                        </div>
+                                                                                    {% endfor %} </div>
+                                                                            </div>
+                                                                        {% endif %}
+
+                                                                        {% if option.type == 'text' %}
+                                                                            <div class="form-group{% if option.required %} required {% endif %}">
+                                                                                <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+                                                                                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" placeholder="{{ option.name }}" id="input-option{{ option.product_option_id }}" class="form-control" />
+                                                                            </div>
+                                                                        {% endif %}
+
+                                                                        {% if option.type == 'textarea' %}
+                                                                            <div class="form-group{% if option.required %} required {% endif %}">
+                                                                                <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+                                                                                <textarea name="option[{{ option.product_option_id }}]" rows="5" placeholder="{{ option.name }}" id="input-option{{ option.product_option_id }}" class="form-control">{{ option.value }}</textarea>
+                                                                            </div>
+                                                                        {% endif %}
+
+                                                                        {% if option.type == 'file' %}
+                                                                            <div class="form-group{% if option.required %} required {% endif %}">
+                                                                                <label class="control-label">{{ option.name }}</label>
+                                                                                <button type="button" id="button-upload{{ option.product_option_id }}" data-loading-text="{{ text_loading }}" class="btn btn-default btn-block"><i class="fa fa-upload"></i> {{ button_upload }}</button>
+                                                                                <input type="hidden" name="option[{{ option.product_option_id }}]" value="" id="input-option{{ option.product_option_id }}" />
+                                                                            </div>
+                                                                        {% endif %}
+
+                                                                        {% if option.type == 'date' %}
+                                                                            <div class="form-group{% if option.required %} required {% endif %}">
+                                                                                <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+                                                                                <div class="input-group date">
+                                                                                    <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" data-date-format="YYYY-MM-DD" id="input-option{{ option.product_option_id }}" class="form-control" />
+                                                                                    <span class="input-group-btn">
+                                                                                        <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        {% endif %}
+
+                                                                        {% if option.type == 'datetime' %}
+                                                                            <div class="form-group{% if option.required %} required {% endif %}">
+                                                                                <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+                                                                                <div class="input-group datetime">
+                                                                                    <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" data-date-format="YYYY-MM-DD HH:mm" id="input-option{{ option.product_option_id }}" class="form-control" />
+                                                                                    <span class="input-group-btn">
+                                                                                        <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        {% endif %}
+
+                                                                        {% if option.type == 'time' %}
+                                                                            <div class="form-group{% if option.required %} required {% endif %}">
+                                                                                <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+                                                                                <div class="input-group time">
+                                                                                    <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" data-date-format="HH:mm" id="input-option{{ option.product_option_id }}" class="form-control" />
+                                                                                    <span class="input-group-btn">
+                                                                                        <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+
+                                                                </div>
+                                                            </div>
+
+                                                            {% endif %}
+
+                                                            <div class="cart">
+                                                                <div class="add-to-cart clearfix">
+                                                                    <p>{{ entry_qty }}</p>
+                                                                    <div class="quantity">
+                                                                        <input type="text" name="quantity" id="quantity_wanted" size="2" value="{{ minimum }}">
+                                                                        <a href="#" id="q_up"><i class="fa fa-plus"></i></a>
+                                                                        <a href="#" id="q_down"><i class="fa fa-minus"></i></a>
+                                                                    </div>
+                                                                    <input type="hidden" name="product_id" size="2" value="{{ product_id }}">
+                                                                    <input type="button" value="{{ button_cart }}" id="button-cart" rel="{{ product_id }}" data-loading-text="{{ text_loading }}" class="button">
+
+                                                                    <div class="clearfix"></div>
+                                                                    <a class="button btn-default button-product-question">
+                                                                        <img src="/catalog/view/theme/medic/image/icon-ask.png" align="left" class="icon-enquiry" alt="Icon">     <span class="text-enquiry">Ask about this product</span>
+                                                                    </a>
+
+                                                                    <div id="popup-product-question-1" class="popup mfp-hide">
+                                                                        <h4>Have a question?</h4>
+                                                                        <form action="" method="post" enctype="multipart/form-data" id="contact" class="form-contact">
+                                                                            <input type="hidden" name="product_id" value="{{ product_id }}">
+
+                                                                            <fieldset>
+                                                                                <div class="contact-label">
+                                                                                    <label for="input-name" class="required"> Your Name</label>
+                                                                                    <div>
+                                                                                        <input type="text" name="name" value="" id="input-name" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="contact-label">
+                                                                                    <label for="input-email" class="required"> E-Mail Address</label>
+                                                                                    <div>
+                                                                                        <input type="text" name="email" value="" id="input-email" class="form-control">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="contact-label">
+                                                                                    <label for="input-enquiry" class="required"> Enquiry</label>
+                                                                                    <div>
+                                                                                        <textarea name="enquiry" rows="7" id="input-enquiry" class="form-control"></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </fieldset>
+
+                                                                            <input class="btn btn-primary" type="submit" value="Submit">
+                                                                        </form>
+
+                                                                        <script type="text/javascript">
+                                                                            function IsEmail(email) {
+                                                                                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                                                                                return regex.test(email);
+                                                                            }
+
+                                                                            $('#contact').bind('submit', function(){
+                                                                                var valid = true;
+
+                                                                                if($('#popup-product-question-1 #input-name').val().length < 3 || $('#popup-product-question-1 #input-name').val().length > 32){
+                                                                                    $('#popup-product-question-1 #input-name').addClass("error");
+                                                                                    valid = false;
+                                                                                } else {
+                                                                                    $('#popup-product-question-1 #input-name').removeClass("error");
+
+                                                                                }
+
+                                                                                if(IsEmail($('#popup-product-question-1 #input-email').val())) {
+                                                                                    $('#popup-product-question-1 #input-email').removeClass("error");
+                                                                                } else {
+                                                                                    $('#popup-product-question-1 #input-email').addClass("error");
+                                                                                    valid = false;
+                                                                                }
+
+
+                                                                                if($('#popup-product-question-1 #input-enquiry').val().length < 10 || $('#popup-product-question-1 #input-enquiry').val().length > 3000){
+                                                                                    $('#popup-product-question-1 #input-enquiry').addClass("error");
+                                                                                    valid = false;
+                                                                                } else {
+                                                                                    $('#popup-product-question-1 #input-enquiry').removeClass("error");
+                                                                                }
+
+                                                                                if(valid) {
+                                                                                    $.ajax({
+                                                                                        type: "POST",
+                                                                                        url: "http://fastortheme.com/medic/index.php?route=module/product_questions/contact",
+                                                                                        data: $("#popup-product-question-1 #contact").serialize(), // serializes the form's elements.
+                                                                                        success: function(data)
+                                                                                        {
+                                                                                            alert(data); // show response from the php script.
+                                                                                            $.magnificPopup.close();
+                                                                                        }
+                                                                                    });
+
+                                                                                    return false;
+                                                                                } else {
+                                                                                    return false;
+                                                                                }
+                                                                            });
+                                                                        </script>
+
+                                                                    </div>
+
+                                                                    <script>
+                                                                        $(function(){
+                                                                            $('.button-product-question').click(function(e){
+                                                                                $.magnificPopup.open({
+                                                                                    items: {
+                                                                                        src: '#popup-product-question-1',
+                                                                                        type: 'inline'
+                                                                                    },
+                                                                                    tLoading: '',
+                                                                                    mainClass: 'popup-module mfp-with-zoom',
+                                                                                    removalDelay: 200,
+                                                                                });
+
+                                                                                return false;
+
+                                                                            })
+                                                                        })
+                                                                    </script>
+                                                                </div>
+
+                                                                <div class="links clearfix">
+                                                                    <a onclick="wishlist.add('{{ product_id }}');">{{ button_wishlist }}</a>
+                                                                    <a onclick="compare.add('{{ product_id }}');">{{ button_compare }}</a>
+                                                                </div>
+                                                                {% if minimum > 1 %}
+                                                                <div class="minimum">{{ text_minimum }}</div>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div><!-- End #product -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div id="tabs" class="htabs">
+                                        <a href="#tab-description" class="selected">{{ tab_description }}</a>
+                                        <a href="#tab-attribute">{{ tab_attribute }}</a>
+                                        <a href="#tab-review">{{ tab_review }}</a>
+                                    </div>
+                                    <div id="tab-description" class="tab-content" itemprop="description" style="display: block;">
+                                        {{ description }}
+                                    </div>
+                                    {% if attribute_groups %}
+                                    <div id="tab-attribute" class="tab-content" style="display: none;">
+                                        <table class="attribute" cellspacing="0">
+                                            {% for attribute_group in attribute_groups %}
+                                                <thead>
+                                                <tr>
+                                                    <td colspan="2">{{ attribute_group.name }}</td>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for attribute in attribute_group.attribute %}
+                                                        <tr>
+                                                            <td>{{ attribute.name }}</td>
+                                                            <td>{{ attribute.text }}</td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                    {% endif %}
+                                    {% if review_status %}
+                                        <div id="tab-review" class="tab-content" style="display: none;">
+                                        <form class="form-horizontal" id="form-review">
+                                            <div id="review">
+
+                                            </div>
+                                            <h2>{{ text_write }}</h2>
+                                            {% if review_guest %}
+                                            <div class="form-group required">
+                                                <div class="col-sm-12">
+                                                    <label class="control-label" for="input-name">{{ entry_name }}</label>
+                                                    <input type="text" name="name" value="{{ customer_name }}" id="input-name" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group required">
+                                                <div class="col-sm-12">
+                                                    <label class="control-label">{{ entry_rating }}</label>
+
+                                                    <div class="rating set-rating">
+                                                        <i class="fa fa-star" data-value="1"></i>
+                                                        <i class="fa fa-star" data-value="2"></i>
+                                                        <i class="fa fa-star" data-value="3"></i>
+                                                        <i class="fa fa-star" data-value="4"></i>
+                                                        <i class="fa fa-star" data-value="5"></i>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        $(document).ready(function() {
+                                                            $('.set-rating i').hover(function(){
+                                                                var rate = $(this).data('value');
+                                                                var i = 0;
+                                                                $('.set-rating i').each(function(){
+                                                                    i++;
+                                                                    if(i <= rate){
+                                                                        $(this).addClass('active');
+                                                                    }else{
+                                                                        $(this).removeClass('active');
+                                                                    }
+                                                                })
+                                                            })
+
+                                                            $('.set-rating i').mouseleave(function(){
+                                                                var rate = $('input[name="rating"]:checked').val();
+                                                                rate = parseInt(rate);
+                                                                i = 0;
+                                                                $('.set-rating i').each(function(){
+                                                                    i++;
+                                                                    if(i <= rate){
+                                                                        $(this).addClass('active');
+                                                                    }else{
+                                                                        $(this).removeClass('active');
+                                                                    }
+                                                                })
+                                                            })
+
+                                                            $('.set-rating i').click(function(){
+                                                                $('input[name="rating"]:nth('+ ($(this).data('value')-1) +')').prop('checked', true);
+                                                            });
+                                                        });
+                                                    </script>
+                                                    <div class="hidden">
+                                                        {{ entry_bad }}&nbsp;
+                                                        <input type="radio" name="rating" value="1">
+                                                        &nbsp;
+                                                        <input type="radio" name="rating" value="2">
+                                                        &nbsp;
+                                                        <input type="radio" name="rating" value="3">
+                                                        &nbsp;
+                                                        <input type="radio" name="rating" value="4">
+                                                        &nbsp;
+                                                        <input type="radio" name="rating" value="5">
+                                                        {{ entry_good }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group required">
+                                                <div class="col-sm-12">
+                                                    <label class="control-label" for="input-review">{{ entry_review }}</label>
+                                                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+                                                    <div class="help-block">{{ text_note }}</div>
+                                                </div>
+                                            </div>
+                                            <div class="buttons clearfix" style="margin-bottom: 0px">
+                                                <div class="pull-right">
+                                                    <button type="button" id="button-review" data-loading-text="Loading..." class="btn btn-primary">Continue</button>
+                                                </div>
+                                            </div>
+                                            {% else %}
+                                                {{ text_login }}
+                                            {% endif %}
+                                        </form>
+                                    </div>
+                                    {% endif %}
+                                </div>
+
+                                <script type="text/javascript"><!--
+                                    $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
+                                        $.ajax({
+                                            url: 'index.php?route=product/product/getRecurringDescription',
+                                            type: 'post',
+                                            data: $('input[name=\'product_id\'], input[name=\'quantity\'], select[name=\'recurring_id\']'),
+                                            dataType: 'json',
+                                            beforeSend: function() {
+                                                $('#recurring-description').html('');
+                                            },
+                                            success: function(json) {
+                                                $('.alert, .text-danger').remove();
+
+                                                if (json['success']) {
+                                                    $('#recurring-description').html(json['success']);
+                                                }
+                                            }
+                                        });
+                                    });
+                                    //--></script>
+                                <script type="text/javascript"><!--
+                                    $('#button-cart').on('click', function() {
+                                        $.ajax({
+                                            url: 'index.php?route=checkout/cart/add',
+                                            type: 'post',
+                                            data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+                                            dataType: 'json',
+                                            beforeSend: function() {
+                                                $('#button-cart').button('loading');
+                                            },
+                                            complete: function() {
+                                                $('#button-cart').button('reset');
+                                            },
+                                            success: function(json) {
+                                                $('.alert, .text-danger').remove();
+                                                $('.form-group').removeClass('has-error');
+
+                                                if (json['error']) {
+                                                    if (json['error']['option']) {
+                                                        for (i in json['error']['option']) {
+                                                            var element = $('#input-option' + i.replace('_', '-'));
+
+                                                            if (element.parent().hasClass('input-group')) {
+                                                                element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                                            } else {
+                                                                element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                                            }
+                                                        }
+                                                    }
+
+                                                    if (json['error']['recurring']) {
+                                                        $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+                                                    }
+
+                                                    // Highlight any found errors
+                                                    $('.text-danger').parent().addClass('has-error');
+                                                }
+
+                                                if (json['success']) {
+                                                    $.notify({
+                                                        message: json['success'],
+                                                        target: '_blank'
+                                                    },{
+                                                        // settings
+                                                        element: 'body',
+                                                        position: null,
+                                                        type: "info",
+                                                        allow_dismiss: true,
+                                                        newest_on_top: false,
+                                                        placement: {
+                                                            from: "top",
+                                                            align: "right"
+                                                        },
+                                                        offset: 20,
+                                                        spacing: 10,
+                                                        z_index: 2031,
+                                                        delay: 5000,
+                                                        timer: 1000,
+                                                        url_target: '_blank',
+                                                        mouse_over: null,
+                                                        animate: {
+                                                            enter: 'animated fadeInDown',
+                                                            exit: 'animated fadeOutUp'
+                                                        },
+                                                        onShow: null,
+                                                        onShown: null,
+                                                        onClose: null,
+                                                        onClosed: null,
+                                                        icon_type: 'class',
+                                                        template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-success" role="alert">' +
+                                                            '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
+                                                            '<span data-notify="message"><i class="fa fa-check-circle"></i>&nbsp; {2}</span>' +
+                                                            '<div class="progress" data-notify="progressbar">' +
+                                                            '<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                                                            '</div>' +
+                                                            '<a href="{3}" target="{4}" data-notify="url"></a>' +
+                                                            '</div>'
+                                                    });
+
+                                                    $('#cart_block #cart_content').load('index.php?route=common/cart/info #cart_content_ajax');
+                                                    $('#cart_block #total_price_ajax').load('index.php?route=common/cart/info #total_price');
+                                                    $('#cart_block .cart-count').load('index.php?route=common/cart/info #total_count_ajax');
+                                                }
+                                            }
+                                        });
+                                    });
+                                    //--></script>
+                                <script type="text/javascript"><!--
+                                    $('.date').datetimepicker({
+                                        pickTime: false
+                                    });
+
+                                    $('.datetime').datetimepicker({
+                                        pickDate: true,
+                                        pickTime: true
+                                    });
+
+                                    $('.time').datetimepicker({
+                                        pickDate: false
+                                    });
+
+                                    $('button[id^=\'button-upload\']').on('click', function() {
+                                        var node = this;
+
+                                        $('#form-upload').remove();
+
+                                        $('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+                                        $('#form-upload input[name=\'file\']').trigger('click');
+
+                                        timer = setInterval(function() {
+                                            if ($('#form-upload input[name=\'file\']').val() != '') {
+                                                clearInterval(timer);
+
+                                                $.ajax({
+                                                    url: 'index.php?route=tool/upload',
+                                                    type: 'post',
+                                                    dataType: 'json',
+                                                    data: new FormData($('#form-upload')[0]),
+                                                    cache: false,
+                                                    contentType: false,
+                                                    processData: false,
+                                                    beforeSend: function() {
+                                                        $(node).button('loading');
+                                                    },
+                                                    complete: function() {
+                                                        $(node).button('reset');
+                                                    },
+                                                    success: function(json) {
+                                                        $('.text-danger').remove();
+
+                                                        if (json['error']) {
+                                                            $(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
+                                                        }
+
+                                                        if (json['success']) {
+                                                            alert(json['success']);
+
+                                                            $(node).parent().find('input').attr('value', json['code']);
+                                                        }
+                                                    },
+                                                    error: function(xhr, ajaxOptions, thrownError) {
+                                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                                                    }
+                                                });
+                                            }
+                                        }, 500);
+                                    });
+                                    //--></script>
+                                <script type="text/javascript"><!--
+                                        $('#review').delegate('.pagination a', 'click', function(e) {
+                                            e.preventDefault();
+
+                                            $('#review').fadeOut('slow');
+
+                                            $('#review').load(this.href);
+
+                                            $('#review').fadeIn('slow');
+                                        });
+
+                                    $('#review').load('index.php?route=product/product/review&product_id=42');
+
+                                    $('#button-review').on('click', function() {
+                                        $.ajax({
+                                            url: 'index.php?route=product/product/write&product_id=42',
+                                            type: 'post',
+                                            dataType: 'json',
+                                            data: $("#form-review").serialize(),
+                                            beforeSend: function() {
+                                                $('#button-review').button('loading');
+                                            },
+                                            complete: function() {
+                                                $('#button-review').button('reset');
+                                            },
+                                            success: function(json) {
+                                                $('.alert-success, .alert-danger').remove();
+
+                                                if (json['error']) {
+                                                    $('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+                                                }
+
+                                                if (json['success']) {
+                                                    $('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+
+                                                    $('input[name=\'name\']').val('');
+                                                    $('textarea[name=\'text\']').val('');
+                                                    $('input[name=\'rating\']:checked').prop('checked', false);
+                                                }
+                                            }
+                                        });
+                                    });
+                                </script>
+
+                                <script type="text/javascript"><!--
+                                    $(document).ready(function() {
+                                        $('.popup-gallery').magnificPopup({
+                                            delegate: 'a.popup-image',
+                                            type: 'image',
+                                            tLoading: 'Loading image #%curr%...',
+                                            mainClass: 'mfp-with-zoom',
+                                            removalDelay: 200,
+                                            gallery: {
+                                                enabled: true,
+                                                navigateByImgClick: true,
+                                                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                                            },
+                                            image: {
+                                                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                                                titleSrc: function(item) {
+                                                    return item.el.attr('title');
+                                                }
+                                            }
+                                        });
+                                    });
+                                    //--></script>
+
+                                <script type="text/javascript">
+                                    var ajax_price = function() {
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: 'index.php?route=product/liveprice/index',
+                                            data: $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\']:checked, .product-info input[type=\'checkbox\']:checked, .product-info select, .product-info textarea'),
+                                            dataType: 'json',
+                                            success: function(json) {
+                                                if (json.success) {
+                                                    change_price('#price-special', json.new_price.special);
+                                                    change_price('#price-tax', json.new_price.tax);
+                                                    change_price('#price-old', json.new_price.price);
+                                                }
+                                            }
+                                        });
+                                    }
+
+                                    var change_price = function(id, new_price) {
+                                        $(id).html(new_price);
+                                    }
+
+                                    $('.product-info input[type=\'text\'], .product-info input[type=\'hidden\'], .product-info input[type=\'radio\'], .product-info input[type=\'checkbox\'], .product-info select, .product-info textarea, .product-info input[name=\'quantity\']').on('change', function() {
+                                        ajax_price();
+                                    });
+                                </script>
+
+                                <script type="text/javascript">
+                                    $.fn.tabs = function() {
+                                        var selector = this;
+
+                                        this.each(function() {
+                                            var obj = $(this);
+
+                                            $(obj.attr('href')).hide();
+
+                                            $(obj).click(function() {
+                                                $(selector).removeClass('selected');
+
+                                                $(selector).each(function(i, element) {
+                                                    $($(element).attr('href')).hide();
+                                                });
+
+                                                $(this).addClass('selected');
+
+                                                $($(this).attr('href')).show();
+
+                                                return false;
+                                            });
+                                        });
+
+                                        $(this).show();
+
+                                        $(this).first().click();
+                                    };
+                                </script>
+
+                                <script type="text/javascript"><!--
+                                    $('#tabs a').tabs();
+                                    //--></script>
+
+                                <script type="text/javascript" src="catalog/view/theme/medic/js/jquery.elevateZoom-3.0.3.min.js"></script>
+                                {{ content_bottom }}
+                            </div>
+                            {{ column_right }}
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ footer }}

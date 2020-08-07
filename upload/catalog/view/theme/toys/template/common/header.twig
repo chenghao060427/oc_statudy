@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html lang="en" class="ie7 responsive"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="ie8 responsive"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 responsive"> <![endif]-->
+<!--[if !IE]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}" class="responsive"> <!--<![endif]-->
+<head>
+    <title>{{ title }}</title>
+    <base href="{{ base }}" />
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if description %}
+        <meta name="description" content="{{ description }}" />
+    {% endif %}
+
+    {% if keywords %}
+        <meta name="keywords" content="{{ keywords }}" />
+    {% endif %}
+
+
+    <link href="catalog/view/theme/toys/image/catalog/cart.png" rel="icon"/>
+    <link href="http://fastortheme.com/toys/" rel="canonical"/>
+
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Schoolbell:800,700,600,500,400,300,200,100" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Poppins:800,700,600,500,400,300,200,100" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/menu.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/filter_product.css"/>
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/wide-grid.css"/>
+    <style type="text/css">
+
+
+        a:hover,
+        div.pagination-results ul li.active {
+            color: #b24043;
+        }
+
+        .product-info .radio-type-button span:hover,
+        .product-info .radio-type-button span.active,
+        .product-info .radio-type-button2 span:hover,
+        .product-info .radio-type-button2 span.active,
+        #main .mfilter-image ul li.mfilter-image-checked {
+            border-color: #b24043;
+        }
+
+        .product-info .radio-type-button2 span.active {
+            background: #b24043;
+        }
+
+        .compare-info .price-new,
+        .product-grid .product .price,
+        .product-list .actions > div .price,
+        .product-info .price .price-new,
+        ul.megamenu li .product .price,
+        .mini-cart-total td:last-child,
+        .cart-total table tr td:last-child,
+        .mini-cart-info td.total,
+        .advanced-grid-products .product .right .price,
+        .product-list .name-actions > .price,
+        .today-deals-products .product .price,
+        .medic-last-in-stock .price,
+        .architecture-products .product .right .price,
+        .matrialarts-products .matrial-product .right .price,
+        .today-deals-toys2-products .price,
+        .today-deals-shoes3-products .price,
+        .holidays-products .product .right .price {
+            color: #b24043;
+        }
+
+        .product-grid .product:hover:before,
+        .product-list > div:hover {
+            border-color: #bcc81b;
+        }
+
+        .product-grid .product .only-hover ul li a:hover,
+        .architecture-products .product .right .only-hover ul li a:hover,
+        .product-list .name-actions ul li a:hover,
+        .today-deals-toys2-products .only-hover ul li a:hover,
+        .flower-product .right ul li a:hover {
+            background-color: #3898af;
+        }
+
+        .product-grid .product .only-hover ul li a:hover,
+        .architecture-products .product .right .only-hover ul li a:hover,
+        .product-list .name-actions ul li a:hover,
+        .today-deals-toys2-products .only-hover ul li a:hover,
+        .flower-product .right ul li a:hover {
+            border-color: #3898af;
+        }
+
+        .product-grid .product .only-hover ul li a:hover,
+        .architecture-products .product .right .only-hover ul li a:hover,
+        .product-list .name-actions ul li a:hover,
+        .today-deals-toys2-products .only-hover ul li a:hover,
+        .flower-product .right ul li a:hover {
+            color: #fff;
+        }
+
+        .dropdown-menu li a:hover,
+        .dropdown-menu .mini-cart-info a:hover,
+        .ui-autocomplete li a:hover,
+        .ui-autocomplete li a.ui-state-focus {
+            color: #b24043 !important;
+        }
+
+        .select:after,
+        .product-filter .list-options .sort:after,
+        .product-filter .list-options .limit:after {
+            color: #3898af;
+        }
+
+        .box .box-heading,
+        .product-block .title-block,
+        .refine_search {
+            color: #7b8817;
+        }
+
+        .box .box-heading,
+        .product-block .title-block,
+        .refine_search,
+        .market-products-categories > ul > li > a {
+            border-bottom-color: #bcc81b;
+        }
+
+        .col-sm-3 .box-no-advanced.box .box-content, .col-sm-4 .box-no-advanced.box .box-content, .col-md-3 .box-no-advanced.box .box-content, .col-md-4 .box-no-advanced.box .box-content {
+            border-color: #7b8817;
+        }
+
+        .col-sm-3 .box-no-advanced.box .box-heading, .col-sm-4 .box-no-advanced.box .box-heading, .col-md-3 .box-no-advanced.box .box-heading, .col-md-4 .box-no-advanced.box .box-heading {
+            border-color: #7b8817;
+        }
+
+        .megamenu-background {
+            border-bottom-color: #3898af;
+        }
+
+        #top .dropdown > a:after {
+            color: #b24043;
+        }
+
+        #top .dropdown:hover > a {
+            color: #b24043;
+        }
+
+        #top .dropdown:hover > a:after {
+            color: #333;
+        }
+
+        #top .my-account:hover {
+            border-color: #3898af;
+        }
+
+        #top .my-account:hover {
+            background: #3898af;
+        }
+
+        #top .my-account:hover,
+        .header-type-23 .dropdown:hover i {
+            color: #fff;
+        }
+
+        #top #cart_block:hover .cart-heading .cart-icon,
+        .cart-block-type-2 #top #cart_block:hover .cart-heading,
+        .cart-block-type-9 #top #cart_block:hover .cart-heading,
+        .cart-block-type-8 #top #cart_block:hover .cart-heading,
+        .cart-block-type-7 #top #cart_block:hover .cart-heading,
+        .cart-block-type-4 #top #cart_block:hover .cart-heading,
+        .cart-block-type-6 #top #cart_block:hover .cart-heading,
+        .cart-block-type-8 #top #cart_block:hover .cart-heading p,
+        .cart-block-type-4 #top #cart_block:hover .cart-heading .cart-icon {
+            border-color: #3898af;
+        }
+
+        #top #cart_block:hover .cart-heading .cart-icon,
+        .cart-block-type-2 #top #cart_block:hover .cart-heading,
+        .cart-block-type-9 #top #cart_block:hover .cart-heading,
+        .cart-block-type-8 #top #cart_block:hover .cart-heading,
+        .cart-block-type-7 #top #cart_block:hover .cart-heading,
+        .cart-block-type-4 #top #cart_block:hover .cart-heading {
+            background: #3898af;
+        }
+
+        #top #cart_block .cart-heading .cart-count {
+            color: #fff;
+        }
+
+        #top #cart_block .cart-heading .cart-count {
+            background-color: #3898af;
+        }
+
+        #top #cart_block .cart-heading p {
+            color: #b24043;
+        }
+
+        #top #cart_block .cart-heading p:after {
+            color: #b24043;
+        }
+
+        #top #cart_block:hover .cart-heading .cart-count {
+            color: #fff;
+        }
+
+        #top #cart_block:hover .cart-heading .cart-count {
+            background-color: #333;
+        }
+
+        #top #cart_block:hover .cart-heading p {
+            color: #3898af;
+        }
+
+        #top #cart_block:hover .cart-heading p:after {
+            color: #3898af;
+        }
+
+        #main .mfilter-slider-slider .ui-slider-handle, #main #mfilter-price-slider .ui-slider-handle {
+            background: #bcc81b !important;
+        }
+
+        #main .mfilter-slider-slider .ui-slider-range, #main #mfilter-price-slider .ui-slider-range {
+            background: #d8e340 !important;
+        }
+
+        ul.megamenu > li.with-sub-menu > a strong:after {
+            color: #b24043;
+        }
+
+        ul.megamenu > li.with-sub-menu:hover > a strong:after {
+            color: #333;
+        }
+
+        ul.megamenu > li:hover > a,
+        ul.megamenu > li.active > a,
+        ul.megamenu > li.home > a {
+            color: #b24043;
+        }
+
+        #main .vertical .megamenuToogle-wrapper .container:after {
+            color: #3898af;
+        }
+
+        .megamenu-type-15 .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        .megamenu-type-15 .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        .megamenu-type-15 .megamenu-background .vertical .megamenuToogle-wrapper:before {
+            background: #3898af;
+        }
+
+        .megamenu-type-20 .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        .megamenu-type-20 .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        .megamenu-type-20 .megamenu-background .vertical .megamenuToogle-wrapper:before {
+            background: #3898af;
+        }
+
+        .megamenu-type-28 .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        .megamenu-type-28 .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        .megamenu-type-28 .megamenu-background .vertical .megamenuToogle-wrapper:before {
+            background: #3898af;
+        }
+
+        .megamenu-type-25 .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        .megamenu-type-25 .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        .megamenu-type-25 .megamenu-background .vertical .megamenuToogle-wrapper:before {
+            background: #3898af;
+        }
+
+        .megamenu-type-18 .slideshow-modules .vertical .megamenuToogle-wrapper .container:before,
+        .megamenu-type-18 .slideshow-modules .vertical .megamenuToogle-wrapper .container:after,
+        .megamenu-type-18 .slideshow-modules .vertical .megamenuToogle-wrapper:before {
+            background: #3898af;
+        }
+
+        #main .vertical:hover .megamenuToogle-wrapper .container,
+        .common-home.show-vertical-megamenu #main .megamenu-background .vertical .megamenuToogle-wrapper .container,
+        body[class*="product-category-"].show-vertical-megamenu-category-page #main .megamenu-background .vertical .megamenuToogle-wrapper .container,
+        .common-home.show-vertical-megamenu #main .slideshow-modules .vertical .megamenuToogle-wrapper .container {
+            color: #fff;
+        }
+
+        #main .vertical:hover .megamenuToogle-wrapper .container:after,
+        .common-home.show-vertical-megamenu #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        body[class*="product-category-"].show-vertical-megamenu-category-page #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after {
+            color: #3898af;
+        }
+
+        .megamenu-type-15 .megamenu-background .vertical:hover .megamenuToogle-wrapper .container:before,
+        .megamenu-type-15 .megamenu-background .vertical:hover .megamenuToogle-wrapper .container:after,
+        .megamenu-type-15 .megamenu-background .vertical:hover .megamenuToogle-wrapper:before,
+        .megamenu-type-18 .slideshow-modules .vertical:hover .megamenuToogle-wrapper .container:before,
+        .megamenu-type-18 .slideshow-modules .vertical:hover .megamenuToogle-wrapper .container:after,
+        .megamenu-type-18 .slideshow-modules .vertical:hover .megamenuToogle-wrapper:before,
+        .megamenu-type-20 .slideshow-modules .vertical:hover .megamenuToogle-wrapper .container:before,
+        .megamenu-type-20 .slideshow-modules .vertical:hover .megamenuToogle-wrapper .container:after,
+        .megamenu-type-20 .slideshow-modules .vertical:hover .megamenuToogle-wrapper:before,
+        .megamenu-type-28 .slideshow-modules .vertical:hover .megamenuToogle-wrapper .container:before,
+        .megamenu-type-28 .slideshow-modules .vertical:hover .megamenuToogle-wrapper .container:after,
+        .megamenu-type-28 .slideshow-modules .vertical:hover .megamenuToogle-wrapper:before,
+        .megamenu-type-25 .slideshow-modules .vertical:hover .megamenuToogle-wrapper .container:before,
+        .megamenu-type-25 .slideshow-modules .vertical:hover .megamenuToogle-wrapper .container:after,
+        .megamenu-type-25 .slideshow-modules .vertical:hover .megamenuToogle-wrapper:before,
+        .common-home.show-vertical-megamenu.megamenu-type-15 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        .common-home.show-vertical-megamenu.megamenu-type-15 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        .common-home.show-vertical-megamenu.megamenu-type-15 #main .megamenu-background .vertical .megamenuToogle-wrapper:before,
+        .common-home.show-vertical-megamenu.megamenu-type-18 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        .common-home.show-vertical-megamenu.megamenu-type-18 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        .common-home.show-vertical-megamenu.megamenu-type-18 #main .megamenu-background .vertical .megamenuToogle-wrapper:before,
+        .common-home.show-vertical-megamenu.megamenu-type-20 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        .common-home.show-vertical-megamenu.megamenu-type-20 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        .common-home.show-vertical-megamenu.megamenu-type-20 #main .megamenu-background .vertical .megamenuToogle-wrapper:before,
+        .common-home.show-vertical-megamenu.megamenu-type-28 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        .common-home.show-vertical-megamenu.megamenu-type-28 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        .common-home.show-vertical-megamenu.megamenu-type-28 #main .megamenu-background .vertical .megamenuToogle-wrapper:before,
+        .common-home.show-vertical-megamenu.megamenu-type-25 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        .common-home.show-vertical-megamenu.megamenu-type-25 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        .common-home.show-vertical-megamenu.megamenu-type-25 #main .megamenu-background .vertical .megamenuToogle-wrapper:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-15 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-15 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-15 #main .megamenu-background .vertical .megamenuToogle-wrapper:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-18 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-18 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-18 #main .megamenu-background .vertical .megamenuToogle-wrapper:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-20 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-20 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-20 #main .megamenu-background .vertical .megamenuToogle-wrapper:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-28 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-28 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-28 #main .megamenu-background .vertical .megamenuToogle-wrapper:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-25 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:before,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-25 #main .megamenu-background .vertical .megamenuToogle-wrapper .container:after,
+        body[class*="product-category-"].show-vertical-megamenu-category-page.megamenu-type-25 #main .megamenu-background .vertical .megamenuToogle-wrapper:before {
+            background: #3898af;
+        }
+
+        #main .vertical:hover .megamenuToogle-wrapper,
+        .common-home.show-vertical-megamenu #main .megamenu-background .vertical .megamenuToogle-wrapper,
+        body[class*="product-category-"].show-vertical-megamenu-category-page #main .megamenu-background .vertical .megamenuToogle-wrapper,
+        .common-home.show-vertical-megamenu #main .slideshow-modules .vertical .megamenuToogle-wrapper {
+            background-color: #3898af !important;
+        }
+
+        #main .vertical .megamenu-wrapper {
+            background-color: #78c9dd !important;
+        }
+
+        #main .vertical ul.megamenu > li {
+            border-color: #86cfe0;
+        }
+
+        #main .vertical ul.megamenu > li > a {
+            color: #fff;
+        }
+
+        #main .vertical ul.megamenu > li:hover > a,
+        #main .vertical ul.megamenu > li.active > a {
+            color: #fff;
+        }
+
+        #main .vertical ul.megamenu > li:hover {
+            background: #86cfe0;
+        }
+
+        #main .vertical ul.megamenu > li.with-sub-menu > a:before,
+        #main .vertical ul.megamenu > li.with-sub-menu > a:after {
+            color: #fff;
+        }
+
+        #main .vertical ul.megamenu > li.with-sub-menu:hover > a:before,
+        #main .vertical ul.megamenu > li.with-sub-menu:hover > a:after {
+            color: #fff;
+        }
+
+        ul.megamenu li .sub-menu .content a:hover,
+        ul.megamenu li .sub-menu .content .hover-menu .menu ul li:hover > a {
+            color: #b24043;
+        }
+
+        ul.megamenu li .sub-menu .content .hover-menu a.with-submenu:before {
+            color: #86cfe0;
+        }
+
+        ul.megamenu li .sub-menu .content .static-menu a.main-menu:hover {
+            color: #b24043;
+        }
+
+        ul.megamenu li .sub-menu .content .static-menu a.main-menu:after {
+            background: #b24043;
+        }
+
+        .megamenuToogle-wrapper {
+            background-color: #3898af;
+        }
+
+        @media (max-width: 991px) {
+            .responsive .standard-body .full-width .megamenu-background .megaMenuToggle:before {
+                background-color: #3898af;
+            }
+        }
+
+        .megamenuToogle-wrapper .container {
+            color: #fff;
+        }
+
+        .megamenuToogle-wrapper .container > div span {
+            background: #fff;
+        }
+
+        .megamenuToogle-wrapper:hover,
+        .active .megamenuToogle-wrapper {
+            background-color: #3898af;
+        }
+
+        .megamenuToogle-wrapper:hover .container,
+        .active .megamenuToogle-wrapper .container {
+            color: #fff;
+        }
+
+        .megamenuToogle-wrapper:hover .container > div span,
+        .active .megamenuToogle-wrapper .container > div span {
+            background: #fff;
+        }
+
+        @media (max-width: 991px) {
+            .responsive .horizontal .megamenu-wrapper {
+                background: #78c9dd !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .responsive .horizontal ul.megamenu > li > a {
+                color: #fff !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .responsive .horizontal ul.megamenu > li:hover > a,
+            .responsive .horizontal ul.megamenu > li.active > a {
+                color: #fff !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .responsive .horizontal ul.megamenu > li {
+                border-top-color: #86cfe0 !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .responsive ul.megamenu > li:hover,
+            .responsive ul.megamenu > li.active {
+                background: #86cfe0 !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .responsive ul.megamenu > li.with-sub-menu .open-menu,
+            .responsive ul.megamenu > li.with-sub-menu .close-menu {
+                color: #fff !important;
+            }
+        }
+
+        .breadcrumb .container h1 {
+            border-bottom-color: #3898af;
+        }
+
+        .next-product .right .price {
+            color: #b24043;
+        }
+
+        .button-previous-next {
+            color: #3898af;
+        }
+
+        .button-previous-next:hover {
+            background: #3898af;
+        }
+
+        .button-previous-next:hover {
+            border-color: #3898af;
+        }
+
+        .button-previous-next:hover {
+            color: #fff;
+        }
+
+        #main .box-with-categories .box-content {
+            background: #78c9dd !important;
+        }
+
+        .box-category > ul li {
+            border-top-color: #86cfe0;
+        }
+
+        #main .box-category ul li > a {
+            color: #fff;
+        }
+
+        #main .box-category ul li > a:hover {
+            color: #fff;
+        }
+
+        #main .box-category ul li a.active {
+            color: #fff;
+        }
+
+        .box-category > ul li > a:hover,
+        .box-category > ul li:hover > a,
+        .box-category > ul li a.active {
+            background: #86cfe0;
+        }
+
+        #main .box-category ul li .head a {
+            color: #fff;
+        }
+
+        .box-with-categories .box-heading {
+            background: #3898af;
+        }
+
+        .box-with-categories .box-heading {
+            color: #fff;
+        }
+
+        .box > .prev:hover,
+        .box > .next:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-prev:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-next:hover,
+        div.pagination-results ul li:hover,
+        .tab-content .prev-button:hover,
+        .tab-content .next-button:hover {
+            background: #7b8817;
+        }
+
+        .box > .prev:hover,
+        .box > .next:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-prev:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-next:hover,
+        div.pagination-results ul li:hover,
+        .tab-content .prev-button:hover,
+        .tab-content .next-button:hover {
+            color: #fff;
+        }
+
+        .box > .prev:hover,
+        .box > .next:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-prev:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-next:hover,
+        div.pagination-results ul li:hover,
+        .tab-content .prev-button:hover,
+        .tab-content .next-button:hover {
+            border-color: #7b8817;
+        }
+
+        .filter-product .filter-tabs ul > li.active > a, .filter-product .filter-tabs ul > li.active > a:hover, .filter-product .filter-tabs ul > li.active > a:focus, .htabs a.selected, .htabs a:hover {
+            color: #7b8817;
+        }
+
+        .htabs a.selected:before,
+        .filter-product .filter-tabs ul > li.active > a:before {
+            background: #bcc81b;
+        }
+
+        .categories-wall .category-wall h3 {
+            border-bottom-color: #bcc81b;
+        }
+
+        .categories-wall .category-wall .more-categories {
+            color: #7b8817;
+        }
+
+        .categories-wall .category-wall .more-categories:hover {
+            background: #7b8817;
+        }
+
+        .categories-wall .category-wall .more-categories:hover {
+            border-color: #7b8817;
+        }
+
+        .categories-wall .category-wall .more-categories:hover {
+            color: #fff;
+        }
+
+        .popup h4:after {
+            background: #7b8817;
+        }
+
+        body .popup-module .mfp-close {
+            border-color: #7b8817;
+        }
+
+        body .popup-module .mfp-close {
+            color: #7b8817;
+        }
+
+        body .popup-module .mfp-close:hover {
+            background: #7b8817;
+        }
+
+        body .popup-module .mfp-close:hover {
+            border-color: #7b8817;
+        }
+
+        body .popup-module .mfp-close:hover {
+            color: #fff;
+        }
+
+        .camera_wrap .owl-controls .owl-buttons .owl-prev:hover, .camera_wrap .owl-controls .owl-buttons .owl-next:hover,
+        #main .tp-leftarrow.default:hover,
+        #main .tp-rightarrow.default:hover,
+        #main .post .post-media .media-slider .owl-controls .owl-buttons .owl-prev:hover,
+        #main .post .post-media .media-slider .owl-controls .owl-buttons .owl-next:hover {
+            background: #7b8817;
+        }
+
+        .camera_wrap .owl-controls .owl-buttons .owl-prev:hover:before, .camera_wrap .owl-controls .owl-buttons .owl-next:hover:before,
+        #main .tp-leftarrow.default:hover:before,
+        #main .tp-rightarrow.default:hover:before,
+        #main .post .post-media .media-slider .owl-controls .owl-buttons .owl-prev:hover:before,
+        #main .post .post-media .media-slider .owl-controls .owl-buttons .owl-next:hover:before {
+            color: #fff;
+        }
+
+        .rating i.active {
+            color: #7b8817;
+        }
+
+        .button, .btn {
+            color: #fff !important;
+        }
+
+        .button, .btn {
+            background: #3898af !important;
+        }
+
+        .button:hover, .btn:hover {
+            color: #fff !important;
+        }
+
+        .button:hover, .btn:hover {
+            background: #78c9dd !important;
+        }
+
+        .buttons .left .button, .buttons .center .button, .btn-default, .input-group-btn .btn-primary {
+            color: #fff !important;
+        }
+
+        .buttons .left .button, .buttons .center .button, .btn-default, .input-group-btn .btn-primary {
+            background: #b24043 !important;
+        }
+
+        .buttons .left .button:hover, .buttons .center .button:hover, .btn-default:hover, .input-group-btn .btn-primary:hover {
+            color: #fff !important;
+        }
+
+        .buttons .left .button:hover, .buttons .center .button:hover, .btn-default:hover, .input-group-btn .btn-primary:hover {
+            background: #f99da0 !important;
+        }
+
+        .custom-footer .background,
+        .standard-body .custom-footer .background {
+            background: #fff;
+        }
+
+        .custom-footer .pattern {
+            background: none;
+        }
+
+        .footer .pattern,
+        .footer .pattern a {
+            color: #808080;
+        }
+
+        .footer .pattern a {
+            color: #808080;
+        }
+
+        .footer .pattern a:hover {
+            color: #b24043;
+        }
+
+        .footer h4 {
+            color: #b24043;
+        }
+
+        .footer h4 {
+            border-bottom-color: #b24043;
+        }
+
+        .footer .background,
+        .standard-body .footer .background,
+        .copyright .background,
+        .standard-body .copyright .background {
+            background: #fff;
+        }
+
+        .footer-button {
+            color: #fff !important;
+        }
+
+        .footer-button {
+            background: #b24043;
+        }
+
+        .footer-button:hover {
+            color: #fff !important;
+        }
+
+        .footer-button:hover {
+            background: #f99da0;
+        }
+
+        #main .post .date-published,
+        #main .news.v2 .media-body .bottom,
+        .cosmetics-news .media .date-published,
+        .medic-news .media .date-published,
+        .wine-news .media .date-published,
+        .cameras-news .media .date-published {
+            color: #333;
+        }
+
+        #main .post .meta > li a {
+            color: #bcc81b;
+        }
+
+        #main .post .meta > li a:hover {
+            color: #333;
+        }
+
+        #main .tagcloud a,
+        #main .post .tags a,
+        #main .news .media-body .tags a,
+        #main .posts .post .tags a,
+        .cosmetics-news .media .tags a,
+        .cameras-news .media .tags a {
+            color: #fff;
+        }
+
+        #main .tagcloud a,
+        #main .post .tags a,
+        #main .news .media-body .tags a,
+        #main .posts .post .tags a,
+        .cosmetics-news .media .tags a,
+        .cameras-news .media .tags a {
+            background: #bcc81b;
+        }
+
+        #main .tagcloud a:hover,
+        #main .post .tags a:hover,
+        #main .news .media-body .tags a:hover,
+        #main .posts .post .tags a:hover,
+        .cosmetics-news .media .tags a:hover,
+        .cameras-news .media .tags a:hover {
+            color: #fff;
+        }
+
+        #main .tagcloud a:hover,
+        #main .post .tags a:hover,
+        #main .news .media-body .tags a:hover,
+        #main .posts .post .tags a:hover,
+        .cosmetics-news .media .tags a:hover,
+        .cameras-news .media .tags a:hover {
+            background: #333;
+        }
+
+        #main .posts .button-more,
+        .wine-news .button-more {
+            color: #bcc81b;
+        }
+
+        #main .posts .button-more:hover,
+        .wine-news .button-more:hover {
+            background: #bcc81b;
+        }
+
+        #main .posts .button-more:hover,
+        .wine-news .button-more:hover {
+            border-color: #bcc81b;
+        }
+
+        #main .posts .button-more:hover,
+        .wine-news .button-more:hover {
+            color: #fff;
+        }
+
+        body,
+        textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input, select {
+            font-size: 13px;
+            font-weight: 400 !important;
+        }
+
+        ul.megamenu .megamenu-label,
+        #main .news .media-body h5,
+        #main .posts .post .post-title {
+        }
+
+        @media (max-width: 767px) {
+            .responsive ul.megamenu li .sub-menu .content .hover-menu .menu ul li a,
+            .responsive ul.megamenu li .sub-menu .content .static-menu .menu ul li a {
+            }
+        }
+
+        body.firefox-mac,
+        body.firefox-mac input,
+        body.firefox-mac select {
+            font-weight: 300 !important;
+        }
+
+        .center-column .panel-heading h4 {
+        }
+
+        .dropdown-menu,
+        body .dropdown-menu > li > a,
+        .top-bar .menu li a,
+        #top .dropdown > a,
+        .product-info .cart .add-to-cart p,
+        .header-notice,
+        .header-type-9 #top #header-center .menu li a,
+        .welcome-text,
+        .header-type-16 #top #header-left .menu li {
+            font-size: 12px;
+        }
+
+        .product-filter .options .product-compare a,
+        .product-info .cart .links a,
+        .button-previous-next,
+        .footer-button,
+        .button-white-with-red-text,
+        table.attribute thead td,
+        table.list thead td,
+        .wishlist-product table thead td,
+        .wishlist-info table thead td,
+        .compare-info thead td,
+        .checkout-product table thead td,
+        .table thead td,
+        .cart-info table thead td,
+        .manufacturer-heading,
+        .center-column .panel-heading h4,
+        ul.box-filter > li > span,
+        .popup .form-contact .contact-label label,
+        .categories-wall .category-wall .more-categories,
+        .mfilter-heading,
+        .product-info .options2 > div > label {
+            font-size: 11px !important;
+
+        }
+
+        ul.megamenu li .sub-menu .content .static-menu a.main-menu {
+            font-size: 25px;
+            font-weight: 400 !important;
+            font-family: Schoolbell;
+
+            line-height: 1.6;
+        }
+
+        ul.megamenu > li > a strong,
+        .megamenuToogle-wrapper .container {
+            font-size: 20px;
+            font-weight: 400 !important;
+            font-family: Schoolbell;
+
+        }
+
+        .horizontal ul.megamenu > li > a,
+        .megamenuToogle-wrapper .container {
+            line-height: 1.1;
+        }
+
+        .box .box-heading,
+        .center-column h1,
+        .center-column h2,
+        .center-column h3,
+        .center-column h4,
+        .center-column h5,
+        .center-column h6,
+        .products-carousel-overflow .box-heading,
+        .htabs a,
+        .product-info .options h2,
+        h3,
+        h4,
+        h6,
+        .product-block .title-block,
+        .filter-product .filter-tabs ul > li > a,
+        .popup h4,
+        .product-info .product-name a,
+        legend {
+            font-size: 25px;
+            font-weight: 400 !important;
+            font-family: Schoolbell;
+
+        }
+
+        .box-with-categories .box-heading,
+        .vertical .megamenuToogle-wrapper .container {
+            font-size: 20px;
+            font-weight: 400 !important;
+            font-family: Schoolbell;
+
+        }
+
+        .box-with-categories .box-heading,
+        .vertical .megamenuToogle-wrapper .container {
+            line-height: 1.1;
+        }
+
+        .box-category ul li > a,
+        .vertical ul.megamenu > li > a strong {
+            font-size: 14px;
+            font-weight: 600 !important;
+            font-family: Poppins;
+
+            line-height: 1.6;
+        }
+
+        .sale,
+        #main .new {
+            font-size: 11px;
+            font-weight: 600 !important;
+
+            line-height: 1.6;
+        }
+
+        .footer h4,
+        .custom-footer h4 {
+            font-size: 25px;
+            font-weight: 400 !important;
+            font-family: Schoolbell;
+
+        }
+
+        .breadcrumb .container h1 {
+            font-size: 35px;
+            font-weight: 400 !important;
+            font-family: Schoolbell;
+
+        }
+
+        .button,
+        .btn,
+        .footer-button {
+            font-size: 11px !important;
+            font-weight: 600 !important;
+
+            line-height: 1.6;
+        }
+
+        .product-grid .product .price,
+        .advanced-grid-products .product .right .price,
+        #top #cart_block .cart-heading p strong,
+        .cart-total table tr td:last-child,
+        .mini-cart-info td.total,
+        .mini-cart-total td:last-child,
+        .today-deals-products .product .price,
+        .architecture-products .product .right .price,
+        .matrialarts-products .matrial-product .right .price {
+            font-size: 14px;
+            font-weight: 600 !important;
+        }
+
+        .product-info .price .price-new {
+            font-size: 50px;
+            font-weight: 600 !important;
+        }
+
+        .product-list .name-actions > .price {
+            font-size: 20px;
+            font-weight: 600 !important;
+        }
+
+        .price-old,
+        .today-deals-products .product .price .price-old,
+        .architecture-products .product .right .price .price-old {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/toys/css/magnific-popup.css" media="screen"/>
+
+
+    <script type="text/javascript" src="catalog/view/theme/toys/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/toys/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/toys/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/toys/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/toys/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/toys/js/twitter-bootstrap-hover-dropdown.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/toys/js/common.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/toys/js/tweetfeed.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/toys/js/bootstrap-notify.min.js"></script>
+
+
+    <script type="text/javascript" src="catalog/view/theme/toys/js/owl.carousel.min.js"></script>
+
+    <script type="text/javascript" src="catalog/view/theme/toys/js/jquery-ui-1.10.4.custom.min.js"></script>
+
+    <script type="text/javascript" src="catalog/view/theme/toys/js/jquery.magnific-popup.min.js"></script>
+
+    <script type="text/javascript">
+        var responsive_design = 'yes';
+    </script>
+
+    {% for script in scripts %}
+        <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
+
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="catalog/view/theme/toys/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="{{ body_class }}       show-vertical-megamenu     no-box-type-7      footer-type-9 breadcrumb-style-1 border-width-0 body-other    body-header-type-5">
+
+
+<div class="fixed-body">
+    <div id="main" class="main-fixed">
+        <!-- HEADER
+    ================================================== -->
+        <header class="header-type-5">
+            <div class="background-header"></div>
+            <div class="slider-header">
+                <!-- Top of pages -->
+                <div id="top" class="full-width">
+                    <div class="background-top"></div>
+                    <div class="background">
+                        <div class="shadow"></div>
+                        <div class="pattern">
+                            <div class="container">
+                                <div class="row">
+
+                                    <!-- Header Left -->
+                                    <div class="col-sm-4" id="header-left">
+                                        <!-- Logo -->
+                                        <div class="logo">
+                                            {% if logo %}
+                                            <a href="{{ home }}">
+                                                <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}"/>
+                                            </a>
+                                            {% else %}
+                                                <h1><a href="{{ home }}">{{ name }}</a></h1>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+
+                                    <!-- Header Right -->
+                                    <div class="col-sm-8" id="header-right">
+
+                                        <!-- Search -->
+                                        {{ search }}
+
+                                        <!-- Currency -->
+                                        {{ currency }}
+
+
+                                        <a href="{{ account }}" class="my-account"><i class="fa fa-user"></i></a>
+
+                                        <!-- Cart block -->
+                                        {{ cart }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{ menu }}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>

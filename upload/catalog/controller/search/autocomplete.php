@@ -17,7 +17,7 @@ class ControllerSearchAutocomplete extends Controller{
                 'filter_name'         => $this->request->get['filter_name'],
                 'filter_tag'          => '',
                 'filter_description'  => '',
-                'filter_category_id'  => $this->request->get['filter_category_id'],
+//                'filter_category_id'  => $this->request->get['filter_category_id'],
                 'filter_sub_category' => '',
                 'sort'                => '',
                 'order'               => '',

@@ -55,7 +55,7 @@ class ControllerExtensionModuleBestSeller extends Controller {
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
 			}
-
+			
 			return $this->load->view('extension/module/bestseller', $data);
 		}
 	}
