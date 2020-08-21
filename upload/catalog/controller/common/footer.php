@@ -18,6 +18,7 @@ class ControllerCommonFooter extends Controller {
         $data['telephone'] = $this->config->get('config_telephone');
         $data['email'] = $this->config->get('config_email');
         $data['fax'] = $this->config->get('config_fax');
+        $data['address'] = nl2br($this->config->get('config_address'));
         
 		$data['contact'] = $this->url->link('information/contact');
 		$data['return'] = $this->url->link('account/return/add', '', true);

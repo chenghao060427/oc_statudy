@@ -1,0 +1,104 @@
+{{ header }}
+<!-- BREADCRUMB
+================================================== -->
+<div class="breadcrumb full-width">
+    <div class="background-breadcrumb"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+                <div class="clearfix">
+                    <h1 id="title-page"> {{ heading_title }} </h1>
+
+                    <ul>
+                        {% for breadcrumb in breadcrumbs %}
+                            <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MAIN CONTENT
+	================================================== -->
+<div class="main-content full-width inner-page">
+    <div class="background-content"></div>
+    <div class="background">
+        <div class="shadow"></div>
+        <div class="pattern">
+            <div class="container">
+
+
+                <div class="row">
+
+                    <div class="col-md-12">
+
+                        <div class="row">
+                            {{ column_left }}
+                            {% if column_left and column_right %}
+                                {% set class = 'col-md-6' %}
+                            {% elseif column_left or column_right %}
+                                {% set class = 'col-md-9' %}
+                            {% else %}
+                                {% set class = 'col-md-12' %}
+                            {% endif %}
+                            <div class="{{ class }} center-column content-with-background" id="content">
+
+                                {{ content_top }}
+                                <p>{{ text_total }} <b>{{ total }}</b>.</p>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <td class="text-left">{{ column_type }}</td>
+                                            <td class="text-left">{{ column_digits }}</td>
+                                            <td class="text-right">{{ column_expiry }}</td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% if cards %}
+                                            {% for card in cards %}
+                                                <tr>
+                                                    <td class="text-right">{{ card.type }}</td>
+                                                    <td class="text-left">{{ card.digits }}</td>
+                                                    <td class="text-left">{{ card.expiry }}</td>
+                                                    <td class="text-right"><a href="{{ delete }} {{ card.card_id }}" class="btn btn-danger">{{ button_delete }}</a></td>
+                                                </tr>
+                                            {% endfor %}
+                                        {% else %}
+                                            <tr>
+                                                <td class="text-center" colspan="5">{{ text_empty }}</td>
+                                            </tr>
+                                        {% endif %}
+                                        </tbody>
+                                    </table>
+                                    <div class="row">
+                                        <div class="col-sm-6 text-left">{{ pagination }}</div>
+                                        <div class="col-sm-6 text-right">{{ results }}</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="buttons clearfix">
+                                    <div class="pull-left"><a href="{{ back }}" class="btn btn-default">{{ button_back }}</a></div>
+                                    <div class="pull-right"><a href="{{ add }}" class="btn btn-primary">{{ button_new_card }}</a></div>
+                                </div>
+                                {{ content_bottom }}
+                            </div>
+                            {{ column_right }}
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ footer }}

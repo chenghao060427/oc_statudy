@@ -962,3 +962,4 @@
 2020-08-05 11:16:59 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\xampp\htdocs\OpenCart\upload\system\library\mail\mail.php on line 77
 2020-08-05 11:17:00 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in D:\xampp\htdocs\OpenCart\upload\system\library\mail\mail.php on line 77
 2020-08-07 6:44:21 - PHP Warning:  unlink(D:/xampp/htdocs/OpenCart/storage/cache/cache.catalog.language.1596786261): No such file or directory in D:\xampp\htdocs\OpenCart\upload\system\library\cache\file.php on line 68
+2020-08-21 6:57:46 - PHP Notice:  Undefined index: date_ordered in D:\xampp\htdocs\OpenCart\upload\catalog\model\account\return.php on line 4

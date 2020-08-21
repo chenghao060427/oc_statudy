@@ -12,8 +12,10 @@ class ControllerExtensionModuleFeatured extends Controller {
 		if (!$setting['limit']) {
 			$setting['limit'] = 4;
 		}
+		
 		$data['name']=$setting['name'];
-
+		$data['id'] = mt_rand(1000000,9999999);
+		
 		if (!empty($setting['product'])) {
 			$products = array_slice($setting['product'], 0, (int)$setting['limit']);
 

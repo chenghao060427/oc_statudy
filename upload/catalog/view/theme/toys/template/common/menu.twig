@@ -1,126 +1,36 @@
-<div class="megamenu-background">
-    <div class="">
-        <div class="overflow-megamenu container">
-            <div class="row mega-menu-modules">
-                <div class="col-md-3">
-                    <div id="megamenu_34645567"
-                         class="container-megamenu container vertical mobile-disabled">
-                        <div id="menuHeading">
-                            <div class="megamenuToogle-wrapper">
-                                <div class="megamenuToogle-pattern">
-                                    <div class="container">
-                                        {{ text_category }}
+<div class="container container-megamenu2">
+    <div class="megamenu-background">
+        <div class="">
+            <div class="overflow-megamenu container">
+                <div class="row mega-menu-modules">
+                    <div class="col-md-3">
+                        <div id="megamenu_34645567"
+                             class="container-megamenu container vertical mobile-disabled">
+                            <div id="menuHeading">
+                                <div class="megamenuToogle-wrapper">
+                                    <div class="megamenuToogle-pattern">
+                                        <div class="container">
+                                            {{ text_category }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="megamenu-wrapper">
-                            <div class="megamenu-pattern">
-                                <div class="container">
-                                    <ul class="megamenu shift-left">
-                                        {% for category in categories %}
-                                            {% if category.children %}
-                                            <li class='with-sub-menu hover'>
-                                                <p class='close-menu'></p>
-                                                <p class='open-menu'></p>
-                                                <a href='{{ category.href }}' class='clearfix'>
-                                                    <span>
-                                                        <strong>
-                                                           {{ category.name }}
-                                                        </strong>
-                                                    </span>
-                                                </a>
-                                                <div class="sub-menu " style="width:190px">
-                                                    <div class="content"><p class="arrow"></p>
-                                                        <div class="row">
-                                                            <div class="col-sm-12  mobile-enabled">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12 hover-menu">
-                                                                        <div class="menu">
-                                                                            <ul>
-                                                                                {% for child in category.children %}
-                                                                                    <li>
-                                                                                        <a href="{{ child.href }}" onclick="window.location = '{{ child.href }}';" class="main-menu ">
-                                                                                            {{ child.name }}
-                                                                                        </a>
-                                                                                    </li>
-                                                                                {% endfor %}
-
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            {% else %}
-                                                <li class=''>
-                                                    <p class='close-menu'></p>
-                                                    <p class='open-menu'></p>
-                                                    <a href='{{ category.href }}' class='clearfix'>
-                                                    <span>
-                                                        <strong>
-                                                           {{ category.name }}
-                                                        </strong>
-                                                    </span>
-                                                    </a>
-                                                </li>
-                                            {% endif %}
-                                        {% endfor %}
-
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <script type="text/javascript">
-                        $(window).load(function () {
-                            var css_tpl = '<style type="text/css">';
-                            css_tpl += '#megamenu_34645567 ul.megamenu > li > .sub-menu > .content {';
-                            css_tpl += '-webkit-transition: all 200ms ease-out !important;';
-                            css_tpl += '-moz-transition: all 200ms ease-out !important;';
-                            css_tpl += '-o-transition: all 200ms ease-out !important;';
-                            css_tpl += '-ms-transition: all 200ms ease-out !important;';
-                            css_tpl += 'transition: all 200ms ease-out !important;';
-                            css_tpl += '}</style>'
-                            $("head").append(css_tpl);
-                        });
-                    </script>
-                </div>
-                <div class="col-md-9">
-                    <div id="megamenu_54925023" class="container-megamenu  horizontal">
-                        <div class="megaMenuToggle">
-                            <div class="megamenuToogle-wrapper">
-                                <div class="megamenuToogle-pattern">
+                            <div class="megamenu-wrapper">
+                                <div class="megamenu-pattern">
                                     <div class="container">
-                                        <div><span></span><span></span><span></span></div>
-                                        Navigation
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="megamenu-wrapper">
-                            <div class="megamenu-pattern">
-                                <div class="container">
-                                    <ul class="megamenu shift-up">
-                                        {% for category in menu_categories %}
-                                            {% if category.children %}
-                                                <li class=' with-sub-menu hover'>
+                                        <ul class="megamenu shift-left">
+                                            {% for category in categories %}
+                                                {% if category.children %}
+                                                <li class='with-sub-menu hover'>
                                                     <p class='close-menu'></p>
                                                     <p class='open-menu'></p>
                                                     <a href='{{ category.href }}' class='clearfix'>
                                                         <span>
                                                             <strong>
-                                                                {{ category.name }}
+                                                               {{ category.name }}
                                                             </strong>
                                                         </span>
                                                     </a>
-
                                                     <div class="sub-menu " style="width:190px">
                                                         <div class="content"><p class="arrow"></p>
                                                             <div class="row">
@@ -130,12 +40,13 @@
                                                                             <div class="menu">
                                                                                 <ul>
                                                                                     {% for child in category.children %}
-                                                                                    <li>
-                                                                                        <a href="{{ child.href }}" onclick="window.location = '{{ child.href }}';" class="main-menu ">
-                                                                                            {{ child.name }}
-                                                                                        </a>
-                                                                                    </li>
+                                                                                        <li>
+                                                                                            <a href="{{ child.href }}" onclick="window.location = '{{ child.href }}';" class="main-menu ">
+                                                                                                {{ child.name }}
+                                                                                            </a>
+                                                                                        </li>
                                                                                     {% endfor %}
+
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
@@ -145,39 +56,130 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                            {% else %}
-                                                <li class=''>
-                                                    <p class='close-menu'></p>
-                                                    <p class='open-menu'></p>
-                                                    <a href='{{ category.href }}' class='clearfix'>
+                                                {% else %}
+                                                    <li class=''>
+                                                        <p class='close-menu'></p>
+                                                        <p class='open-menu'></p>
+                                                        <a href='{{ category.href }}' class='clearfix'>
                                                         <span>
                                                             <strong>
-                                                                {{ category.name }}
+                                                               {{ category.name }}
                                                             </strong>
                                                         </span>
-                                                    </a>
-                                                </li>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </ul>
+                                                        </a>
+                                                    </li>
+                                                {% endif %}
+                                            {% endfor %}
+
+
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <script type="text/javascript">
-                        $(window).load(function () {
-                            var css_tpl = '<style type="text/css">';
-                            css_tpl += '#megamenu_54925023 ul.megamenu > li > .sub-menu > .content {';
-                            css_tpl += '-webkit-transition: all 200ms ease-out !important;';
-                            css_tpl += '-moz-transition: all 200ms ease-out !important;';
-                            css_tpl += '-o-transition: all 200ms ease-out !important;';
-                            css_tpl += '-ms-transition: all 200ms ease-out !important;';
-                            css_tpl += 'transition: all 200ms ease-out !important;';
-                            css_tpl += '}</style>'
-                            $("head").append(css_tpl);
-                        });
-                    </script>
+                        <script type="text/javascript">
+                            $(window).load(function () {
+                                var css_tpl = '<style type="text/css">';
+                                css_tpl += '#megamenu_34645567 ul.megamenu > li > .sub-menu > .content {';
+                                css_tpl += '-webkit-transition: all 200ms ease-out !important;';
+                                css_tpl += '-moz-transition: all 200ms ease-out !important;';
+                                css_tpl += '-o-transition: all 200ms ease-out !important;';
+                                css_tpl += '-ms-transition: all 200ms ease-out !important;';
+                                css_tpl += 'transition: all 200ms ease-out !important;';
+                                css_tpl += '}</style>'
+                                $("head").append(css_tpl);
+                            });
+                        </script>
+                    </div>
+                    <div class="col-md-9">
+                        <div id="megamenu_54925023" class="container-megamenu  horizontal">
+                            <div class="megaMenuToggle">
+                                <div class="megamenuToogle-wrapper">
+                                    <div class="megamenuToogle-pattern">
+                                        <div class="container">
+                                            <div><span></span><span></span><span></span></div>
+                                            Navigation
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="megamenu-wrapper">
+                                <div class="megamenu-pattern">
+                                    <div class="container">
+                                        <ul class="megamenu shift-up">
+                                            {% for category in menu_categories %}
+                                                {% if category.children %}
+                                                    <li class=' with-sub-menu hover'>
+                                                        <p class='close-menu'></p>
+                                                        <p class='open-menu'></p>
+                                                        <a href='{{ category.href }}' class='clearfix'>
+                                                            <span>
+                                                                <strong>
+                                                                    {{ category.name }}
+                                                                </strong>
+                                                            </span>
+                                                        </a>
+
+                                                        <div class="sub-menu " style="width:190px">
+                                                            <div class="content"><p class="arrow"></p>
+                                                                <div class="row">
+                                                                    <div class="col-sm-12  mobile-enabled">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12 hover-menu">
+                                                                                <div class="menu">
+                                                                                    <ul>
+                                                                                        {% for child in category.children %}
+                                                                                        <li>
+                                                                                            <a href="{{ child.href }}" onclick="window.location = '{{ child.href }}';" class="main-menu ">
+                                                                                                {{ child.name }}
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        {% endfor %}
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                {% else %}
+                                                    <li class=''>
+                                                        <p class='close-menu'></p>
+                                                        <p class='open-menu'></p>
+                                                        <a href='{{ category.href }}' class='clearfix'>
+                                                            <span>
+                                                                <strong>
+                                                                    {{ category.name }}
+                                                                </strong>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+                            $(window).load(function () {
+                                var css_tpl = '<style type="text/css">';
+                                css_tpl += '#megamenu_54925023 ul.megamenu > li > .sub-menu > .content {';
+                                css_tpl += '-webkit-transition: all 200ms ease-out !important;';
+                                css_tpl += '-moz-transition: all 200ms ease-out !important;';
+                                css_tpl += '-o-transition: all 200ms ease-out !important;';
+                                css_tpl += '-ms-transition: all 200ms ease-out !important;';
+                                css_tpl += 'transition: all 200ms ease-out !important;';
+                                css_tpl += '}</style>'
+                                $("head").append(css_tpl);
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
