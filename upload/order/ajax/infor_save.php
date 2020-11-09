@@ -23,7 +23,7 @@ $title_arr = array(
     'product_addr',
     'remark'
 );
-$con = mysqli_connect('localhost','root','123456','open_cart');
+$con = mysqli_connect('127.0.0.1','lin_yuyanxt_com','kjTGHNadXL2NhAyx','lin_yuyanxt_com');
 
 mysqli_query($con,"SET CHARACTER SET utf8");
 

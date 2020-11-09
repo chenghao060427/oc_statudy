@@ -1,0 +1,204 @@
+<div class="box clearfix box-with-products with-scroll box-no-advanced">
+    <!-- Carousel nav -->
+    <a class="next" href="#myCarouse{{ id }}" id="myCarouse{{ id }}_next"><span></span></a>
+    <a class="prev" href="#myCarouse{{ id }}" id="myCarouse{{ id }}_prev"><span></span></a>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var ow{{ id }} = $(".box #myCarouse{{ id }} .carousel-inner");
+
+            $("#myCarouse{{ id }}_next").click(function(){
+                ow{{ id }}.trigger('owl.next');
+                return false;
+            })
+            $("#myCarouse{{ id }}_prev").click(function(){
+                ow{{ id }}.trigger('owl.prev');
+                return false;
+            });
+
+            ow{{ id }}.owlCarousel({
+                slideSpeed : 500,
+                singleItem:true
+            });
+        });
+    </script>
+
+    <div class="box-heading">{{ name }}</div>
+    <div class="strip-line"></div>
+    <div class="clear"></div>
+    <div class="box-content products">
+        <div class="box-product">
+            <div id="myCarouse{{ id }}" class="carousel slide">
+                <!-- Carousel items -->
+                <div class="carousel-inner owl-carousel owl-theme" style="opacity: 1; display: block;">
+                    <div class="product-grid">
+
+                        <div class="row">
+                            {% if(products|length>=4) %}
+                                {% for i in 0..3 %}
+                                    <div class="col-sm-3 col-xs-6  ">
+
+                                        <!-- Product -->
+                                        <div class="product clearfix product-hover">
+                                            <div class="left">
+
+                                                <div class="image ">
+                                                    <a href="{{ products[i].href }}">
+
+                                                        <img src="{{ products[i].thumb }}" alt="{{ products[i].name }}" class="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="name"><a href="{{ products[i].href }}">{{ products[i].name }}</a></div>
+                                                {% if product.rating %}
+                                                    <div class="rating">
+                                                        {% for i in 5 %}
+                                                            {% if products[i].rating < i %}
+                                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                            {% else %}
+                                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                {% endif %}
+                                                {% if product.price %}
+                                                    <div class="price">
+                                                        {% if not product.special %}
+                                                            <span class="price-new">{{ products[i].price }}</span>
+                                                        {% else %}
+                                                            <span class="price-old">{{ products[i].special }}</span> <span class="price-new">{{ products[i].price }}</span>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                                <div class="only-hover">
+                                                    <ul>
+                                                        <li><a onclick="cart.add('{{ products[i].product_id }}');" data-toggle="tooltip" data-original-title="{{ button_cart }}"><i class="fa fa-shopping-cart"></i></a></li>
+
+
+                                                        <li><a onclick="compare.add('{{ products[i].product_id }}');" data-toggle="tooltip" data-original-title="{{ button_compare }}"><i class="fa fa-exchange"></i></a></li>
+
+                                                        <li><a onclick="wishlist.add('{{ products[i].product_id }}');" data-toggle="tooltip" data-original-title="{{ button_wishlist }}"><i class="fa fa-heart"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                {% for product in products %}
+                                    <div class="col-sm-3 col-xs-6  ">
+
+                                        <!-- Product -->
+                                        <div class="product clearfix product-hover">
+                                            <div class="left">
+
+                                                <div class="image ">
+                                                    <a href="{{ product.href }}">
+
+                                                        <img src="{{ product.thumb }}" alt="{{ product.name }}" class="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="name"><a href="{{ product.href }}">{{ product.name }}</a></div>
+                                                {% if product.rating %}
+                                                    <div class="rating">
+                                                        {% for i in 5 %}
+                                                            {% if product.rating < i %}
+                                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                            {% else %}
+                                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                {% endif %}
+                                                {% if product.price %}
+                                                    <div class="price">
+                                                        {% if not product.special %}
+                                                            <span class="price-new">{{ product.price }}</span>
+                                                        {% else %}
+                                                            <span class="price-old">{{ product.special }}</span> <span class="price-new">{{ product.price }}</span>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                                <div class="only-hover">
+                                                    <ul>
+                                                        <li><a onclick="cart.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_cart }}"><i class="fa fa-shopping-cart"></i></a></li>
+
+
+                                                        <li><a onclick="compare.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_compare }}"><i class="fa fa-exchange"></i></a></li>
+
+                                                        <li><a onclick="wishlist.add('{{ product.product_id }}');" data-toggle="tooltip" data-original-title="{{ button_wishlist }}"><i class="fa fa-heart"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="product-grid">
+                        <div class="row">
+                            {% if(products|length>4) and (products|length<=8) %}
+                                {% for i in 4..8 %}
+                                    <div class="col-sm-3 col-xs-6  ">
+
+                                        <!-- Product -->
+                                        <div class="product clearfix product-hover">
+                                            <div class="left">
+
+                                                <div class="image ">
+                                                    <a href="{{ products[i].href }}">
+
+                                                        <img src="{{ products[i].thumb }}" alt="{{ products[i].name }}" class="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <div class="name"><a href="{{ products[i].href }}">{{ products[i].name }}</a></div>
+                                                {% if product.rating %}
+                                                    <div class="rating">
+                                                        {% for i in 5 %}
+                                                            {% if products[i].rating < i %}
+                                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                            {% else %}
+                                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                {% endif %}
+                                                {% if product.price %}
+                                                    <div class="price">
+                                                        {% if not product.special %}
+                                                            <span class="price-new">{{ products[i].price }}</span>
+                                                        {% else %}
+                                                            <span class="price-old">{{ products[i].special }}</span> <span class="price-new">{{ products[i].price }}</span>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                                <div class="only-hover">
+                                                    <ul>
+                                                        <li><a onclick="cart.add('{{ products[i].product_id }}');" data-toggle="tooltip" data-original-title="{{ button_cart }}"><i class="fa fa-shopping-cart"></i></a></li>
+
+
+                                                        <li><a onclick="compare.add('{{ products[i].product_id }}');" data-toggle="tooltip" data-original-title="{{ button_compare }}"><i class="fa fa-exchange"></i></a></li>
+
+                                                        <li><a onclick="wishlist.add('{{ products[i].product_id }}');" data-toggle="tooltip" data-original-title="{{ button_wishlist }}"><i class="fa fa-heart"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

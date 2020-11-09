@@ -1,0 +1,15 @@
+
+<div class="row banners">
+    {% if banners|length == 1 %}
+        {% set class = 'col-sm-12' %}
+      {% elseif banners|length == 2%}
+          {% set class = 'col-sm-6' %}
+      {% elseif banners|length == 3%}
+          {% set class = 'col-sm-4' %}
+      {% elseif banners|length == 4%}
+          {% set class = 'col-sm-3' %}
+    {% endif %}
+    {% for banner in banners %}
+      <div class="{{ class }}"><a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="Image" style="width: 100%"></a></div>
+    {% endfor %}
+</div>

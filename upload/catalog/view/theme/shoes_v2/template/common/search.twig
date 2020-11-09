@@ -1,0 +1,57 @@
+<div class="search_form">
+    <div class="button-search"></div>
+    <span role="status" aria-live="polite"
+          class="ui-helper-hidden-accessible"></span><input type="text"
+                                                            class="input-block-level search-query ui-autocomplete-input"
+                                                            name="search"
+                                                            placeholder="{{ text_search }}"
+                                                            id="search_query"
+                                                            value="{{ search }}"
+                                                            autocomplete="off">
+
+    <div id="autocomplete-results" class="autocomplete-results">
+        <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all"
+            id="ui-id-1" tabindex="0" style="display: none;"></ul>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#search_query').autocomplete({
+                delay: 0,
+                appendTo: "#autocomplete-results",
+                source: function (request, response) {
+                    $.ajax({
+                        url: 'index.php?route=search/autocomplete&filter_name=' + encodeURIComponent(request.term),
+                        dataType: 'json',
+                        success: function (json) {
+                            response($.map(json, function (item) {
+                                return {
+                                    label: item.name,
+                                    value: item.product_id,
+                                    href: item.href,
+                                    thumb: item.thumb,
+                                    desc: item.desc,
+                                    price: item.price
+                                }
+                            }));
+                        }
+                    });
+                },
+                select: function (event, ui) {
+                    document.location.href = ui.item.href;
+
+                    return false;
+                },
+                focus: function (event, ui) {
+                    return false;
+                },
+                minLength: 2
+            })
+                .data("ui-autocomplete")._renderItem = function (ul, item) {
+                return $("<li>")
+                    .append("<a>" + item.label + "</a>")
+                    .appendTo(ul);
+            };
+        });
+    </script>
+</div>

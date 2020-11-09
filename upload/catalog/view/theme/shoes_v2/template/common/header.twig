@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html lang="en" class="ie7 responsive"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="ie8 responsive"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 responsive"> <![endif]-->
+<!--[if !IE]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}" class="responsive"> <!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{ title }}</title>
+    <!--<base href="http://fastortheme.com/shoes_v2/">-->
+    <base href="{{ base }}" />
+
+    <!-- Meta -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if description %}
+        <meta name="description" content="{{ description }}" />
+    {% endif %}
+
+    <link href="catalog/view/theme/shoes_v2/image/catalog/cart.png" rel="icon"/>
+
+    <!-- Google Fonts -->
+    <link href="catalog/view/theme/shoes_v2/css/css" rel="stylesheet" type="text/css">
+    <link href="catalog/view/theme/shoes_v2/css/css(1)" rel="stylesheet" type="text/css">
+    <link href="catalog/view/theme/shoes_v2/css/css(2)" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/filter_product.css">
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/wide-grid.css">
+    <style type="text/css">
+        body,
+        .product-filter .list-options select,
+        .blog-article .post .box .box-heading {
+            color: #232323;
+        }
+
+        a {
+            color: #232323;
+        }
+
+        a:hover,
+        div.pagination-results ul li.active {
+            color: #97e524;
+        }
+
+
+        .product-info .radio-type-button span:hover,
+        .product-info .radio-type-button span.active,
+        .product-info .radio-type-button2 span:hover,
+        .product-info .radio-type-button2 span.active,
+        #main .mfilter-image ul li.mfilter-image-checked {
+            border-color: #97e524;
+        }
+
+        .product-info .radio-type-button2 span.active {
+            background: #97e524;
+        }
+
+        .compare-info .price-new,
+        .product-grid .product .price,
+        .product-list .actions > div .price,
+        .product-info .price .price-new,
+        ul.megamenu li .product .price,
+        .mini-cart-total td:last-child,
+        .cart-total table tr td:last-child,
+        .mini-cart-info td.total,
+        .advanced-grid-products .product .right .price,
+        .product-list .name-actions > .price,
+        .today-deals-products .product .price,
+        .medic-last-in-stock .price,
+        .architecture-products .product .right .price,
+        .matrialarts-products .matrial-product .right .price,
+        .today-deals-toys2-products .price,
+        .today-deals-shoes_v23-products .price,
+        .holidays-products .product .right .price {
+            color: #f77b24;
+        }
+
+
+
+        body,
+        .standard-body .full-width #mfilter-content-container > span:before {
+            background: #fff;
+        }
+
+        .product-grid .product:hover:before,
+        .product-list > div:hover {
+            border-color: #97e524;
+        }
+
+
+
+
+        .product-grid .product .only-hover ul li a:hover,
+        .architecture-products .product .right .only-hover ul li a:hover,
+        .product-list .name-actions ul li a:hover,
+        .today-deals-toys2-products .only-hover ul li a:hover,
+        .flower-product .right ul li a:hover {
+            background-color: #97e524;
+        }
+
+        .product-grid .product .only-hover ul li a:hover,
+        .architecture-products .product .right .only-hover ul li a:hover,
+        .product-list .name-actions ul li a:hover,
+        .today-deals-toys2-products .only-hover ul li a:hover,
+        .flower-product .right ul li a:hover {
+            border-color: #97e524;
+        }
+
+        .product-grid .product .only-hover ul li a:hover,
+        .architecture-products .product .right .only-hover ul li a:hover,
+        .product-list .name-actions ul li a:hover,
+        .today-deals-toys2-products .only-hover ul li a:hover,
+        .flower-product .right ul li a:hover {
+            color: #fff;
+        }
+
+
+        .dropdown-menu {
+            color: #232323;
+        }
+
+        .dropdown-menu li a,
+        .dropdown-menu .mini-cart-info a,
+        .ui-autocomplete li a {
+            color: #232323 !important;
+        }
+
+        .dropdown-menu li a:hover,
+        .dropdown-menu .mini-cart-info a:hover,
+        .ui-autocomplete li a:hover,
+        .ui-autocomplete li a.ui-state-focus {
+            color: #97e524 !important;
+        }
+
+        textarea,
+        input[type="text"],
+        input[type="password"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="date"],
+        input[type="month"],
+        input[type="time"],
+        input[type="week"],
+        input[type="number"],
+        input[type="email"],
+        input[type="url"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="color"],
+        .uneditable-input {
+            background: #fff;
+        }
+
+        textarea:focus,
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="datetime"]:focus,
+        input[type="datetime-local"]:focus,
+        input[type="date"]:focus,
+        input[type="month"]:focus,
+        input[type="time"]:focus,
+        input[type="week"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="color"]:focus,
+        .uneditable-input:focus {
+            background: #fff;
+        }
+
+        textarea,
+        input[type="text"],
+        input[type="password"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="date"],
+        input[type="month"],
+        input[type="time"],
+        input[type="week"],
+        input[type="number"],
+        input[type="email"],
+        input[type="url"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="color"],
+        .uneditable-input {
+            border: 1px solid #d9d9d9;
+        }
+
+        textarea:focus,
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="datetime"]:focus,
+        input[type="datetime-local"]:focus,
+        input[type="date"]:focus,
+        input[type="month"]:focus,
+        input[type="time"]:focus,
+        input[type="week"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="color"]:focus,
+        .uneditable-input:focus {
+            border: 1px solid #97e524;
+        }
+
+        textarea,
+        input[type="text"],
+        input[type="password"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="date"],
+        input[type="month"],
+        input[type="time"],
+        input[type="week"],
+        input[type="number"],
+        input[type="email"],
+        input[type="url"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="color"],
+        .uneditable-input {
+            color: #232323;
+        }
+
+        .mfilter-price-inputs input {
+            color: #232323 !important;
+        }
+
+
+
+
+        .select:after,
+        .product-filter .list-options .sort:after,
+        .product-filter .list-options .limit:after {
+            color: #f77b24;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .box .box-heading,
+        .product-block .title-block,
+        .refine_search {
+            color: #1a191a;
+        }
+
+        .box .box-heading,
+        .product-block .title-block,
+        .refine_search,
+        .market-products-categories > ul > li > a {
+            border-bottom-color: #97e524;
+        }
+
+
+        .col-sm-3 .box-no-advanced.box .box-content, .col-sm-4 .box-no-advanced.box .box-content, .col-md-3 .box-no-advanced.box .box-content, .col-md-4 .box-no-advanced.box .box-content {
+            border-color: #97e524;
+        }
+
+        .col-sm-3 .box-no-advanced.box .box-heading, .col-sm-4 .box-no-advanced.box .box-heading, .col-md-3 .box-no-advanced.box .box-heading, .col-md-4 .box-no-advanced.box .box-heading {
+            border-color: #97e524;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .top-bar {
+            background: #000000;
+        }
+
+
+
+
+
+
+        #top .background {
+            background: #0f0e0f; /* Old browsers */
+            background: -moz-linear-gradient(top, #0f0e0f 0%, #232223 0%, #0f0e0f 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f0e0f), color-stop(0%,#232223), color-stop(99%,#0f0e0f)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #0f0e0f 0%,#232223 0%,#0f0e0f 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #0f0e0f 0%,#232223 0%,#0f0e0f 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #0f0e0f 0%,#232223 0%,#0f0e0f 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #0f0e0f 0%,#232223 0%,#0f0e0f 99%); /* W3C */
+        }
+
+        .megamenu-background {
+            border-bottom-color: none;
+        }
+
+        .megamenu-background {
+            border-bottom: none;
+        }
+
+
+
+        .top-bar .menu li a,
+        .header-type-9 #top #header-center .menu li a,
+        .header-type-17 #top #header-left .menu li a,
+        .header-type-26 #top .menu li a {
+            color: #626262;
+        }
+
+        .top-bar .menu li a:hover,
+        .header-type-9 #top #header-center .menu li a:hover,
+        .header-type-17 #top #header-left .menu li a:hover,
+        .header-type-26 #top .menu li a:hover {
+            color: #fff;
+        }
+
+        #top .search_form input {
+            background: none;
+        }
+
+        #top .search_form input:focus {
+            background: none;
+        }
+
+        #top .search_form input {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #top .search_form input:focus {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        #top .search_form input {
+            color: #808080;
+        }
+
+        #top .search_form input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color:    #808080;
+        }
+
+        #top .search_form input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    #808080;
+            opacity:  1;
+        }
+
+        #top .search_form input::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    #808080;
+            opacity:  1;
+        }
+
+        #top .search_form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color:    #808080;
+        }
+
+        .search_form .button-search,
+        .search_form .button-search2 {
+            color: #626262;
+        }
+
+        #top .dropdown > a:after {
+            color: #97e524;
+        }
+
+        #top .dropdown > a {
+            color: #626262;
+        }
+
+        #top .dropdown:hover > a {
+            color: #97e524;
+        }
+
+        #top .dropdown:hover > a:after {
+            color: #626262;
+        }
+
+        #top .my-account {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        #top .my-account {
+            background: none;
+        }
+
+
+        #top .my-account,
+        .header-type-23 .dropdown i {
+            color: #f77b24;
+        }
+
+        #top .my-account:hover {
+            border-color: #f77b24;
+        }
+
+        #top .my-account:hover {
+            background: #f77b24;
+        }
+
+
+        #top .my-account:hover,
+        .header-type-23 .dropdown:hover i {
+            color: #fff;
+        }
+
+        #top #cart_block .cart-heading .cart-icon,
+        .cart-block-type-2 #top #cart_block .cart-heading,
+        .cart-block-type-9 #top #cart_block .cart-heading,
+        .cart-block-type-8 #top #cart_block .cart-heading,
+        .cart-block-type-7 #top #cart_block .cart-heading,
+        .cart-block-type-4 #top #cart_block .cart-heading,
+        .cart-block-type-6 #top #cart_block .cart-heading,
+        .cart-block-type-8 #top #cart_block .cart-heading p,
+        .cart-block-type-4 #top #cart_block .cart-heading .cart-icon {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+
+
+        #top #cart_block .cart-heading .cart-icon,
+        .cart-block-type-2 #top #cart_block .cart-heading,
+        .cart-block-type-9 #top #cart_block .cart-heading,
+        .cart-block-type-8 #top #cart_block .cart-heading,
+        .cart-block-type-7 #top #cart_block .cart-heading,
+        .cart-block-type-4 #top #cart_block .cart-heading {
+            background: none;
+        }
+
+
+        #top #cart_block:hover .cart-heading .cart-icon,
+        .cart-block-type-2 #top #cart_block:hover .cart-heading,
+        .cart-block-type-9 #top #cart_block:hover .cart-heading,
+        .cart-block-type-8 #top #cart_block:hover .cart-heading,
+        .cart-block-type-7 #top #cart_block:hover .cart-heading,
+        .cart-block-type-4 #top #cart_block:hover .cart-heading,
+        .cart-block-type-6 #top #cart_block:hover .cart-heading,
+        .cart-block-type-8 #top #cart_block:hover .cart-heading p,
+        .cart-block-type-4 #top #cart_block:hover .cart-heading .cart-icon {
+            border-color: #97e524;
+        }
+
+
+        #top #cart_block:hover .cart-heading .cart-icon,
+        .cart-block-type-2 #top #cart_block:hover .cart-heading,
+        .cart-block-type-9 #top #cart_block:hover .cart-heading,
+        .cart-block-type-8 #top #cart_block:hover .cart-heading,
+        .cart-block-type-7 #top #cart_block:hover .cart-heading,
+        .cart-block-type-4 #top #cart_block:hover .cart-heading {
+            background: #97e524;
+        }
+
+
+        #top #cart_block .cart-heading .cart-count {
+            color: #000;
+        }
+
+
+        #top #cart_block .cart-heading .cart-count {
+            background: #75cf15; /* Old browsers */
+            background: -moz-linear-gradient(top, #75cf15 0%, #adeb40 0%, #75cf15 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#75cf15), color-stop(0%,#adeb40), color-stop(99%,#75cf15)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #75cf15 0%,#adeb40 0%,#75cf15 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #75cf15 0%,#adeb40 0%,#75cf15 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #75cf15 0%,#adeb40 0%,#75cf15 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #75cf15 0%,#adeb40 0%,#75cf15 99%); /* W3C */
+        }
+
+        #top #cart_block .cart-heading p {
+            color: #fff;
+        }
+
+        #top #cart_block .cart-heading p:after {
+            color: #fff;
+        }
+
+        #top #cart_block:hover .cart-heading .cart-count {
+            color: #fff;
+        }
+
+
+        #top #cart_block:hover .cart-heading .cart-count {
+            background: #f35e16; /* Old browsers */
+            background: -moz-linear-gradient(top, #f35e16 0%, #f99641 0%, #f35e16 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f35e16), color-stop(0%,#f99641), color-stop(99%,#f35e16)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f35e16 0%,#f99641 0%,#f35e16 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f35e16 0%,#f99641 0%,#f35e16 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f35e16 0%,#f99641 0%,#f35e16 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #f35e16 0%,#f99641 0%,#f35e16 99%); /* W3C */
+        }
+
+        #top #cart_block:hover .cart-heading p {
+            color: #97e524;
+        }
+
+        #top #cart_block:hover .cart-heading p:after {
+            color: #97e524;
+        }
+
+        #main .mfilter-slider-slider .ui-slider-handle, #main #mfilter-price-slider .ui-slider-handle {
+            background: #97e524 !important;
+        }
+
+        #main .mfilter-slider-slider .ui-slider-range, #main #mfilter-price-slider .ui-slider-range {
+            background: #adf444 !important;
+        }
+
+        ul.megamenu > li.with-sub-menu > a strong:after {
+            color: #1a191a;
+        }
+
+        ul.megamenu > li.with-sub-menu:hover > a strong:after {
+            color: #97e524;
+        }
+
+
+        .megamenu-background {
+            background: #f2f2f2; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2f2f2 0%, #ffffff 0%, #f2f2f2 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(0%,#ffffff), color-stop(99%,#f2f2f2)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2f2f2 0%,#ffffff 0%,#f2f2f2 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2f2f2 0%,#ffffff 0%,#f2f2f2 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2f2f2 0%,#ffffff 0%,#f2f2f2 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #f2f2f2 0%,#ffffff 0%,#f2f2f2 99%); /* W3C */
+        }
+
+        .megamenu-background {
+            background: #ffffff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #ffffff 50%, #f2f2f2 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#ffffff), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #ffffff 50%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #ffffff 50%,#f2f2f2 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #ffffff 50%,#f2f2f2 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #ffffff 50%,#f2f2f2 100%); /* W3C */
+        }
+
+        ul.megamenu > li > a {
+            color: #1a191a;
+        }
+
+        ul.megamenu > li:hover > a,
+        ul.megamenu > li.active > a,
+        ul.megamenu > li.home > a {
+            color: #97e524;
+        }
+
+
+        ul.megamenu li .sub-menu .content a:hover,
+        ul.megamenu li .sub-menu .content .hover-menu .menu ul li:hover > a {
+            color: #97e524;
+        }
+
+        ul.megamenu li .sub-menu .content .hover-menu a.with-submenu:before {
+            color: #97e524;
+        }
+
+
+
+        ul.megamenu li .sub-menu .content .static-menu a.main-menu:hover {
+            color: #97e524;
+        }
+
+        ul.megamenu li .sub-menu .content .static-menu a.main-menu:after {
+            background: #97e524;
+        }
+
+
+        .megamenuToogle-wrapper {
+            background: #f2f2f2; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2f2f2 0%, #fff 0%, #f2f2f2 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(0%,#fff), color-stop(99%,#f2f2f2)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2f2f2 0%,#fff 0%,#f2f2f2 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2f2f2 0%,#fff 0%,#f2f2f2 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2f2f2 0%,#fff 0%,#f2f2f2 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #f2f2f2 0%,#fff 0%,#f2f2f2 99%); /* W3C */
+        }
+
+        .megamenuToogle-wrapper {
+            background: #fff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #fff 50%, #f2f2f2 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#fff), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #fff 50%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #fff 50%,#f2f2f2 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #fff 50%,#f2f2f2 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #fff 50%,#f2f2f2 100%); /* W3C */
+        }
+
+        .megamenuToogle-wrapper .container {
+            color: #1a191a;
+        }
+
+        .megamenuToogle-wrapper .container > div span {
+            background: #1a191a;
+        }
+
+
+        .megamenuToogle-wrapper:hover,
+        .active .megamenuToogle-wrapper {
+            background: #f2f2f2; /* Old browsers */
+            background: -moz-linear-gradient(top, #f2f2f2 0%, #fff 0%, #f2f2f2 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(0%,#fff), color-stop(99%,#f2f2f2)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f2f2f2 0%,#fff 0%,#f2f2f2 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f2f2f2 0%,#fff 0%,#f2f2f2 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f2f2f2 0%,#fff 0%,#f2f2f2 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #f2f2f2 0%,#fff 0%,#f2f2f2 99%); /* W3C */
+        }
+
+        .megamenuToogle-wrapper:hover,
+        .active .megamenuToogle-wrapper {
+            background: #fff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #fff 50%, #f2f2f2 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#fff), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #fff 50%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #fff 50%,#f2f2f2 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #fff 50%,#f2f2f2 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #fff 50%,#f2f2f2 100%); /* W3C */
+        }
+
+        .megamenuToogle-wrapper:hover .container,
+        .active .megamenuToogle-wrapper .container {
+            color: #f77b24;
+        }
+
+        .megamenuToogle-wrapper:hover .container > div span,
+        .active .megamenuToogle-wrapper .container > div span {
+            background: #f77b24;
+        }
+
+        @media (max-width: 991px) {
+            .responsive .horizontal .megamenu-wrapper {
+                background: #fff !important;
+            }
+        }
+
+
+        @media (max-width: 991px) {
+            .responsive .horizontal ul.megamenu > li > a {
+                color: #333333 !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .responsive .horizontal ul.megamenu > li:hover > a,
+            .responsive .horizontal ul.megamenu > li.active > a {
+                color: #f77b24 !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .responsive .horizontal ul.megamenu > li {
+                border-top-color: #e5e5e5 !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .responsive ul.megamenu > li:hover,
+            .responsive ul.megamenu > li.active {
+                background: #fff !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .responsive ul.megamenu > li.with-sub-menu .open-menu,
+            .responsive ul.megamenu > li.with-sub-menu .close-menu {
+                color: #333 !important;
+            }
+        }
+
+
+
+
+
+
+        #main .breadcrumb .background {
+            background: none;
+        }
+
+
+
+
+        .breadcrumb .container h1 {
+            color: #1a191a;
+        }
+
+        .breadcrumb .container h1 {
+            border-bottom-color: #97e524;
+        }
+
+        .breadcrumb ul,
+        .breadcrumb ul a {
+            color: #333333;
+        }
+
+        .breadcrumb ul a:hover {
+            color: #97e524;
+        }
+
+        .next-product .right .price {
+            color: #f77b24;
+        }
+
+        .button-previous-next,
+        .next-product {
+            background: #fff;
+        }
+
+        .button-previous-next,
+        .next-product {
+            border-color: #d9d9d9;
+        }
+
+        .button-previous-next {
+            color: #97e524;
+        }
+
+        .button-previous-next:hover {
+            background: #97e524;
+        }
+
+        .button-previous-next:hover {
+            border-color: #97e524;
+        }
+
+        .button-previous-next:hover {
+            color: #fff;
+        }
+
+        #main .box-with-categories .box-content {
+            background: #191819 !important;
+        }
+
+
+
+        .box-category > ul li {
+            border-top-color: #1d1b1d;
+        }
+
+        #main .box-category ul li > a {
+            color: #fff;
+        }
+
+        #main .box-category ul li > a:hover {
+            color: #f77b24;
+        }
+
+        #main .box-category ul li a.active {
+            color: #f77b24;
+        }
+
+        .box-category > ul li > a:hover,
+        .box-category > ul li:hover > a,
+        .box-category > ul li a.active {
+            background: #1d1b1d;
+        }
+
+        #main .box-category ul li .head a {
+            color: #fff;
+        }
+
+
+        .box-with-categories .box-heading {
+            background: #f46318; /* Old browsers */
+            background: -moz-linear-gradient(top, #f46318 0%, #f9913b 0%, #f46318 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f46318), color-stop(0%,#f9913b), color-stop(99%,#f46318)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f46318 0%,#f9913b 0%,#f46318 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f46318 0%,#f9913b 0%,#f46318 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f46318 0%,#f9913b 0%,#f46318 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #f46318 0%,#f9913b 0%,#f46318 99%); /* W3C */
+        }
+
+        .box-with-categories .box-heading {
+            color: #fff;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        .box > .prev:hover,
+        .box > .next:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-prev:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-next:hover,
+        div.pagination-results ul li:hover,
+        .tab-content .prev-button:hover,
+        .tab-content .next-button:hover {
+            background: #97e524;
+        }
+
+
+        .box > .prev:hover,
+        .box > .next:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-prev:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-next:hover,
+        div.pagination-results ul li:hover,
+        .tab-content .prev-button:hover,
+        .tab-content .next-button:hover {
+            color: #fff;
+        }
+
+        .box > .prev:hover,
+        .box > .next:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-prev:hover,
+        .product-info .thumbnails-carousel .owl-buttons .owl-next:hover,
+        div.pagination-results ul li:hover,
+        .tab-content .prev-button:hover,
+        .tab-content .next-button:hover {
+            border-color: #97e524;
+        }
+
+        .filter-product .filter-tabs ul > li.active > a, .filter-product .filter-tabs ul > li.active > a:hover, .filter-product .filter-tabs ul > li.active > a:focus, .htabs a.selected, .htabs a:hover {
+            color: #1a191a;
+        }
+
+        .htabs a.selected:before,
+        .filter-product .filter-tabs ul > li.active > a:before {
+            background: #97e524;
+        }
+
+        .filter-product .filter-tabs ul > li > a,
+        .htabs a {
+            color: #808080;
+        }
+
+
+
+
+
+
+
+
+        .popup h4:after {
+            background: #97e524;
+        }
+
+
+
+
+
+
+
+
+
+        body .popup-module .mfp-close {
+            border-color: #97e524;
+        }
+
+        body .popup-module .mfp-close {
+            color: #97e524;
+        }
+
+        body .popup-module .mfp-close:hover {
+            background: #97e524;
+        }
+
+        body .popup-module .mfp-close:hover {
+            border-color: #97e524;
+        }
+
+        body .popup-module .mfp-close:hover {
+            color: #fff;
+        }
+
+
+
+
+
+        .camera_wrap .owl-controls .owl-buttons .owl-prev:hover, .camera_wrap .owl-controls .owl-buttons .owl-next:hover,
+        #main .tp-leftarrow.default:hover,
+        #main .tp-rightarrow.default:hover,
+        #main .post .post-media .media-slider .owl-controls .owl-buttons .owl-prev:hover,
+        #main .post .post-media .media-slider .owl-controls .owl-buttons .owl-next:hover {
+            background: #97e524;
+        }
+
+
+        .camera_wrap .owl-controls .owl-buttons .owl-prev:hover:before, .camera_wrap .owl-controls .owl-buttons .owl-next:hover:before,
+        #main .tp-leftarrow.default:hover:before,
+        #main .tp-rightarrow.default:hover:before,
+        #main .post .post-media .media-slider .owl-controls .owl-buttons .owl-prev:hover:before,
+        #main .post .post-media .media-slider .owl-controls .owl-buttons .owl-next:hover:before {
+            color: #fff;
+        }
+
+
+
+
+
+        .sale {
+            background: #f35e16; /* Old browsers */
+            background: -moz-linear-gradient(top, #f35e16 0%, #f99641 0%, #f35e16 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f35e16), color-stop(0%,#f99641), color-stop(99%,#f35e16)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f35e16 0%,#f99641 0%,#f35e16 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f35e16 0%,#f99641 0%,#f35e16 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f35e16 0%,#f99641 0%,#f35e16 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #f35e16 0%,#f99641 0%,#f35e16 99%); /* W3C */
+        }
+
+        .sale {
+            color: #fff;
+        }
+
+
+
+        #main .new {
+            background: #97e524; /* Old browsers */
+            background: -moz-linear-gradient(top, #97e524 0%, #97e524 0%, #97e524 99%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#97e524), color-stop(0%,#97e524), color-stop(99%,#97e524)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #97e524 0%,#97e524 0%,#97e524 99%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #97e524 0%,#97e524 0%,#97e524 99%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #97e524 0%,#97e524 0%,#97e524 99%); /* IE10+ */
+            background: linear-gradient(to bottom, #97e524 0%,#97e524 0%,#97e524 99%); /* W3C */
+        }
+
+        #main .new {
+            color: #000;
+        }
+
+
+        .rating i.active {
+            color: #f77b24;
+        }
+
+        .button, .btn {
+            color: #fff !important;
+        }
+
+
+
+        .button, .btn {
+            background: #1e1d1f !important; /* Old browsers */
+            background: -moz-linear-gradient(top, #1e1d1f 0%, #514f52 0%, #1e1d1f 99%) !important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e1d1f), color-stop(0%,#514f52), color-stop(99%,#1e1d1f)) !important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #1e1d1f 0%,#514f52 0%,#1e1d1f 99%) !important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #1e1d1f 0%,#514f52 0%,#1e1d1f 99%) !important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #1e1d1f 0%,#514f52 0%,#1e1d1f 99%) !important; /* IE10+ */
+            background: linear-gradient(to bottom, #1e1d1f 0%,#514f52 0%,#1e1d1f 99%) !important; /* W3C */
+        }
+
+        .button:hover, .btn:hover {
+            color: #fff !important;
+        }
+
+
+
+        .button:hover, .btn:hover {
+            background: #323033 !important; /* Old browsers */
+            background: -moz-linear-gradient(top, #323033 0%, #514f52 0%, #323033 99%) !important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#323033), color-stop(0%,#514f52), color-stop(99%,#323033)) !important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #323033 0%,#514f52 0%,#323033 99%) !important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #323033 0%,#514f52 0%,#323033 99%) !important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #323033 0%,#514f52 0%,#323033 99%) !important; /* IE10+ */
+            background: linear-gradient(to bottom, #323033 0%,#514f52 0%,#323033 99%) !important; /* W3C */
+        }
+
+        .buttons .left .button, .buttons .center .button, .btn-default, .input-group-btn .btn-primary {
+            color: #fff !important;
+        }
+
+
+
+        .buttons .left .button, .buttons .center .button, .btn-default, .input-group-btn .btn-primary {
+            background: #f46318 !important; /* Old browsers */
+            background: -moz-linear-gradient(top, #f46318 0%, #f9913b 0%, #f46318 99%) !important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f46318), color-stop(0%,#f9913b), color-stop(99%,#f46318)) !important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f46318 0%,#f9913b 0%,#f46318 99%) !important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f46318 0%,#f9913b 0%,#f46318 99%) !important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f46318 0%,#f9913b 0%,#f46318 99%) !important; /* IE10+ */
+            background: linear-gradient(to bottom, #f46318 0%,#f9913b 0%,#f46318 99%) !important; /* W3C */
+        }
+
+        .buttons .left .button:hover, .buttons .center .button:hover, .btn-default:hover, .input-group-btn .btn-primary:hover {
+            color: #fff !important;
+        }
+
+
+
+        .buttons .left .button:hover, .buttons .center .button:hover, .btn-default:hover, .input-group-btn .btn-primary:hover {
+            background: #f77b24 !important; /* Old browsers */
+            background: -moz-linear-gradient(top, #f77b24 0%, #f9913b 0%, #f77b24 99%) !important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f77b24), color-stop(0%,#f9913b), color-stop(99%,#f77b24)) !important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f77b24 0%,#f9913b 0%,#f77b24 99%) !important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f77b24 0%,#f9913b 0%,#f77b24 99%) !important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f77b24 0%,#f9913b 0%,#f77b24 99%) !important; /* IE10+ */
+            background: linear-gradient(to bottom, #f77b24 0%,#f9913b 0%,#f77b24 99%) !important; /* W3C */
+        }
+
+
+
+
+
+
+
+        .footer .pattern,
+        .footer .pattern a {
+            color: #666666;
+        }
+
+        .footer .pattern a {
+            color: #666666;
+        }
+
+        .footer .pattern a:hover {
+            color: #97e524;
+        }
+
+        .footer h4 {
+            color: #1a191a;
+        }
+
+        .footer h4 {
+            border-bottom-color: #97e524;
+        }
+
+        .footer .background,
+        .standard-body .footer .background,
+        .copyright .background,
+        .standard-body .copyright .background {
+            background: #fff;
+        }
+
+        .footer .container > .row:before,
+        .footer .advanced-grid .container > div > .row:before,
+        .footer .container > .row > div:before,
+        .footer .advanced-grid .container > div > .row > div:before,
+        .footer-type-11 .footer .container > .row:nth-last-child(2) > div:before,
+        .footer-type-11 .footer .advanced-grid .container > div > .row:nth-last-child(2) > div:before,
+        .footer-type-16 .footer .container > .row:nth-last-child(2) > div:before,
+        .footer-type-16 .footer .advanced-grid .container > div > .row:nth-last-child(2) > div:before,
+        .footer-type-21 .footer .container > .row > div:last-child:after,
+        .footer-type-21 .footer .advanced-grid .container > div > .row > div:last-child:after {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-type-11 .footer .container > .row:nth-last-child(2),
+        .footer-type-11 .footer .advanced-grid .container > div > .row:nth-last-child(2),
+        .footer-type-16 .footer .container > .row:nth-last-child(2),
+        .footer-type-16 .footer .advanced-grid .container > div > .row:nth-last-child(2) {
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        #main .post .date-published,
+        #main .news.v2 .media-body .bottom,
+        .cosmetics-news .media .date-published,
+        .medic-news .media .date-published,
+        .wine-news .media .date-published,
+        .cameras-news .media .date-published {
+            color: #f77b24;
+        }
+
+        #main .post .meta > li a {
+            color: #f77b24;
+        }
+
+        #main .post .meta > li a:hover {
+            color: #333;
+        }
+
+        #main .tagcloud a,
+        #main .post .tags a,
+        #main .news .media-body .tags a,
+        #main .posts .post .tags a,
+        .cosmetics-news .media .tags a,
+        .cameras-news .media .tags a {
+            color: #fff;
+        }
+
+
+        #main .tagcloud a,
+        #main .post .tags a,
+        #main .news .media-body .tags a,
+        #main .posts .post .tags a,
+        .cosmetics-news .media .tags a,
+        .cameras-news .media .tags a {
+            background: #f46318 !important; /* Old browsers */
+            background: -moz-linear-gradient(top, #f46318 0%, #f9913b 0%, #f46318 99%) !important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f46318), color-stop(0%,#f9913b), color-stop(99%,#f46318)) !important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f46318 0%,#f9913b 0%,#f46318 99%) !important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f46318 0%,#f9913b 0%,#f46318 99%) !important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f46318 0%,#f9913b 0%,#f46318 99%) !important; /* IE10+ */
+            background: linear-gradient(to bottom, #f46318 0%,#f9913b 0%,#f46318 99%) !important; /* W3C */
+        }
+
+        #main .tagcloud a:hover,
+        #main .post .tags a:hover,
+        #main .news .media-body .tags a:hover,
+        #main .posts .post .tags a:hover,
+        .cosmetics-news .media .tags a:hover,
+        .cameras-news .media .tags a:hover {
+            color: #fff;
+        }
+
+
+        #main .tagcloud a:hover,
+        #main .post .tags a:hover,
+        #main .news .media-body .tags a:hover,
+        #main .posts .post .tags a:hover,
+        .cosmetics-news .media .tags a:hover,
+        .cameras-news .media .tags a:hover {
+            background: #222123 !important; /* Old browsers */
+            background: -moz-linear-gradient(top, #222123 0%, #4a484b 0%, #222123 99%) !important; /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222123), color-stop(0%,#4a484b), color-stop(99%,#222123)) !important; /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #222123 0%,#4a484b 0%,#222123 99%) !important; /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #222123 0%,#4a484b 0%,#222123 99%) !important; /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #222123 0%,#4a484b 0%,#222123 99%) !important; /* IE10+ */
+            background: linear-gradient(to bottom, #222123 0%,#4a484b 0%,#222123 99%) !important; /* W3C */
+        }
+
+
+
+        #main .posts .button-more,
+        .wine-news .button-more {
+            color: #f77b24;
+        }
+
+        #main .posts .button-more:hover,
+        .wine-news .button-more:hover {
+            background: #f77b24;
+        }
+
+        #main .posts .button-more:hover,
+        .wine-news .button-more:hover {
+            border-color: #f77b24;
+        }
+
+        #main .posts .button-more:hover,
+        .wine-news .button-more:hover {
+            color: #fff;
+        }
+
+        body,
+        textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input, select {
+            font-size: 13px;
+            font-weight: 400 !important;
+        }
+
+        ul.megamenu .megamenu-label,
+        #main .news .media-body h5,
+        #main .posts .post .post-title {
+        }
+
+        @media (max-width: 767px) {
+            .responsive ul.megamenu li .sub-menu .content .hover-menu .menu ul li a,
+            .responsive ul.megamenu li .sub-menu .content .static-menu .menu ul li a {
+            }
+        }
+
+        body.firefox-mac,
+        body.firefox-mac input,
+        body.firefox-mac select {
+            font-weight: 300 !important;
+        }
+
+
+
+
+
+        .center-column .panel-heading h4 {
+        }
+
+        .dropdown-menu,
+        body .dropdown-menu > li > a,
+        .top-bar .menu li a,
+        #top .dropdown > a,
+        .product-info .cart .add-to-cart p,
+        .header-notice,
+        .header-type-9 #top #header-center .menu li a,
+        .welcome-text,
+        .header-type-16 #top #header-left .menu li {
+            font-size: 12px;
+        }
+
+
+        .product-filter .options .product-compare a,
+        .product-info .cart .links a,
+        .button-previous-next,
+        .footer-button,
+        .button-white-with-red-text,
+        table.attribute thead td,
+        table.list thead td,
+        .wishlist-product table thead td,
+        .wishlist-info table thead td,
+        .compare-info thead td,
+        .checkout-product table thead td,
+        .table thead td,
+        .cart-info table thead td,
+        .manufacturer-heading,
+        .center-column .panel-heading h4,
+        ul.box-filter > li > span,
+        .popup .form-contact .contact-label label,
+        .categories-wall .category-wall .more-categories,
+        .mfilter-heading,
+        .product-info .options2 > div > label {
+            font-size: 11px !important;
+
+        }
+
+        ul.megamenu li .sub-menu .content .static-menu a.main-menu {
+            font-size: 20px;
+            font-weight: 500 !important;
+
+
+            line-height: 1.6;
+        }
+
+        ul.megamenu > li > a strong,
+        .megamenuToogle-wrapper .container {
+            font-size: 13px;
+            font-weight: 600 !important;
+
+        }
+
+        .horizontal ul.megamenu > li > a,
+        .megamenuToogle-wrapper .container {
+            line-height: 1.6;
+        }
+
+        .box .box-heading,
+        .center-column h1,
+        .center-column h2,
+        .center-column h3,
+        .center-column h4,
+        .center-column h5,
+        .center-column h6,
+        .products-carousel-overflow .box-heading,
+        .htabs a,
+        .product-info .options h2,
+        h3,
+        h4,
+        h6,
+        .product-block .title-block,
+        .filter-product .filter-tabs ul > li > a,
+        .popup h4,
+        .product-info .product-name a,
+        legend {
+            font-size: 20px;
+            font-weight: 500 !important;
+
+        }
+
+        .box-with-categories .box-heading,
+        .vertical .megamenuToogle-wrapper .container {
+            font-size: 14px;
+            font-weight: 600 !important;
+
+        }
+
+        .box-with-categories .box-heading,
+        .vertical .megamenuToogle-wrapper .container {
+            line-height: 1.6;
+        }
+
+        .box-category ul li > a,
+        .vertical ul.megamenu > li > a strong {
+            font-size: 14px;
+            font-weight: 600 !important;
+
+
+            line-height: 1.6;
+        }
+
+
+
+        .sale,
+        #main .new {
+            font-size: 11px;
+            font-weight: 600 !important;
+
+
+            line-height: 1.6;
+        }
+
+        .footer h4,
+        .custom-footer h4 {
+            font-size: 18px;
+            font-weight: 500 !important;
+
+        }
+
+        .breadcrumb .container h1 {
+            font-size: 30px;
+            font-weight: 500 !important;
+
+        }
+
+        .button,
+        .btn,
+        .footer-button {
+            font-size: 11px !important;
+            font-weight: 600 !important;
+
+
+            line-height: 1.6;
+        }
+
+
+
+
+        .product-grid .product .price,
+        .advanced-grid-products .product .right .price,
+        #top #cart_block .cart-heading p strong,
+        .cart-total table tr td:last-child,
+        .mini-cart-info td.total,
+        .mini-cart-total td:last-child,
+        .today-deals-products .product .price,
+        .architecture-products .product .right .price,
+        .matrialarts-products .matrial-product .right .price {
+            font-size: 14px;
+            font-weight: 600 !important;
+        }
+
+
+        .product-info .price .price-new {
+            font-size: 50px;
+            font-weight: 600 !important;
+        }
+
+        .product-list .name-actions > .price {
+            font-size: 20px;
+            font-weight: 600 !important;
+        }
+
+        .price-old,
+        .today-deals-products .product .price .price-old,
+        .architecture-products .product .right .price .price-old {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
+
+    <style type="text/css">
+
+        body { background-image:url(catalog/view/theme/shoes_v2/image/bg-body.png);background-position:top center;background-repeat:no-repeat !important;background-attachment:scroll !important; }
+
+        .footer .pattern { background-image:url(catalog/view/theme/shoes_v2/image/bg-footer.png);background-position:top center;background-repeat:no-repeat !important;background-attachment:scroll !important; }
+
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="catalog/view/theme/shoes_v2/css/magnific-popup.css" media="screen">
+
+
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/twitter-bootstrap-hover-dropdown.js"></script>
+    <style type="text/css">.dropdown-submenu:hover > .dropdown-menu {
+            display: none
+        }</style>
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/common.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/tweetfeed.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/bootstrap-notify.min.js"></script>
+
+
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/owl.carousel.min.js"></script>
+
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/jquery-ui-1.10.4.custom.min.js"></script>
+
+    <script type="text/javascript" src="catalog/view/theme/shoes_v2/js/jquery.magnific-popup.min.js"></script>
+
+    <script type="text/javascript">
+        var responsive_design = 'yes';
+    </script>
+
+    {% for style in styles %}
+        <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+    {% endfor %}
+
+    {% for script in scripts %}
+        <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="catalog/view/theme/fastor/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        #megamenu_108912313 ul.megamenu > li > .sub-menu > .content {
+            -webkit-transition: all 200ms ease-out !important;
+            -moz-transition: all 200ms ease-out !important;
+            -o-transition: all 200ms ease-out !important;
+            -ms-transition: all 200ms ease-out !important;
+            transition: all 200ms ease-out !important;
+        }
+    </style>
+</head>
+<body class="{{ body_class }}    products-buttons-action-type-2 buttons-prev-next-type-2 inputs-type-2 cart-block-type-3 my-account-type-2    product-page-type-2 megamenu-type-5  megamenu-label-type-4 no-box-type-7   sale-new-type-2 button-body-type-2  footer-type-3 breadcrumb-style-9 border-width-0 body-other    body-header-type-2">
+
+
+<script type="text/javascript">
+    $(window).load(function(){
+        $('.quickview a').magnificPopup({
+            preloader: true,
+            tLoading: '',
+            type: 'iframe',
+            mainClass: 'quickview',
+            removalDelay: 200,
+            gallery: {
+                enabled: true
+            }
+        });
+    });
+</script>
+
+
+
+
+<div class="standard-body">
+    <div id="main" class="">
+        <!-- HEADER
+    ================================================== -->
+        <header class="header-type-2 header-type-7">
+            <div class="background-header"></div>
+            <div class="slider-header">
+                <!-- Top of pages -->
+                <div id="top" class="full-width">
+                    <div class="background-top"></div>
+                    <div class="background">
+                        <div class="shadow"></div>
+                        <div class="pattern">
+                            <div class="top-bar">
+                                <div class="container">
+                                    <!-- Links -->
+                                    <ul class="menu">
+                                        <li><a href="http://fastortheme.com/shoes2/index.php?route=account/account">My Account</a></li>
+                                        <li><a href="http://fastortheme.com/shoes2/index.php?route=account/wishlist" id="wishlist-total">Wish List (0)</a></li>
+                                        <li><a href="http://fastortheme.com/shoes2/index.php?route=checkout/cart">Shopping Cart</a></li>
+                                        <li><a href="http://fastortheme.com/shoes2/index.php?route=checkout/checkout">Checkout</a></li>
+                                    </ul>
+
+                                    <form action="http://fastortheme.com/shoes2/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="currency_form">
+                                        <!-- Currency -->
+                                        <div class="dropdown">
+                                            <a href="http://fastortheme.com/shoes2/#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">£</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;" onclick="$(&#39;input[name=\&#39;code\&#39;]&#39;).attr(&#39;value&#39;, &#39;EUR&#39;); $(&#39;#currency_form&#39;).submit();">Euro</a></li>
+                                                <li><a href="javascript:;" onclick="$(&#39;input[name=\&#39;code\&#39;]&#39;).attr(&#39;value&#39;, &#39;GBP&#39;); $(&#39;#currency_form&#39;).submit();">Pound Sterling</a></li>
+                                                <li><a href="javascript:;" onclick="$(&#39;input[name=\&#39;code\&#39;]&#39;).attr(&#39;value&#39;, &#39;USD&#39;); $(&#39;#currency_form&#39;).submit();">US Dollar</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <input type="hidden" name="code" value="">
+                                        <input type="hidden" name="redirect" value="http://fastortheme.com/shoes2/index.php?route=common/home">
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Header Left -->
+                                    <div class="col-sm-4" id="header-left">
+                                        <!-- Logo -->
+                                        <div class="logo"><a href="http://fastortheme.com/shoes2/index.php?route=common/home"><img src="./Your Store_files/logo.png" title="Your Store" alt="Your Store"></a></div>
+                                    </div>
+
+                                    <!-- Header Right -->
+                                    <div class="col-sm-8" id="header-right">
+                                        <div class="shoes2-phone hidden-md hidden-sm">
+                                            <img src="./Your Store_files/icon-phone.png" alt="Phone">
+                                            <div class="heading">Need<br>help?</div>
+                                            <p>500-500-500</p>
+                                        </div>
+                                        <!-- Search -->
+                                        <div class="search_form">
+                                            <div class="button-search"></div>
+                                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" class="input-block-level search-query ui-autocomplete-input" name="search" placeholder="Search" id="search_query" value="" autocomplete="off">
+
+                                            <div id="autocomplete-results" class="autocomplete-results"><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul></div>
+
+                                            <script type="text/javascript">
+                                                $(document).ready(function() {
+                                                    $('#search_query').autocomplete({
+                                                        delay: 0,
+                                                        appendTo: "#autocomplete-results",
+                                                        source: function(request, response) {
+                                                            $.ajax({
+                                                                url: 'index.php?route=search/autocomplete&filter_name=' +  encodeURIComponent(request.term),
+                                                                dataType: 'json',
+                                                                success: function(json) {
+                                                                    response($.map(json, function(item) {
+                                                                        return {
+                                                                            label: item.name,
+                                                                            value: item.product_id,
+                                                                            href: item.href,
+                                                                            thumb: item.thumb,
+                                                                            desc: item.desc,
+                                                                            price: item.price
+                                                                        }
+                                                                    }));
+                                                                }
+                                                            });
+                                                        },
+                                                        select: function(event, ui) {
+                                                            document.location.href = ui.item.href;
+
+                                                            return false;
+                                                        },
+                                                        focus: function(event, ui) {
+                                                            return false;
+                                                        },
+                                                        minLength: 2
+                                                    })
+                                                        .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                                                        return $( "<li>" )
+                                                            .append( "<a>" + item.label + "</a>" )
+                                                            .appendTo( ul );
+                                                    };
+                                                });
+                                            </script>
+                                        </div>
+
+                                        <a href="http://fastortheme.com/shoes2/index.php?route=account/account" class="my-account"><i class="fa fa-user"></i></a>
+
+                                        <!-- Cart block -->
+                                        <div id="cart_block" class="dropdown">
+                                            <div class="cart-heading dropdown-toogle" data-hover="dropdown" data-toggle="dropdown" onclick="window.location.href = &#39;http://fastortheme.com/shoes2/index.php?route=checkout/cart&#39;">
+                                                <i class="cart-count"><span id="total_count_ajax">0</span></i>
+
+                                                <i class="cart-icon "><img src="./Your Store_files/icon-cart-hover.png" class="cart-icon-hover" alt=""><img src="./Your Store_files/icon-cart.png" class="cart-icon-standard" alt=""></i>
+
+                                                <p><strong id="total_price_ajax"><span id="total_price">£0.00</span></strong></p>
+                                            </div>
+
+                                            <div class="dropdown-menu" id="cart_content"><div id="cart_content_ajax">
+                                                    <div class="empty">Your shopping cart is empty!</div>
+                                                </div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="megamenu-background">
+                                <div class="">
+                                    <div class="overflow-megamenu container">
+
+                                        <div id="megamenu_108912313" class="container-megamenu  horizontal">
+                                            <div class="megaMenuToggle">
+                                                <div class="megamenuToogle-wrapper">
+                                                    <div class="megamenuToogle-pattern">
+                                                        <div class="container">
+                                                            <div><span></span><span></span><span></span></div>
+                                                            Navigation				</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="megamenu-wrapper">
+                                                <div class="megamenu-pattern">
+                                                    <div class="container">
+                                                        <ul class="megamenu shift-up">
+                                                            <li class=" with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20" class="clearfix"><span><strong><img src="./Your Store_files/men.png" alt="">Men</strong></span></a><div class="sub-menu full-width-sub-menu" style="width:100%"><div class="content" style="background-image:url(image/catalog/shoes2/bg-women.png);background-position: top right;background-repeat: no-repeat;"><p class="arrow"></p><div class="row"><div class="col-sm-6  mobile-enabled"><div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="static-menu" style="position: relative;margin-bottom: -20px">
+                                                                                            <div class="menu">
+                                                                                                <ul>
+                                                                                                    <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20" class="main-menu">Shop by category</a>
+                                                                                                        <div class="open-categories"></div>
+                                                                                                        <div class="close-categories"></div>
+                                                                                                        <ul>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Athletic Shoes</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Casual Shoes</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Clogs and Slides</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Narrow Shoes</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Slippers</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Winter Boots</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Sandals</a></li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-sm-6 with-border-left">
+                                                                                        <div class="static-menu" style="position: relative;margin-bottom: -20px">
+                                                                                            <div class="menu">
+                                                                                                <ul>
+                                                                                                    <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20" class="main-menu">Brands</a>
+                                                                                                        <div class="open-categories"></div>
+                                                                                                        <div class="close-categories"></div>
+                                                                                                        <ul>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer">Adidas</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer">New Balance</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer">Nike</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer">Reebok</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer" class="button shoes2-small-button mobile-disabled">All brands</a></li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div></div><div class="col-sm-6  mobile-disabled"><a href="http://fastortheme.com/shoes2/#"><img src="./Your Store_files/banner-men.png" alt="Banner" style="display: block;float: right;margin: -30px -45px -40px 0px;position: relative"></a></div></div></div></div></li>
+                                                            <li class=" with-sub-menu hover"><p class="close-menu"></p><p class="open-menu"></p><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20" class="clearfix"><span><strong><img src="./Your Store_files/women.png" alt="">Women<span class="megamenu-label" style="background: #f35e16;color:  #fff;"><span style="background: #f35e16;border-color: #f35e16"></span>NEW</span></strong></span></a><div class="sub-menu full-width-sub-menu" style="width:100%"><div class="content" style="background-image:url(image/catalog/shoes2/bg-men.png);background-position: top right;background-repeat: no-repeat;"><p class="arrow"></p><div class="row"><div class="col-sm-6  mobile-enabled"><div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="static-menu" style="position: relative;margin-bottom: -20px">
+                                                                                            <div class="menu">
+                                                                                                <ul>
+                                                                                                    <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20" class="main-menu">Shop by category</a>
+                                                                                                        <div class="open-categories"></div>
+                                                                                                        <div class="close-categories"></div>
+                                                                                                        <ul>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Athletic Shoes</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Casual Shoes</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Clogs and Slides</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Narrow Shoes</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Slippers</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Winter Boots</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20">Sandals</a></li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="col-sm-6 with-border-left">
+                                                                                        <div class="static-menu" style="position: relative;margin-bottom: -20px">
+                                                                                            <div class="menu">
+                                                                                                <ul>
+                                                                                                    <li><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20" class="main-menu">Brands</a>
+                                                                                                        <div class="open-categories"></div>
+                                                                                                        <div class="close-categories"></div>
+                                                                                                        <ul>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer">Adidas</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer">New Balance</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer">Nike</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer">Reebok</a></li>
+                                                                                                            <li><a href="http://fastortheme.com/shoes2/index.php?route=product/manufacturer" class="button shoes2-small-button mobile-disabled">All brands</a></li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div></div><div class="col-sm-6  mobile-disabled"><a href="http://fastortheme.com/shoes2/#"><img src="./Your Store_files/banner-women.png" alt="Banner" style="display: block;float: right;margin: -30px -45px -40px 0px;position: relative"></a></div></div></div></div></li>
+                                                            <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20" class="clearfix"><span><strong><img src="./Your Store_files/kids.png" alt="">Kids</strong></span></a></li>
+                                                            <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/shoes2/index.php?route=product/special" class="clearfix"><span><strong>Sale<span class="megamenu-label" style="background: #97e524;color:  #000;"><span style="background: #97e524;border-color: #97e524"></span>HOT</span></strong></span></a></li>
+                                                            <li class=""><p class="close-menu"></p><p class="open-menu mobile-disabled"></p><a href="http://fastortheme.com/shoes2/index.php?route=product/category&amp;path=20" class="clearfix"><span><strong>Latest products</strong></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <script type="text/javascript">
+                                            $(window).load(function(){
+                                                var css_tpl = '<style type="text/css">';
+                                                css_tpl += '#megamenu_108912313 ul.megamenu > li > .sub-menu > .content {';
+                                                css_tpl += '-webkit-transition: all 200ms ease-out !important;';
+                                                css_tpl += '-moz-transition: all 200ms ease-out !important;';
+                                                css_tpl += '-o-transition: all 200ms ease-out !important;';
+                                                css_tpl += '-ms-transition: all 200ms ease-out !important;';
+                                                css_tpl += 'transition: all 200ms ease-out !important;';
+                                                css_tpl += '}</style>'
+                                                $("head").append(css_tpl);
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider -->
+            <div id="slider" class="full-width">
+                <div class="background-slider"></div>
+                <div class="background">
+                    <div class="shadow"></div>
+                    <div class="pattern">
+                        <link rel="stylesheet" type="text/css" href="./Your Store_files/settings.css" property="stylesheet">
+                        <link rel="stylesheet" type="text/css" href="./Your Store_files/static-captions.css" property="stylesheet">
+                        <link rel="stylesheet" type="text/css" href="./Your Store_files/dynamic-captions.css" property="stylesheet">
+                        <link rel="stylesheet" type="text/css" href="./Your Store_files/captions.css" property="stylesheet">
+                        <link rel="stylesheet" type="text/css" href="./Your Store_files/slider.css" property="stylesheet">
+                        <script type="text/javascript" src="./Your Store_files/jquery.themepunch.tools.min.js.下载"></script>
+                        <script type="text/javascript" src="./Your Store_files/jquery.themepunch.revolution.min.js.下载"></script>
+                        <!-- START REVOLUTION SLIDER  fullwidth mode -->
+
+                        <div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin: 0px auto; padding: 0px; max-height: 523px; height: 523px; overflow: visible;">
+                            <div id="rev_slider_2_1" class="rev_slider fullwidthabanner revslider-initialised tp-simpleresponsive hovered" style="max-height: 523px; height: 523px;">
+                                <ul style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: 523px;">	<!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off" style="width: 100%; height: 100%; overflow: hidden; z-index: 20; visibility: inherit; opacity: 1;" class="active-revslide current-sr-slide-visible">
+                                        <!-- MAIN IMAGE -->
+                                        <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png" data-src="http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url(&quot;http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png&quot;); background-size: cover; background-position: center top; width: 100%; height: 100%; opacity: 1; visibility: inherit;"></div></div>
+                                        <!-- LAYERS -->
+
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption tp-fade start" data-x="265" data-y="0" data-speed="1200" data-start="300" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1200" style="z-index: 2; left: 406.5px; top: 0px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);"><img src="./Your Store_files/8277764_shoes2-1.png" alt="" style="width: 860px; height: 522px;">
+                                        </div>
+
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption shoes2_text_1 sft tp-resizeme start" data-x="67" data-y="147" data-speed="700" data-start="300" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700" style="z-index: 3; white-space: nowrap; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 45px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 50px; left: 208.5px; top: 147px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">Addidos<br style="transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 45px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 50px;">Curves
+                                        </div>
+
+                                        <!-- LAYER NR. 3 -->
+                                        <div class="tp-caption shoes2_text_2 sfb tp-resizeme start" data-x="67" data-y="245" data-speed="700" data-start="600" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700" style="z-index: 4; white-space: nowrap; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 50px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 50px; left: 208.5px; top: 245px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1);">$250,00
+                                        </div>
+
+                                        <!-- LAYER NR. 4 -->
+                                        <div class="tp-caption customin tp-resizeme start" data-x="68" data-y="320" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="900" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700" style="z-index: 5; white-space: nowrap; transition: all 0s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-size: 13px; left: 209.5px; top: 320px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.0025, 0, 0, 0, 1); transform-origin: 50% 50% 0px;"><a href="http://fastortheme.com/shoes2/#" class="button button-shoes2-add-to-cart" style="transition: all 0.2s ease-out 0s; min-height: 0px; min-width: 0px; line-height: 19px; border-width: 0px; margin: 5px 0px; padding: 14px 32px 12px 57px; letter-spacing: 0px; font-size: 12px;">Add to cart</a>
+                                        </div>
+                                    </li>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off" style="width: 100%; height: 100%; overflow: hidden;">
+                                        <!-- MAIN IMAGE -->
+                                        <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png" data-src="http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png" style="background-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;background-image:url(http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png);background-size:cover;background-position:center top;width:100%;height:100%;"></div></div>
+                                        <!-- LAYERS -->
+
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption tp-fade start" data-x="132" data-y="0" data-speed="1200" data-start="300" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1200" style="z-index: 2;"><img src="./Your Store_files/1827128_shoes2-2.png" alt="">
+                                        </div>
+
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption shoes2_text_1 sft tp-resizeme start" data-x="67" data-y="147" data-speed="700" data-start="300" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Nikos<br>Superos
+                                        </div>
+
+                                        <!-- LAYER NR. 3 -->
+                                        <div class="tp-caption shoes2_text_2 sfb tp-resizeme start" data-x="67" data-y="245" data-speed="700" data-start="600" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">$350,00
+                                        </div>
+
+                                        <!-- LAYER NR. 4 -->
+                                        <div class="tp-caption customin tp-resizeme start" data-x="68" data-y="320" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="900" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;"><a href="http://fastortheme.com/shoes2/#" class="button button-shoes2-add-to-cart">Add to cart</a>
+                                        </div>
+                                    </li>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-saveperformance="off" style="width: 100%; height: 100%; overflow: hidden;">
+                                        <!-- MAIN IMAGE -->
+                                        <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png" data-src="http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png" style="background-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;background-image:url(http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png);background-size:cover;background-position:center top;width:100%;height:100%;"></div></div>
+                                        <!-- LAYERS -->
+
+                                        <!-- LAYER NR. 1 -->
+                                        <div class="tp-caption tp-fade start" data-x="144" data-y="0" data-speed="1200" data-start="300" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1200" style="z-index: 2;"><img src="./Your Store_files/2378228_shoes2-3.png" alt="">
+                                        </div>
+
+                                        <!-- LAYER NR. 2 -->
+                                        <div class="tp-caption shoes2_text_1 sft tp-resizeme start" data-x="67" data-y="147" data-speed="700" data-start="300" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Nikos<br>Superos
+                                        </div>
+
+                                        <!-- LAYER NR. 3 -->
+                                        <div class="tp-caption shoes2_text_2 sfb tp-resizeme start" data-x="67" data-y="245" data-speed="700" data-start="600" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">$350,00
+                                        </div>
+
+                                        <!-- LAYER NR. 4 -->
+                                        <div class="tp-caption customin tp-resizeme start" data-x="68" data-y="320" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="900" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="700" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;"><a href="http://fastortheme.com/shoes2/#" class="button button-shoes2-add-to-cart">Add to cart</a>
+                                        </div>
+                                    </li>
+                                    <!-- SLIDE  -->
+                                    <li data-transition="random" data-slotamount="7" data-saveperformance="off" style="width: 100%; height: 100%; overflow: hidden; visibility: hidden; opacity: 0; z-index: 18;">
+                                        <!-- MAIN IMAGE -->
+                                        <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="center top" data-kenburns="undefined" data-easeme="undefined" data-bgfit="cover" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" data-lazydone="undefined" src="http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png" data-src="http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png" style="background-color:rgba(0, 0, 0, 0);background-repeat:no-repeat;background-image:url(http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png);background-size:cover;background-position:center top;width:100%;height:100%;"></div></div>
+                                        <!-- LAYERS -->
+                                    </li>
+                                </ul>
+                                <div class="tp-bannertimer tp-bottom" style="visibility: hidden; width: 8.85556%; transform: translate3d(0px, 0px, 0px);"></div>	<div class="tp-loader spinner0" style="display: none;"><div class="dot1"></div><div class="dot2"></div><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>
+
+                            <script type="text/javascript">
+
+                                /******************************************
+                                 -	PREPARE PLACEHOLDER FOR SLIDER	-
+                                 ******************************************/
+
+
+                                var setREVStartSize = function() {
+                                    var	tpopt = new Object();
+                                    tpopt.startwidth = 1140;
+                                    tpopt.startheight = 523;
+                                    tpopt.container = jQuery('#rev_slider_2_1');
+                                    tpopt.fullScreen = "off";
+                                    tpopt.forceFullWidth="off";
+
+                                    tpopt.container.closest(".rev_slider_wrapper").css({height:tpopt.container.height()});tpopt.width=parseInt(tpopt.container.width(),0);tpopt.height=parseInt(tpopt.container.height(),0);tpopt.bw=tpopt.width/tpopt.startwidth;tpopt.bh=tpopt.height/tpopt.startheight;if(tpopt.bh>tpopt.bw)tpopt.bh=tpopt.bw;if(tpopt.bh<tpopt.bw)tpopt.bw=tpopt.bh;if(tpopt.bw<tpopt.bh)tpopt.bh=tpopt.bw;if(tpopt.bh>1){tpopt.bw=1;tpopt.bh=1}if(tpopt.bw>1){tpopt.bw=1;tpopt.bh=1}tpopt.height=Math.round(tpopt.startheight*(tpopt.width/tpopt.startwidth));if(tpopt.height>tpopt.startheight&&tpopt.autoHeight!="on")tpopt.height=tpopt.startheight;if(tpopt.fullScreen=="on"){tpopt.height=tpopt.bw*tpopt.startheight;var cow=tpopt.container.parent().width();var coh=jQuery(window).height();if(tpopt.fullScreenOffsetContainer!=undefined){try{var offcontainers=tpopt.fullScreenOffsetContainer.split(",");jQuery.each(offcontainers,function(e,t){coh=coh-jQuery(t).outerHeight(true);if(coh<tpopt.minFullScreenHeight)coh=tpopt.minFullScreenHeight})}catch(e){}}tpopt.container.parent().height(coh);tpopt.container.height(coh);tpopt.container.closest(".rev_slider_wrapper").height(coh);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh);tpopt.container.css({height:"100%"});tpopt.height=coh;}else{tpopt.container.height(tpopt.height);tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height);}
+                                };
+
+                                /* CALL PLACEHOLDER */
+                                setREVStartSize();
+
+
+                                var tpj=jQuery;
+
+                                var revapi2;
+
+                                tpj(document).ready(function() {
+
+                                    if(tpj('#rev_slider_2_1').revolution == undefined)
+                                        revslider_showDoubleJqueryError('#rev_slider_2_1');
+                                    else
+                                        revapi2 = tpj('#rev_slider_2_1').show().revolution(
+                                            {
+                                                dottedOverlay:"none",
+                                                delay:9000,
+                                                startwidth:1140,
+                                                startheight:523,
+                                                hideThumbs:200,
+
+                                                thumbWidth:100,
+                                                thumbHeight:50,
+                                                thumbAmount:4,
+
+
+                                                simplifyAll:"off",
+
+                                                navigationType:"none",
+                                                navigationArrows:"solo",
+                                                navigationStyle:"round",
+
+                                                touchenabled:"on",
+                                                onHoverStop:"on",
+                                                nextSlideOnWindowFocus:"off",
+
+                                                swipe_threshold: 75,
+                                                swipe_min_touches: 1,
+                                                drag_block_vertical: false,
+
+
+
+                                                keyboardNavigation:"off",
+
+                                                navigationHAlign:"center",
+                                                navigationVAlign:"bottom",
+                                                navigationHOffset:0,
+                                                navigationVOffset:20,
+
+                                                soloArrowLeftHalign:"left",
+                                                soloArrowLeftValign:"center",
+                                                soloArrowLeftHOffset:100,
+                                                soloArrowLeftVOffset:0,
+
+                                                soloArrowRightHalign:"right",
+                                                soloArrowRightValign:"center",
+                                                soloArrowRightHOffset:100,
+                                                soloArrowRightVOffset:0,
+
+                                                shadow:0,
+                                                fullWidth:"on",
+                                                fullScreen:"off",
+
+                                                spinner:"spinner0",
+
+                                                stopLoop:"off",
+                                                stopAfterLoops:-1,
+                                                stopAtSlide:-1,
+
+                                                shuffle:"off",
+
+                                                autoHeight:"off",
+                                                forceFullWidth:"off",
+
+
+                                                hideTimerBar:"on",
+                                                hideThumbsOnMobile:"off",
+                                                hideNavDelayOnMobile:1500,
+                                                hideBulletsOnMobile:"off",
+                                                hideArrowsOnMobile:"off",
+                                                hideThumbsUnderResolution:0,
+
+                                                hideSliderAtLimit:0,
+                                                hideCaptionAtLimit:0,
+                                                hideAllCaptionAtLilmit:0,
+                                                startWithSlide:0					});
+
+
+
+
+                                });	/*ready*/
+
+                            </script>
+
+
+                            <div style="position: absolute; top: 261px; margin-top: -17px; left: 100px;" class="tp-leftarrow tparrows default round"><div class="tp-arr-allwrapper"><div class="tp-arr-iwrapper"><div class="tp-arr-imgholder" style="visibility: inherit; opacity: 1; background-image: url(&quot;http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png&quot;);"></div><div class="tp-arr-imgholder2"></div><div class="tp-arr-titleholder"></div><div class="tp-arr-subtitleholder"></div></div></div></div><div style="position: absolute; top: 261px; margin-top: -17px; right: 100px;" class="tp-rightarrow tparrows default round"><div class="tp-arr-allwrapper"><div class="tp-arr-iwrapper"><div class="tp-arr-imgholder" style="visibility: inherit; opacity: 1; background-image: url(&quot;http://fastortheme.com/shoes2/system/config/revslider/images/transparent.png&quot;);"></div><div class="tp-arr-imgholder2"></div><div class="tp-arr-titleholder"></div><div class="tp-arr-subtitleholder"></div></div></div></div></div><!-- END REVOLUTION SLIDER -->
+                    </div>
+                </div>
+            </div>
+        </header>

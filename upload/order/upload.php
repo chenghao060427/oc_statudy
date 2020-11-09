@@ -7,25 +7,38 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style type="text/css">
+        th,tr{
+            font-size: 10px;
+        }
+        .table td, .table th {
+            panding-top: 0.75rem;
+            panding-bottom: 0.75rem;
+            padding-right: .15rem;
+            padding-left: .15rem;
 
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
     <title>Hello, world!</title>
   </head>
   <body>
     <table class="table table-bordered">
 	  <thead>
 		<tr id="thead">
-            <th scope="col" contenteditable="true">订单号</th>
+<!--            <th scope="col" contenteditable="true">订单号</th>-->
             <th scope="col" contenteditable="true">邮箱</th>
-            <th scope="col" contenteditable="true">联系地址</th>
-            <th scope="col" contenteditable="true">num1</th>
-            <th scope="col" contenteditable="true">num2</th>
-            <th scope="col" contenteditable="true">物品</th>
-            <th scope="col" contenteditable="true">码数</th>
+            <th scope="col" contenteditable="true" style="width: 15%;">联系地址</th>
+            <th scope="col" contenteditable="true">num 1</th>
+            <th scope="col" contenteditable="true">num 2</th>
+            <th scope="col" contenteditable="true" style="width: 15%;">物品</th>
+            <th scope="col" contenteditable="true" style="width: 10%;">码数</th>
             <th scope="col" contenteditable="true">拿货价格</th>
-            <th scope="col" contenteditable="true">产品名</th>
-            <th scope="col" contenteditable="true">拿货地址</th>
-            <th scope="col" contenteditable="true">备注</th>
-            <th scope="col" contenteditable="true">操作</th>
+<!--            <th scope="col" contenteditable="true">产品名</th>-->
+<!--            <th scope="col" contenteditable="true">拿货地址</th>-->
+<!--            <th scope="col" contenteditable="true">备注</th>-->
+            <th scope="col" contenteditable="true"></th>
 		</tr>
 	  </thead>
 	  <tbody id="tbody">
@@ -49,7 +62,7 @@
 	</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 <!--    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
 <!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -62,16 +75,16 @@
 
 			$('#col_add').click(function(){
                 var tr =$('<tr></tr>') ;
-			    for(var i =0;i<5;i++){
+			    for(var i =0;i<4;i++){
                     tr.append('<td scope="col" contenteditable="true"></td>');
                 }
                 
                 //上传初始化
-                tr.append('<td scope="col image-content" id="image_show'+image_count+'"></td>');
-                for(var i =0;i<5;i++){
+                tr.append('<td scope="col" class="image_content" id="image_show'+image_count+'"></td>');
+                for(var i =0;i<2;i++){
                     tr.append('<td scope="col" contenteditable="true"></td>');
                 }
-                tr.append('<td scope="col" class="action"><input type="file" id="picker'+image_count+'" data-count="'+image_count+'" class="col-sm-6 upload-image" /><button class="btn btn-warning delete-col">删除</button></td>');
+                tr.append('<td scope="col" class="action"><input type="file" id="picker'+image_count+'" data-count="'+image_count+'" class="col-sm-6 upload-image"  style="display: none' + '"/><button class="btn btn-warning delete-col">X</button></td>');
                 $('#tbody').append(tr);
                 image_count++;
               
@@ -79,6 +92,11 @@
 			$('#tbody').on('click','.delete-col',function(){
 			    $(this).parents('tr').remove();
 			});
+			
+			$('#tbody').on('click','.image_content',function(){
+			
+			    $(this).siblings('.action').find('.upload-image').trigger('click');
+            });
 			
             $('#tbody').on('change','.upload-image',function(){
                 var file = $(this).get(0).files[0]; //得到文件信息
@@ -103,7 +121,7 @@
                         success: function(data) {
                             if(data.status=='success'){
                                 
-                                $('#image_show'+num).html('<img src="'+data.url+'" class="figure-img img-fluid rounded" >');
+                                $('#image_show'+num).html('<img src="'+data.url+'" class="figure-img img-fluid rounded" style="width: 100%' + ';" >');
 
                             }else{
                                 $('#'+fileid).find('.state').html(data.message);
